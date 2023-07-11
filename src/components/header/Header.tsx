@@ -9,19 +9,19 @@ function Header() {
     <AppBar position="static" style={{ width: "100%" }}>
       <Toolbar sx={{ justifyContent: "flex-end" }}>
         <Button color="inherit" onClick={() => navigate("home")}>
-          Home
+          HOME
         </Button>
         <Button color="inherit" onClick={() => navigate("about-me")}>
-          About Warrant
+          ABOUT
         </Button>
         <Button color="inherit" onClick={() => navigate("hobby")}>
-          Hobby
+          HOBBY
         </Button>
         <Button color="inherit" onClick={() => navigate("learning-path")}>
-          Learning Path
+          LEARNING PATH
         </Button>
         <Button color="inherit" onClick={() => navigate("contact-with-me")}>
-          Contact With Warrant
+          CONTACT
         </Button>
       </Toolbar>
     </AppBar>
