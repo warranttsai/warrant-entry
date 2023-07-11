@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 // components
 import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 function Layout() {
   const Container = styled.div`
@@ -36,7 +37,9 @@ function Layout() {
       <OutletContainer>
         <Outlet />
       </OutletContainer>
-      <FooterContainer>{/* <Footer /> */}456</FooterContainer>
+      <FooterContainer>
+        <Footer />
+      </FooterContainer>
     </Container>
   );
 }
