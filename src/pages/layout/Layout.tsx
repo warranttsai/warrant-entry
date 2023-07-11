@@ -15,6 +15,7 @@ function Layout() {
   const HeaderContainer = styled.div`
     background-color: #f1f1f1;
     padding: 20px;
+    position: static;
   `;
 
   const OutletContainer = styled.div`
