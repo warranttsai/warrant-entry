@@ -12,16 +12,19 @@ function Header() {
           HOME
         </Button>
         <Button color="inherit" onClick={() => navigate("about-me")}>
-          ABOUT
+          ABOUT ME
         </Button>
-        <Button color="inherit" onClick={() => navigate("hobby")}>
-          HOBBY
+        <Button color="inherit" onClick={() => navigate("my-majority")}>
+          MY MAJORITY
         </Button>
-        <Button color="inherit" onClick={() => navigate("learning-path")}>
-          LEARNING PATH
+        <Button color="inherit" onClick={() => navigate("my-hobbies")}>
+          MY HOBBIES
+        </Button>
+        <Button color="inherit" onClick={() => navigate("working-experience")}>
+          WORKING EXPERIENCE
         </Button>
         <Button color="inherit" onClick={() => navigate("contact-with-me")}>
-          CONTACT
+          CONTACT WITH ME
         </Button>
       </Toolbar>
     </AppBar>

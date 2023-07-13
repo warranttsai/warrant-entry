@@ -14,7 +14,7 @@ export default function Footer() {
       }}
     >
       <Typography variant="body1" color="inherit">
-        Thank you for visiting my website!
+        @2023
       </Typography>
     </AppBar>
   );
