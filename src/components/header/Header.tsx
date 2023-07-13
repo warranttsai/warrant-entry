@@ -8,8 +8,12 @@ function Header() {
   return (
     <AppBar position="static" style={{ width: "100%" }}>
       <Toolbar sx={{ justifyContent: "flex-end" }}>
-        <Button color="inherit" onClick={() => navigate("home")}>
-          HOME
+        <Button
+          color="inherit"
+          onClick={() => navigate("home")}
+          sx={{ marginRight: "auto", fontSize: "25px", padding: "0" }}
+        >
+          🏡
         </Button>
         <Button color="inherit" onClick={() => navigate("about-me")}>
           ABOUT ME
