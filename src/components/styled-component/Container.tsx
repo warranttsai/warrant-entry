@@ -20,3 +20,11 @@ export const OutletContainer = styled.div`
   flex-grow: 1;
   padding: 20px;
 `;
+
+export const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+`;
