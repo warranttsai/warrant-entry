@@ -2,6 +2,7 @@ body{
   text-align: center;
   color:black;
   background-color: white;
+  min-width: 700px;
 }
 #root {
   width: 100%;
