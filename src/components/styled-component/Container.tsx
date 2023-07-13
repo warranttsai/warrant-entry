@@ -12,13 +12,11 @@ export const LayoutContainer = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  background-color: #f1f1f1;
   padding: 20px;
   position: static;
 `;
 
 export const OutletContainer = styled.div`
-  background-color: #f1f1f1;
   flex-grow: 1;
   padding: 20px;
 `;
