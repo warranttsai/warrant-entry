@@ -7,6 +7,6 @@ export const BrownCenterTitle = styled.h1`
   font-weight: 400;
   font-style: italic;
   line-height: 44px;
-  margin: 0 0 40px 0;
   text-align: center;
+  min-width: 400px;
 `;

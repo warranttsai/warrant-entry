@@ -2,9 +2,10 @@ body{
   text-align: center;
   color:black;
   background-color: white;
-  min-width: 700px;
+  min-width: 1000px;
 }
 #root {
   width: 100%;
+  min-width: 1000px;
   height:100%;
 }

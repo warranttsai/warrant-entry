@@ -24,6 +24,7 @@ function Home() {
               bgcolor: "#D7F72A",
               color: "black",
             },
+            width: "300px",
           }}
           onClick={() => navigate("/about-me")}
         >
@@ -37,6 +38,7 @@ function Home() {
               bgcolor: "#D7F72A",
               color: "black",
             },
+            width: "300px",
           }}
           onClick={() => navigate("/my-majority")}
         >
@@ -50,6 +52,7 @@ function Home() {
               bgcolor: "#D7F72A",
               color: "black",
             },
+            width: "300px",
           }}
           onClick={() => navigate("/working-experience")}
         >
@@ -63,6 +66,7 @@ function Home() {
               bgcolor: "#D7F72A",
               color: "black",
             },
+            width: "300px",
           }}
           onClick={() => navigate("/other-experience")}
         >
@@ -76,6 +80,7 @@ function Home() {
               bgcolor: "#D7F72A",
               color: "black",
             },
+            width: "300px",
           }}
           onClick={() => navigate("/my-hobbies")}
         >
@@ -89,6 +94,7 @@ function Home() {
               bgcolor: "#D7F72A",
               color: "black",
             },
+            width: "300px",
           }}
           onClick={() => navigate("/contact-with-me")}
         >
