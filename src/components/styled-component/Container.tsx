@@ -39,3 +39,6 @@ export const FlexRowCenteredContainer = styled.div`
 export const Flex1 = styled.div`
   flex: 1;
 `;
+export const Flex2 = styled.div`
+  flex: 2;
+`;
