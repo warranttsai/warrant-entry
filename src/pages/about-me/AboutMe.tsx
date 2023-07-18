@@ -11,7 +11,7 @@ import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow"
 
 function AboutMe() {
   return (
-    <FlexRowCenteredContainer>
+    <FlexRowCenteredContainer style={{ paddingInline: "200px" }}>
       <Flex1>
         <RectangleBoxShadow>
           <img src={Warrant} style={{ maxWidth: "350px" }} />
@@ -30,7 +30,7 @@ function AboutMe() {
           I'm also a street dancer. I had learned Popping dance for 7 years and
           a beginner of Hip-hop nad House dance. In 2023, I was taking the role
           to be the secretary of student dancing club in RMIT which named
-          "Funkdelics"
+          "Funkdelics".
         </span>
       </Flex2>
     </FlexRowCenteredContainer>
