@@ -29,3 +29,13 @@ export const ContactContainer = styled.div`
   align-items: center;
   height: auto;
 `;
+
+export const FlexRowCenteredContainer = styled.div`
+  display: flex;
+  flexdirection: row;
+  justify-content: center;
+  align-items: center;
+`;
+export const Flex1 = styled.div`
+  flex: 1;
+`;

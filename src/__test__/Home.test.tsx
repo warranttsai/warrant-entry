@@ -15,7 +15,9 @@ describe("<Home />", () => {
       </Router>
     );
     const checkContent = screen.getByTestId("home-title");
-    expect(checkContent).toBeTruthy();
+    expect(checkContent).toContain(
+      "Welcome to Warrant's website! Hope you enjoy the time browsing herer!"
+    );
   });
   // buttons
   test("has button with context 'About Me'", () => {

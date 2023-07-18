@@ -10,3 +10,8 @@ export const BrownCenterTitle = styled.h1`
   text-align: center;
   min-width: 400px;
 `;
+
+export const BlackCenterTitle = styled.h1`
+  color: black;
+  text-align: center;
+`;
