@@ -15,11 +15,12 @@ export const LayoutContainer = styled.div`
 export const HeaderContainer = styled.div`
   padding: 20px;
   position: static;
+  flex: 1;
 `;
 
 export const OutletContainer = styled.div`
+  flex: 1;
   flex-grow: 1;
-  padding: 20px;
 `;
 
 export const ContactContainer = styled.div`
@@ -38,4 +39,7 @@ export const FlexRowCenteredContainer = styled.div`
 `;
 export const Flex1 = styled.div`
   flex: 1;
+`;
+export const Flex2 = styled.div`
+  flex: 2;
 `;
