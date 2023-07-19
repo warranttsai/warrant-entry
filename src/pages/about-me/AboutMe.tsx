@@ -1,4 +1,5 @@
 // modules
+import { useState } from "react";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 // images
@@ -6,6 +7,8 @@ import Warrant from "../../assets/Warrant.jpg";
 import linedinButton from "../../assets/linedin-button.jpeg";
 import instagramButton from "../../assets/instagram-button.jpeg";
 import facebookButton from "../../assets/facebook-button.jpeg";
+// components
+import WarningBalloon from "../../components/warning-balloon/WarningBalloon";
 // styled comopnents
 import {
   Flex1,
@@ -17,20 +20,34 @@ import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow"
 import { NormalContent } from "../../components/styled-component/Content";
 
 function AboutMe() {
-  const myPersonalities = [
+  const [myPersonalities, setMyPersonalities] = useState<
+    Array<{ id: number; name: string }>
+  >([
     { id: 1, name: "Highly Organized" },
     { id: 2, name: "Fast Learner" },
     { id: 3, name: "Optimistic" },
     { id: 4, name: "Open-minded" },
     { id: 5, name: "Strong Communicator" },
-  ];
-  const handleDelete = () => {
+  ]);
+  const [showWarningBalloon, setShowWarningBalloon] = useState<boolean>(false);
+  const handleDelete = (id: number) => {
     // Handle the delete action here
-    console.log("Chip deleted!");
+    const newArray = myPersonalities.filter(
+      (item: { id: number; name: string }) => id !== item.id
+    );
+    setMyPersonalities(newArray);
+
+    setShowWarningBalloon(true);
+    if (showWarningBalloon) {
+      setTimeout(() => {
+        setShowWarningBalloon(false);
+      }, 1000);
+    }
   };
 
   return (
     <>
+      {showWarningBalloon && <WarningBalloon message="OMG! Don't do this!😱" />}
       <FlexRowCenteredContainer style={{ paddingInline: "200px" }}>
         <Flex1>
           <RectangleBoxShadow>
@@ -68,7 +85,7 @@ function AboutMe() {
                   <Chip
                     key={item.id}
                     label={item.name}
-                    onDelete={handleDelete}
+                    onDelete={() => handleDelete(item.id)}
                   />
                 );
               })}
