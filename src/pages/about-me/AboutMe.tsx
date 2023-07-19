@@ -1,5 +1,5 @@
 // modules
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 // images
@@ -36,15 +36,18 @@ function AboutMe() {
       (item: { id: number; name: string }) => id !== item.id
     );
     setMyPersonalities(newArray);
-
     setShowWarningBalloon(true);
+  };
+
+  useEffect(() => {
+    console.log(showWarningBalloon);
     if (showWarningBalloon) {
+      // After 3 seconds, hide the message again
       setTimeout(() => {
         setShowWarningBalloon(false);
       }, 1000);
     }
-  };
-
+  }, [showWarningBalloon]);
   return (
     <>
       {showWarningBalloon && <WarningBalloon message="OMG! Don't do this!😱" />}
