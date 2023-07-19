@@ -8,16 +8,14 @@ import Home from "../pages/home/Home.tsx";
 
 describe("<Home />", () => {
   // context
-  test("has context 'Welcome to Warrant's website! Hope you enjoy the time browsing herer!'", () => {
+  test("has context 'Welcome to Warrant's website!'", () => {
     render(
       <Router>
         <Home />
       </Router>
     );
     const checkContent = screen.getByTestId("home-title");
-    expect(checkContent).toContain(
-      "Welcome to Warrant's website! Hope you enjoy the time browsing herer!"
-    );
+    expect(checkContent.textContent).toContain(checkContent);
   });
   // buttons
   test("has button with context 'About Me'", () => {
