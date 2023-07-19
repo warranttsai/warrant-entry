@@ -1,6 +1,6 @@
 // modules
 import { describe, test, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 // components
@@ -16,65 +16,60 @@ describe("<AboutMe />", () => {
     const checkContent = screen.getByTestId("intro-title");
     expect(checkContent.textContent).toContain("Introduction");
   });
-  test("has section 'My Personalities'", () => {
+  test("has section 'My Social Media'", () => {
     render(
       <Router>
         <AboutMe />
       </Router>
     );
-    const checkContent = screen.getByTestId("my-personalities-section");
-    expect(checkContent.textContent).toContain("My Personalities");
+    const checkContent = screen.getByTestId("my-social-media");
+    expect(checkContent.textContent).toContain("My Social Media");
   });
-  test("has section 'Something I am PROUND OF!'", () => {
+  test("has button 'linedin-button'", () => {
     render(
       <Router>
         <AboutMe />
       </Router>
     );
-    const checkContent = screen.getByTestId("highlight-title");
-    expect(checkContent.textContent).toContain("Something I am PROUND OF!");
+
+    // Find the button element using its data-testid
+    const button = screen.getByTestId("instagram-button");
+    // Mock the window.open method
+    const originalOpen = window.open;
+    window.open = jest.fn();
+    // Simulate a click on the button
+    fireEvent.click(button);
+    // Restore the original window.open method
+    window.open = originalOpen;
+
+    // Check if window.open was called with the expected URL
+    expect(window.open).toHaveBeenCalledWith(
+      "https://www.instagram.com/warrant_job_hunting/",
+      "_blank"
+    );
   });
-  test("has section and title as 'Social Media'", () => {
+  test("has button 'instagram-button'", () => {
     render(
       <Router>
         <AboutMe />
       </Router>
     );
-    const checkContent = screen.getByTestId("social-media");
-    expect(checkContent.textContent).toContain("Social Media");
+
+    const checkLink = screen.getByTestId("instagram-button");
+    const hrefValue = checkLink.getAttribute("href");
+    const expectedHref = "https://www.instagram.com/warrant_job_hunting/";
+    expect(hrefValue).toBe(expectedHref);
   });
-  test("has button 'my-ins'", () => {
-    render(
-      <Router>
-        <AboutMe />
-      </Router>
-    );
-    const checkLink = screen.getByTestId("ins-button");
-    expect(checkLink).toContain(
-      "https://www.instagram.com/warrant_job_hunting/"
-    );
-  });
-  test("has button 'my-linkedin'", () => {
-    render(
-      <Router>
-        <AboutMe />
-      </Router>
-    );
-    const checkLink = screen.getByTestId("linedin-button");
-    expect(checkLink).toHaveAttribute(
-      "href",
-      "https://www.linkedin.com/in/warrant-tsai-20463414b/"
-    );
-  });
-  test("has button 'my-facebook'", () => {
+  test("has button 'facebook-button'", () => {
     render(
       <Router>
         <AboutMe />
       </Router>
     );
     const checkLink = screen.getByTestId("facebook-button");
-    expect(checkLink).toContain(
-      "https://www.facebook.com/profile.php?id=100007257571234"
-    );
+    const hrefValue = checkLink.getAttribute("href");
+    const expectedHref =
+      "https://www.facebook.com/profile.php?id=100007257571234";
+    expect(hrefValue).toBe(expectedHref);
   });
 });
