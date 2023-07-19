@@ -75,6 +75,7 @@ function AboutMe() {
           </Flex1>
           <Flex1>
             <Stack
+              data-testid="my-personalities"
               direction="row"
               spacing={1}
               alignItems="center" // Align items vertically to the center
