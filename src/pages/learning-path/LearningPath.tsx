@@ -1,5 +1,7 @@
 // styled-components
+import { ArrowComponent } from "../../components/learning-path-components/ArrowComponent";
 import { SE2016 } from "../../components/learning-path-components/software-engineering/SE2016";
+import { SE2017 } from "../../components/learning-path-components/software-engineering/SE2017";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 
 export default function LearningPath() {
@@ -18,6 +20,8 @@ export default function LearningPath() {
           }}
         >
           <SE2016 />
+          <ArrowComponent />
+          <SE2017 />
         </div>
       </div>
       <div

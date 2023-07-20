@@ -2,15 +2,19 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-// images
-import NationalFormosaUniversity from "../../assets/national-formosa-university.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
 export function SE2017() {
   return (
     <>
-      <Card sx={{ width: 300 }}>
+      <Card
+        sx={{
+          width: 300,
+          background: "#FFFDD0",
+          border: "5px solid rgba(3, 102, 214, 0.3)",
+        }}
+      >
         <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
             2017
@@ -24,13 +28,17 @@ export function SE2017() {
             color="text.primary"
             gutterBottom
           >
-            I started to learn the basic knowledges about UML diagram,
-            statistic, linear algebra...etc. The school used the 2nd year of my
-            Bachelor life to build up the important knowledges. Also, as we know
-            more about the programming, I had learned using Python for
-            application development and Unity for simple game design.
+            I started to learn the basic knowledges about{" "}
+            <span style={{ color: "blue" }}>
+              UML diagram, statistic, linear algebra...etc
+            </span>
+            . The school used the 2nd year of my Bachelor life to build up the
+            important knowledges. Also, as we know more about the programming, I
+            had learned using <span style={{ color: "blue" }}>Python</span> for
+            application development and Unity for simple game design. At the
+            same time, we are also preparing the code assessment. It was very
+            similar to the concept of LeetCode.
           </Typography>
-          <img style={{ width: 200 }} src={NationalFormosaUniversity} />
         </CardContent>
       </Card>
     </>

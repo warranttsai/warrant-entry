@@ -17,9 +17,7 @@ export function SE2016() {
           border: "5px solid rgba(3, 102, 214, 0.3)",
         }}
       >
-        <CardContent
-          sx={{ boxShadow: "rgba(3, 102, 214, 0.3) 0px 0px 0px 5px" }}
-        >
+        <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
             2016
           </BrownCenterTitle>
