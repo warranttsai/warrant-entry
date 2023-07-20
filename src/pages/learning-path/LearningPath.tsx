@@ -1,5 +1,5 @@
 // styled-components
-import { SE2016 } from "../../components/learning-path-components/SE2016";
+import { SE2016 } from "../../components/learning-path-components/software-engineering/SE2016";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 
 export default function LearningPath() {
