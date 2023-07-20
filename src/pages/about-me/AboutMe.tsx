@@ -40,7 +40,6 @@ function AboutMe() {
   };
 
   useEffect(() => {
-    console.log(showWarningBalloon);
     if (showWarningBalloon) {
       // After 3 seconds, hide the message again
       setTimeout(() => {
