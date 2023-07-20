@@ -10,7 +10,13 @@ import { BrownCenterTitle } from "../../styled-component/Title";
 export function SE2016() {
   return (
     <>
-      <Card sx={{ width: 300 }}>
+      <Card
+        sx={{
+          width: 300,
+          background: "#FFFDD0",
+          border: "5px solid rgba(3, 102, 214, 0.3)",
+        }}
+      >
         <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
             2016

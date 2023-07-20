@@ -40,7 +40,12 @@ export function SE2016() {
             <span style={{ color: "blue" }}>
               Object Orientation Programming
             </span>
-            .
+            . <br />
+            On the other hand, I had joined the labratory of Cloud Computing
+            System and learning with professor{" "}
+            <a href="https://patent.nfu.edu.tw/patent/pages/teachers.php?professorId=982">
+              Jian Ming Xuan
+            </a>
           </Typography>
           <img style={{ width: 200 }} src={NationalFormosaUniversity} />
         </CardContent>
