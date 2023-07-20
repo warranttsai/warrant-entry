@@ -102,7 +102,7 @@ function AboutMe() {
         style={{
           height: "auto",
           maxWidth: "max-content",
-          margin: "20px auto 0 auto",
+          margin: "20px auto 20px auto",
           fontFamily: "Raleway,sans-serif",
           fontSize: "15px",
           fontWeight: "800",
