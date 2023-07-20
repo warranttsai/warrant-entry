@@ -1,12 +1,8 @@
-// modules
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 // styled-components
+import { SE2016 } from "../../components/learning-path-components/SE2016";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 
 export default function LearningPath() {
-  const softwareEngineer = [{ id: 1, content: "test" }];
   return (
     <>
       <div data-testid="software-engineering" style={{ minHeight: "40vh" }}>
@@ -14,23 +10,14 @@ export default function LearningPath() {
           👨‍💻 Software Engineering/Computer Science
         </BlackCenterTitle>
         <div
-          style={{ display: "flex", flexDirection: "row", overflow: "auto" }}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            overflow: "auto",
+            paddingInline: 200,
+          }}
         >
-          {softwareEngineer.map((item: { id: number; content: string }) => {
-            return (
-              <Card key={item.id} sx={{ minWidth: 275 }}>
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    {item.content}
-                  </Typography>
-                </CardContent>
-              </Card>
-            );
-          })}
+          <SE2016 />
         </div>
       </div>
       <div
