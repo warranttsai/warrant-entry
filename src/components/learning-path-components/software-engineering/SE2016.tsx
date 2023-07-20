@@ -7,7 +7,7 @@ import NationalFormosaUniversity from "../../../assets/national-formosa-universi
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export function SE2016() {
+export default function SE2016() {
   return (
     <>
       <Card

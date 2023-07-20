@@ -11,7 +11,7 @@ import SE2017_5 from "../../../assets/SE2017/2017-5.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export function SE2017() {
+export default function SE2017() {
   return (
     <>
       <Card

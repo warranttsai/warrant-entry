@@ -2,12 +2,10 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-// images
-import NationalFormosaUniversity from "../../assets/national-formosa-university.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export function SE2016() {
+export default function SE2018() {
   return (
     <>
       <Card
@@ -19,7 +17,7 @@ export function SE2016() {
       >
         <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
-            2016
+            2018
           </BrownCenterTitle>
           <Typography
             sx={{
@@ -30,12 +28,19 @@ export function SE2016() {
             color="text.primary"
             gutterBottom
           >
-            I had enrolled to the Computer Science and Information
-            EngineeringNational at Formosa University in Taiwan. In the first
-            year, I learned how to coding with C/C++ and Object Orientation
-            Programming.
+            The 3<sup>rd</sup> year of my university life. We start to do the
+            graduate project and learn the{" "}
+            <span style={{ color: "red" }}>software development circle</span>.
+            Because the workload from school was getting lifted, I started to
+            focus on training my English and prepare the documents to move to
+            Australia. Apart from that, I tried to do a self-research on{" "}
+            <span style={{ color: "red" }}>machine learning</span> and implement
+            some small project with{" "}
+            <span style={{ color: "red" }}>Python Tensorflow</span> from{" "}
+            <a href="https://www.google.com/search?q=python+tensorflow+mofan&oq=python+tensorflow+mofan&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigAdIBCDQyNjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">
+              莫煩Python
+            </a>
           </Typography>
-          <img style={{ width: 200 }} src={NationalFormosaUniversity} />
         </CardContent>
       </Card>
     </>
