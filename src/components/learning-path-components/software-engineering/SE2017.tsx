@@ -38,12 +38,11 @@ export function SE2017() {
             <span style={{ color: "red" }}>
               UML diagram, statistic, linear algebra...etc
             </span>
-            . The school used the 2nd year of my Bachelor life to build up the
-            important knowledges. Also, as we know more about the programming, I
-            had learned using <span style={{ color: "red" }}>Python</span> for
-            application development and Unity for simple game design. At the
-            same time, we are also preparing the code assessment. It was very
-            similar to the concept of LeetCode.
+            . Also, as we know more about the programming, I had learned using{" "}
+            <span style={{ color: "red" }}>Python</span> for application
+            development and <span style={{ color: "red" }}>Unity</span> for
+            simple game design. At the same time, we are also preparing the code
+            assessment. It was very similar to the concept of LeetCode.
           </Typography>
           <div
             style={{
