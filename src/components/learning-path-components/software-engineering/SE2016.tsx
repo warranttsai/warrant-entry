@@ -31,15 +31,13 @@ export function SE2016() {
             gutterBottom
           >
             I had enrolled to the{" "}
-            <span style={{ color: "blue" }}>
+            <span style={{ color: "red" }}>
               Bachlor of Computer Science and Information Engineering
             </span>{" "}
             at National Formosa University in Taiwan. In the first year, I
             learned how to coding with{" "}
-            <span style={{ color: "blue" }}>C/C++</span> and{" "}
-            <span style={{ color: "blue" }}>
-              Object Orientation Programming
-            </span>
+            <span style={{ color: "red" }}>C/C++</span> and{" "}
+            <span style={{ color: "red" }}>Object Orientation Programming</span>
             . <br />
             On the other hand, I had joined the labratory of Cloud Computing
             System and learning with professor{" "}
