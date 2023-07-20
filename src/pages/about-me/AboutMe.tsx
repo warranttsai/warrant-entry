@@ -63,7 +63,7 @@ function AboutMe() {
               Introduction
             </BlackCenterTitle>
           </Flex1>
-          <Flex1>
+          <Flex1 data-testid="introduction-content">
             <NormalContent>
               My name is Warrant TSAI, the 2023 graduate of Master of
               Information Technology from RMIT. I was growing up in Taiwan (the
