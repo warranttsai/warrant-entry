@@ -6,7 +6,7 @@ export default function Footer() {
     <footer
       style={{
         width: "100%",
-        height: "60px",
+        maxHeight: "60px",
         flex: "1",
         display: "flex",
         flexDirection: "column",
