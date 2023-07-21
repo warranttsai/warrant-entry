@@ -18,8 +18,8 @@ function Header() {
         <Button color="inherit" onClick={() => navigate("about-me")}>
           ABOUT ME
         </Button>
-        <Button color="inherit" onClick={() => navigate("my-majority")}>
-          MY MAJORITY
+        <Button color="inherit" onClick={() => navigate("learning-path")}>
+          LEARNING PATH
         </Button>
         <Button color="inherit" onClick={() => navigate("my-hobbies")}>
           MY HOBBIES
