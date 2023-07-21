@@ -1,5 +1,5 @@
 // styled-components
-import { BrownCenterTitle } from "../../components/styled-component/Title";
+import { BlackCenterTitle } from "../../components/styled-component/Title";
 import {
   BlackBackgroundContainer,
   FlexColumnCenteredContainer,
@@ -11,7 +11,7 @@ export default function WorkingExperience() {
   return (
     <>
       <div style={{ padding: "20px 150px" }}>
-        <BrownCenterTitle>Present</BrownCenterTitle>
+        <BlackCenterTitle>Present</BlackCenterTitle>
         <FlexColumnCenteredContainer>
           <Cleanstormwater />
           <Flex1>1</Flex1>
@@ -19,7 +19,7 @@ export default function WorkingExperience() {
         </FlexColumnCenteredContainer>
       </div>
       <BlackBackgroundContainer>
-        <BrownCenterTitle>Previous Experious</BrownCenterTitle>
+        <BlackCenterTitle>Previous Experious</BlackCenterTitle>
       </BlackBackgroundContainer>
     </>
   );

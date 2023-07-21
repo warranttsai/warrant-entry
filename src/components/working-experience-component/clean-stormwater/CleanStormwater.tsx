@@ -8,8 +8,7 @@ import CleanStormwaterGroup3 from "../../../assets/present-work/cleanstormwater-
 import CleanStormwaterGroup4 from "../../../assets/present-work/cleanstormwater-group-4.jpeg";
 // styled-components
 import { Flex1 } from "../../styled-component/Container";
-import { BlackCenterTitle } from "../../styled-component/Title";
-import { SimpleGallery } from "../../styled-component/Gallery";
+import { BrownCenterTitle } from "../../styled-component/Title";
 
 export default function Cleanstormwater() {
   return (
@@ -29,7 +28,7 @@ export default function Cleanstormwater() {
         }}
       >
         <CardContent>
-          <h3
+          <BrownCenterTitle
             style={{
               fontSize: "30px",
               flex: 1,
@@ -38,7 +37,7 @@ export default function Cleanstormwater() {
             }}
           >
             Clean Stormwater - from May 2022
-          </h3>
+          </BrownCenterTitle>
           <span style={{ fontWeight: "1200", fontSize: "20px", flex: 1 }}>
             Bullet Points
           </span>
