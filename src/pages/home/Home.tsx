@@ -42,7 +42,7 @@ function Home() {
           }}
           onClick={() => navigate("/my-majority")}
         >
-          My Majority
+          Learning Path
         </Button>
         <Button
           variant="contained"
