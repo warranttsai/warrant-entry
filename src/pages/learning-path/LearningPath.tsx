@@ -7,6 +7,9 @@ import SE2017 from "../../components/learning-path-components/software-engineeri
 import SE2018 from "../../components/learning-path-components/software-engineering/SE2018";
 import SE2019 from "../../components/learning-path-components/software-engineering/SE2019";
 import SE2020 from "../../components/learning-path-components/software-engineering/SE2020";
+import SE2021 from "../../components/learning-path-components/software-engineering/SE2021";
+import SE2022 from "../../components/learning-path-components/software-engineering/SE2022";
+import SE2023 from "../../components/learning-path-components/software-engineering/SE2023";
 
 export default function LearningPath() {
   return (
@@ -34,6 +37,12 @@ export default function LearningPath() {
           <SE2019 />
           <ArrowComponent />
           <SE2020 />
+          <ArrowComponent />
+          <SE2021 />
+          <ArrowComponent />
+          <SE2022 />
+          <ArrowComponent />
+          <SE2023 />
         </div>
       </div>
       <div

@@ -3,17 +3,22 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import NationalFormosaUniversity from "../../assets/national-formosa-university.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export function SE2016() {
+export default function SE2023() {
   return (
     <>
-      <Card sx={{ width: 300 }}>
+      <Card
+        sx={{
+          minWidth: 400,
+          background: "white",
+          border: "5px solid rgba(3, 102, 214, 0.3)",
+        }}
+      >
         <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
-            2016
+            2023
           </BrownCenterTitle>
           <Typography
             sx={{
@@ -24,12 +29,16 @@ export function SE2016() {
             color="text.primary"
             gutterBottom
           >
-            I had enrolled to the Computer Science and Information
-            EngineeringNational at Formosa University in Taiwan. In the first
-            year, I learned how to coding with C/C++ and Object Orientation
-            Programming.
+            In the beggining of this year, I enrolled my{" "}
+            <span style={{ color: "red" }}>
+              Master degree of Information Technology in RMIT
+            </span>
+            . I'm really lucky to get exemptions from my Bachelor degree and
+            successfully got into this University. In this year, I had learned
+            the usage of <span style={{ color: "red" }}>JAVA</span> and mostly
+            learning how the eduction works in Australia. A brand new
+            environment brought the new challenges for me.
           </Typography>
-          <img style={{ width: 200 }} src={NationalFormosaUniversity} />
         </CardContent>
       </Card>
     </>
