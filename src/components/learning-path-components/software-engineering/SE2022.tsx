@@ -3,8 +3,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
+import CleanStormwaterLogo from "../../../assets/SE2022/clean-stormwater-logo.jpeg";
+import MasterCertificate from "../../../assets/SE2022/master-certificate.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
+import { SimpleGallery } from "../../styled-component/Gallery";
 
 export default function SE2022() {
   return (
@@ -29,16 +32,35 @@ export default function SE2022() {
             color="text.primary"
             gutterBottom
           >
-            In the beggining of this year, I enrolled my{" "}
+            I <span style={{ color: "red" }}>GRADUATED</span>! I got my{" "}
+            <span style={{ color: "blue" }}>Master</span> degree at the end of
+            2022 and started to work in{" "}
+            <span style={{ color: "blue" }}>Clean Stormwater</span> as software
+            engineer from 31 of May 2022. <br />
+            In this position, I had applied my skill of
             <span style={{ color: "red" }}>
-              Master degree of Information Technology in RMIT
+              {" "}
+              React JS/TS, ES6, JavaScript(Sails) HTML, CSS, Python(Flask), OOP,
+              Encapsulation with AWS(Amplify, EC2, S3, API Gateway, Route 53,
+              Cognito...etc)
             </span>
-            . I'm really lucky to get exemptions from my Bachelor degree and
-            successfully got into this University. In this year, I had learned
-            the usage of <span style={{ color: "red" }}>JAVA</span> and mostly
-            learning how the eduction works in Australia. A brand new
-            environment brought the new challenges for me.
+            . To support the teamwork,{" "}
+            <span style={{ color: "blue" }}>
+              Scrum and Agile methodology
+            </span>{" "}
+            was applied. To manage the task and version control,{" "}
+            <span style={{ color: "blue" }}>
+              JIRA Board and Bitbucket(GitHub)
+            </span>{" "}
+            were used in our company.
           </Typography>
+          <SimpleGallery>
+            <img
+              style={{ width: 200, height: 150 }}
+              src={CleanStormwaterLogo}
+            />
+            <img style={{ width: 200, height: 150 }} src={MasterCertificate} />
+          </SimpleGallery>
         </CardContent>
       </Card>
     </>

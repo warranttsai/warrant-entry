@@ -29,15 +29,7 @@ export default function SE2023() {
             color="text.primary"
             gutterBottom
           >
-            In the beggining of this year, I enrolled my{" "}
-            <span style={{ color: "red" }}>
-              Master degree of Information Technology in RMIT
-            </span>
-            . I'm really lucky to get exemptions from my Bachelor degree and
-            successfully got into this University. In this year, I had learned
-            the usage of <span style={{ color: "red" }}>JAVA</span> and mostly
-            learning how the eduction works in Australia. A brand new
-            environment brought the new challenges for me.
+            On going... updated soon!
           </Typography>
         </CardContent>
       </Card>

@@ -29,7 +29,7 @@ export default function SE2016() {
             color="text.primary"
             gutterBottom
           >
-            In the beggining of this year, I enrolled my{" "}
+            In the beginning of this year, I enrolled my{" "}
             <span style={{ color: "red" }}>
               Master degree of Information Technology in RMIT
             </span>
