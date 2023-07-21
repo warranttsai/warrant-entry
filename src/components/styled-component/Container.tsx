@@ -37,6 +37,12 @@ export const FlexRowCenteredContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const FlexColumnCenteredContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 export const Flex1 = styled.div`
   flex: 1;
 `;
