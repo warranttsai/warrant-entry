@@ -3,17 +3,23 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import NationalFormosaUniversity from "../../assets/national-formosa-university.jpeg";
+import AlgorithmMock from "../../../assets/SE2019/algorithm-mock.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export function SE2016() {
+export function SE2019() {
   return (
     <>
-      <Card sx={{ width: 300 }}>
+      <Card
+        sx={{
+          width: 300,
+          background: "#FFFDD0",
+          border: "5px solid rgba(3, 102, 214, 0.3)",
+        }}
+      >
         <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
-            2016
+            2019
           </BrownCenterTitle>
           <Typography
             sx={{
@@ -24,12 +30,14 @@ export function SE2016() {
             color="text.primary"
             gutterBottom
           >
-            I had enrolled to the Computer Science and Information
-            EngineeringNational at Formosa University in Taiwan. In the first
-            year, I learned how to coding with C/C++ and Object Orientation
-            Programming.
+            The 4th year of my Bachlor degree was stated from September to July
+            2020. In this year, I was mainly focusing on build-up my project. I
+            was in-charge with the calculation of drone-searching algorithm. To
+            find out how to search the whole map completely and minimise the
+            unexpected situation. I decided to operate the drone to circle the
+            map until the center of the map.
           </Typography>
-          <img style={{ width: 200 }} src={NationalFormosaUniversity} />
+          <img style={{ width: 250 }} src={AlgorithmMock} />
         </CardContent>
       </Card>
     </>
