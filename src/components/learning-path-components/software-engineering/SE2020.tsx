@@ -3,17 +3,26 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import NationalFormosaUniversity from "../../assets/national-formosa-university.jpeg";
+import IELTs from "../../../assets/SE2020/ielts.jpeg";
+import BachelorCertificate from "../../../assets/SE2020/bachelor-certificate.jpeg";
+import BachelorTranscript from "../../../assets/SE2020/bachelor-transcript.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
+import { SimpleGallery } from "../../styled-component/Gallery";
 
-export function SE2016() {
+export default function SE2020() {
   return (
     <>
-      <Card sx={{ width: 300 }}>
+      <Card
+        sx={{
+          minWidth: 400,
+          background: "white",
+          border: "5px solid rgba(3, 102, 214, 0.3)",
+        }}
+      >
         <CardContent>
           <BrownCenterTitle style={{ minWidth: "300px" }}>
-            2016
+            2020
           </BrownCenterTitle>
           <Typography
             sx={{
@@ -24,12 +33,17 @@ export function SE2016() {
             color="text.primary"
             gutterBottom
           >
-            I had enrolled to the Computer Science and Information
-            EngineeringNational at Formosa University in Taiwan. In the first
-            year, I learned how to coding with C/C++ and Object Orientation
-            Programming.
+            I GRADUATED from my Bachelor of CSIE! Also, in this phase, I got 7
+            bands from my IELTs exam. I'm fully ready to move to Australia. In
+            this year, I was not doing much of the programming thing but I
+            actually took a cyber security course from tafe to keep myself
+            updated and learning.
           </Typography>
-          <img style={{ width: 200 }} src={NationalFormosaUniversity} />
+          <SimpleGallery>
+            <img style={{ width: 200 }} src={IELTs} />
+            <img style={{ width: 200 }} src={BachelorCertificate} />
+            <img style={{ width: 200 }} src={BachelorTranscript} />
+          </SimpleGallery>
         </CardContent>
       </Card>
     </>

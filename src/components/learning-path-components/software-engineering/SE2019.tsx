@@ -7,13 +7,13 @@ import AlgorithmMock from "../../../assets/SE2019/algorithm-mock.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export function SE2019() {
+export default function SE2019() {
   return (
     <>
       <Card
         sx={{
-          width: 300,
-          background: "#FFFDD0",
+          minWidth: 400,
+          background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
         }}
       >

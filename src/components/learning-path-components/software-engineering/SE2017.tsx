@@ -10,14 +10,15 @@ import SE2017_4 from "../../../assets/SE2017/2017-4.jpeg";
 import SE2017_5 from "../../../assets/SE2017/2017-5.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
+import { SimpleGallery } from "../../styled-component/Gallery";
 
 export default function SE2017() {
   return (
     <>
       <Card
         sx={{
-          width: 300,
-          background: "#FFFDD0",
+          minWidth: 400,
+          background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
         }}
       >
@@ -44,24 +45,13 @@ export default function SE2017() {
             simple game design. At the same time, we are also preparing the code
             assessment. It was very similar to the concept of LeetCode.
           </Typography>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              overflow: "scroll",
-              overflowX: "scroll",
-              height: 200,
-              gap: 10,
-              padding: 10,
-              background: "white",
-            }}
-          >
-            <img style={{ width: 200 }} src={SE2017_1} />
-            <img style={{ width: 200 }} src={SE2017_2} />
-            <img style={{ width: 200 }} src={SE2017_3} />
-            <img style={{ width: 200 }} src={SE2017_4} />
-            <img style={{ width: 200 }} src={SE2017_5} />
-          </div>
+          <SimpleGallery>
+            <img style={{ width: 200, height: 200 }} src={SE2017_1} />
+            <img style={{ width: 200, height: 200 }} src={SE2017_2} />
+            <img style={{ width: 200, height: 200 }} src={SE2017_3} />
+            <img style={{ width: 200, height: 200 }} src={SE2017_4} />
+            <img style={{ width: 200, height: 200 }} src={SE2017_5} />
+          </SimpleGallery>
         </CardContent>
       </Card>
     </>

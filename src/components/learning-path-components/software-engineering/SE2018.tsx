@@ -10,8 +10,8 @@ export default function SE2018() {
     <>
       <Card
         sx={{
-          width: 300,
-          background: "#FFFDD0",
+          minWidth: 400,
+          background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
         }}
       >

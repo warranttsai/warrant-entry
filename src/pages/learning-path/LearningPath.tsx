@@ -1,10 +1,12 @@
 // styled-components
 import { ArrowComponent } from "../../components/learning-path-components/ArrowComponent";
+import { BlackCenterTitle } from "../../components/styled-component/Title";
+// components
 import SE2016 from "../../components/learning-path-components/software-engineering/SE2016";
 import SE2017 from "../../components/learning-path-components/software-engineering/SE2017";
 import SE2018 from "../../components/learning-path-components/software-engineering/SE2018";
-import { SE2019 } from "../../components/learning-path-components/software-engineering/SE2019";
-import { BlackCenterTitle } from "../../components/styled-component/Title";
+import SE2019 from "../../components/learning-path-components/software-engineering/SE2019";
+import SE2020 from "../../components/learning-path-components/software-engineering/SE2020";
 
 export default function LearningPath() {
   return (
@@ -17,8 +19,10 @@ export default function LearningPath() {
           style={{
             display: "flex",
             flexDirection: "row",
-            overflow: "auto",
+            overflow: "scroll",
+            overflowX: "scroll",
             paddingInline: 200,
+            maxWidth: "80vw",
           }}
         >
           <SE2016 />
@@ -28,6 +32,8 @@ export default function LearningPath() {
           <SE2018 />
           <ArrowComponent />
           <SE2019 />
+          <ArrowComponent />
+          <SE2020 />
         </div>
       </div>
       <div
