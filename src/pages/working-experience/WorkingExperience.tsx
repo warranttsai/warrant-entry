@@ -19,7 +19,10 @@ export default function WorkingExperience() {
         </FlexColumnCenteredContainer>
       </div>
       <BlackBackgroundContainer>
-        <BlackCenterTitle>Previous Experious</BlackCenterTitle>
+        <BlackCenterTitle style={{ color: "white" }}>
+          Previous Experience
+        </BlackCenterTitle>
+        <FlexColumnCenteredContainer>23123</FlexColumnCenteredContainer>
       </BlackBackgroundContainer>
     </>
   );
