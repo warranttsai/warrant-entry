@@ -1,7 +1,7 @@
 export default function OtherExperience() {
   return (
     <>
-      <div>123</div>
+      <div>Coming soon!</div>
     </>
   );
 }
