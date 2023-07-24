@@ -53,7 +53,7 @@ function ContactWithMe() {
           alignItems: "center",
         }}
       >
-        123
+        Coming soon!
       </div>
     </ContactContainer>
   );

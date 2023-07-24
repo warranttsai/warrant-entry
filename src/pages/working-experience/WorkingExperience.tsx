@@ -14,15 +14,13 @@ export default function WorkingExperience() {
         <BlackCenterTitle>Present</BlackCenterTitle>
         <FlexColumnCenteredContainer>
           <Cleanstormwater />
-          <Flex1>1</Flex1>
-          <Flex1>1</Flex1>
         </FlexColumnCenteredContainer>
       </div>
       <BlackBackgroundContainer>
         <BlackCenterTitle style={{ color: "white" }}>
           Previous Experience
         </BlackCenterTitle>
-        <FlexColumnCenteredContainer>23123</FlexColumnCenteredContainer>
+        <FlexColumnCenteredContainer>Coming soon!</FlexColumnCenteredContainer>
       </BlackBackgroundContainer>
     </>
   );
