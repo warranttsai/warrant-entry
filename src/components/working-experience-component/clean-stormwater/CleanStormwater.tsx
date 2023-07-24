@@ -25,9 +25,15 @@ export default function Cleanstormwater() {
         sx={{
           background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
+          width: 800,
         }}
       >
-        <CardContent>
+        <CardContent
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <BrownCenterTitle
             style={{
               fontSize: "30px",
@@ -41,7 +47,7 @@ export default function Cleanstormwater() {
           <span style={{ fontWeight: "1200", fontSize: "20px", flex: 1 }}>
             Bullet Points
           </span>
-          <ul>
+          <ul style={{ flex: 1 }}>
             <li>Front-end development and management. (React JS/TS, ES6)</li>
             <li>
               Back-end development and management. (Sails.JS, Python Flask, AWS
@@ -66,9 +72,11 @@ export default function Cleanstormwater() {
           </ul>
           <Flex1
             style={{
-              marginBottom: "0.67rem",
+              margin: "0 auto 0.67rem auto",
               display: "flex",
               gap: "10px",
+              maxWidth: "700px",
+              overflow: "scroll",
             }}
           >
             <img
