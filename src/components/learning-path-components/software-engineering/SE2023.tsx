@@ -29,7 +29,12 @@ export default function SE2023() {
             color="text.primary"
             gutterBottom
           >
-            On going... updated soon!
+            In the beginning of the 2023, I took the role to be the secretary in{" "}
+            <span style={{ color: "red" }}>RMIT dancing club "Funkdelics"</span>
+            . The meanings of this role are broad for me. Proving my English
+            communication, self-organisation, management ability...etc. But the
+            most important thing is that I could contribute my power for dancing
+            community! This is where I found my passion of life!
           </Typography>
         </CardContent>
       </Card>

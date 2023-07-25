@@ -45,14 +45,15 @@ export default function LearningPath() {
           <SE2023 />
         </div>
       </div>
-      <div
+      <br />
+      {/* <div
         data-testid="street-dancing"
         style={{ background: "#D3D3D3", minHeight: "40vh" }}
       >
         <BlackCenterTitle style={{ marginTop: "100px", paddingTop: "30px" }}>
           🕺 Street Dancing
         </BlackCenterTitle>
-      </div>
+      </div> */}
     </>
   );
 }
