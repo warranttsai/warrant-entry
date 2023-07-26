@@ -12,6 +12,7 @@ import OtherExperience from "./pages/other-experience/OtherExperience";
 import MyHobbies from "./pages/my-hobbies/MyHobbies";
 import ContactWithMe from "./pages/contact-with-me/ContactWithMe";
 import NotFoundPage from "./pages/not-found-page/NotFoundPage";
+import Lab from "./pages/lab/Lab";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="other-experience" element={<OtherExperience />} />
         <Route path="my-hobbies" element={<MyHobbies />} />
         <Route path="contact-with-me" element={<ContactWithMe />} />
+        <Route path="lab" element={<Lab />} />
       </Route>
       <Route path="/*" element={<NotFoundPage />} />
     </Routes>
