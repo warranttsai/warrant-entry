@@ -1,0 +1,23 @@
+.introduction-content-area {
+  max-height: 550px;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+.introduction-content-area::-webkit-scrollbar {
+  width: 10px; /* Adjust the width of the scrollbar track */
+}
+
+.introduction-content-area::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the background color for the scrollbar track */
+}
+
+/* Style the scrollbar thumb (the draggable part of the scrollbar) */
+.introduction-content-area::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the scrollbar thumb */
+  border-radius: 5px; /* Add some border-radius to the thumb for a rounded look */
+}
+
+/* Optional: Hover style for the scrollbar thumb */
+.introduction-content-area::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Set the color when hovering over the scrollbar thumb */
+}

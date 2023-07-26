@@ -7,6 +7,8 @@ import Warrant from "../../assets/Warrant.jpg";
 import linedinButton from "../../assets/linedin-button.jpeg";
 import instagramButton from "../../assets/instagram-button.jpeg";
 import facebookButton from "../../assets/facebook-button.jpeg";
+// scss
+import "./AboutMe.scss";
 // components
 import WarningBalloon from "../../components/warning-balloon/WarningBalloon";
 // styled comopnents
@@ -51,6 +53,9 @@ function AboutMe() {
   return (
     <>
       {showWarningBalloon && <WarningBalloon message="OMG! Don't do this!😱" />}
+      <BlackCenterTitle data-testid="intro-title">
+        Introduction
+      </BlackCenterTitle>
       <FlexRowCenteredContainer style={{ paddingInline: "200px" }}>
         <Flex1>
           <RectangleBoxShadow>
@@ -61,62 +66,61 @@ function AboutMe() {
           </RectangleBoxShadow>
         </Flex1>
         <Flex2>
-          <Flex1>
-            <BlackCenterTitle data-testid="intro-title">
-              Introduction
-            </BlackCenterTitle>
-          </Flex1>
+          <Flex1></Flex1>
           <Flex1
             data-testid="introduction-content"
-            style={{
-              maxHeight: "550px",
-              overflow: "auto",
-              overflowY: "scroll",
-            }}
+            className="introduction-content-area"
           >
             <NormalContent>
               My name is Warrant TSAI, and in 2023, I successfully completed my
               Master of Information Technology from RMIT. Originally from Taiwan
               (the R.O.C.), I relocated to Melbourne, Australia in June 2020 to
-              pursue my academic and personal aspirations. During my academic
-              journey, I developed a keen interest and proficiency in various
-              programming languages, particularly in the domain of website
-              development. This area of study has been a major focus of mine
-              throughout my Information Technology program. Beyond my academic
-              pursuits, I also have a passion for street dancing. I have been
-              dedicatedly learning Popping dance for seven years and have
-              recently embarked on my journey as a beginner in Hip-hop and House
-              dance styles. Additionally, I had the privilege of serving as the
-              secretary of the student dancing club "Funkdelics" at RMIT in
-              2023. In this capacity, I actively contributed to the organization
-              and successful execution of various dance events and activities
-              within the club. Thank you for taking the time to learn more about
-              my background and interests. I am excited about the future
+              pursue my academic and personal aspirations. <br />
+              <br />
+              During my academic journey, I developed a keen interest and
+              proficiency in various programming languages, particularly in the
+              domain of website development. This area of study has been a major
+              focus of mine throughout my Information Technology program. <br />
+              <br />
+              Beyond my academic pursuits, I also have a passion for street
+              dancing. I have been dedicatedly learning Popping dance for seven
+              years and have recently embarked on my journey as a beginner in
+              Hip-hop and House dance styles. Additionally, I had the privilege
+              of serving as the secretary of the student dancing club
+              "Funkdelics" at RMIT in 2023. <br />
+              <br />
+              In this capacity, I actively contributed to the organization and
+              successful execution of various dance events and activities within
+              the club. Thank you for taking the time to learn more about my
+              background and interests. I am excited about the future
               opportunities that await me in the field of Information Technology
               and the world of dance.
             </NormalContent>
           </Flex1>
-          <Flex1>
-            <Stack
-              data-testid="my-personalities"
-              direction="row"
-              spacing={1}
-              alignItems="center" // Align items vertically to the center
-              justifyContent="center" // Justify items horizontally to the center
-            >
-              {myPersonalities.map((item) => {
-                return (
-                  <Chip
-                    key={item.id}
-                    label={item.name}
-                    onDelete={() => handleDelete(item.id)}
-                  />
-                );
-              })}
-            </Stack>
-          </Flex1>
         </Flex2>
       </FlexRowCenteredContainer>
+      <br />
+      <div id="my-personality-section">
+        <Flex1>
+          <Stack
+            data-testid="my-personalities"
+            direction="row"
+            spacing={1}
+            alignItems="center" // Align items vertically to the center
+            justifyContent="center" // Justify items horizontally to the center
+          >
+            {myPersonalities.map((item) => {
+              return (
+                <Chip
+                  key={item.id}
+                  label={item.name}
+                  onDelete={() => handleDelete(item.id)}
+                />
+              );
+            })}
+          </Stack>
+        </Flex1>
+      </div>
       <div
         data-testid="social-media"
         style={{
