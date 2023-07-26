@@ -47,13 +47,17 @@ function AboutMe() {
       }, 1000);
     }
   }, [showWarningBalloon]);
+
   return (
     <>
       {showWarningBalloon && <WarningBalloon message="OMG! Don't do this!😱" />}
       <FlexRowCenteredContainer style={{ paddingInline: "200px" }}>
         <Flex1>
           <RectangleBoxShadow>
-            <img src={Warrant} style={{ maxWidth: "350px" }} />
+            <img
+              src={Warrant}
+              style={{ maxWidth: "350px", maxHeight: "450px" }}
+            />
           </RectangleBoxShadow>
         </Flex1>
         <Flex2>
@@ -62,17 +66,34 @@ function AboutMe() {
               Introduction
             </BlackCenterTitle>
           </Flex1>
-          <Flex1 data-testid="introduction-content">
+          <Flex1
+            data-testid="introduction-content"
+            style={{
+              maxHeight: "550px",
+              overflow: "auto",
+              overflowY: "scroll",
+            }}
+          >
             <NormalContent>
-              My name is Warrant TSAI, the 2023 graduate of Master of
-              Information Technology from RMIT. I was growing up in Taiwan (the
-              R.O.C.) and moving to Melbourne Australia since June 2020. As a
-              Information Technology student, my majorities are covering across
-              different program languages especially for website development.
-              Apart from it, I'm also a street dancer. I had learned Popping
-              dance for 7 years and a beginner of Hip-hop and House dance. In
-              2023, I was taking the role to be the secretary of student dancing
-              club in RMIT which named "Funkdelics".
+              My name is Warrant TSAI, and in 2023, I successfully completed my
+              Master of Information Technology from RMIT. Originally from Taiwan
+              (the R.O.C.), I relocated to Melbourne, Australia in June 2020 to
+              pursue my academic and personal aspirations. During my academic
+              journey, I developed a keen interest and proficiency in various
+              programming languages, particularly in the domain of website
+              development. This area of study has been a major focus of mine
+              throughout my Information Technology program. Beyond my academic
+              pursuits, I also have a passion for street dancing. I have been
+              dedicatedly learning Popping dance for seven years and have
+              recently embarked on my journey as a beginner in Hip-hop and House
+              dance styles. Additionally, I had the privilege of serving as the
+              secretary of the student dancing club "Funkdelics" at RMIT in
+              2023. In this capacity, I actively contributed to the organization
+              and successful execution of various dance events and activities
+              within the club. Thank you for taking the time to learn more about
+              my background and interests. I am excited about the future
+              opportunities that await me in the field of Information Technology
+              and the world of dance.
             </NormalContent>
           </Flex1>
           <Flex1>
