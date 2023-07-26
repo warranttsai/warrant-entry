@@ -113,7 +113,9 @@ function ContactWithMe() {
 
         {clickOnSubmit && (
           <WarningBalloon
-            message={"Your email had been sent to Warrant's email. Thank you!"}
+            message={
+              "This function is not enable yet. Thank you for your time to visit my website!"
+            }
           />
         )}
       </form>
