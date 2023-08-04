@@ -11,11 +11,11 @@ import {
 
 function Layout() {
   return (
-    <LayoutContainer>
-      <HeaderContainer>
+    <LayoutContainer id="layout-container">
+      <HeaderContainer id="header-container">
         <Header />
       </HeaderContainer>
-      <OutletContainer>
+      <OutletContainer id="outlet-container">
         <Outlet />
       </OutletContainer>
       <Footer />
