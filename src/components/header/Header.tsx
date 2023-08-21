@@ -31,7 +31,7 @@ function Header() {
           CONTACT WITH ME
         </Button>
         <Button color="inherit" onClick={() => navigate("lab")}>
-          Labratory
+          Laboratory
         </Button>
       </Toolbar>
     </AppBar>

@@ -96,6 +96,20 @@ function Home() {
             },
             width: "300px",
           }}
+          onClick={() => navigate("/lab")}
+        >
+          Laboratory
+        </Button>
+        <Button
+          variant="contained"
+          data-testid="contact-with-me"
+          sx={{
+            ":hover": {
+              bgcolor: "#D7F72A",
+              color: "black",
+            },
+            width: "300px",
+          }}
           onClick={() => navigate("/contact-with-me")}
         >
           Contact With Me
