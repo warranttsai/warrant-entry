@@ -39,6 +39,8 @@ export default function Lab() {
           challenge #4
         </Button>
       </div>
+      <br />
+      <br />
       {/* Software Engineer Note */}
       <BlackBackgroundContainer>
         <WhiteCenterTitle>Software Engineer Note</WhiteCenterTitle>
