@@ -100,8 +100,6 @@ export function Challenge2() {
      * including at least 1 special character
      */
     let passwordBuf = desiredCharacter;
-    let lettersArray: any = [];
-    const dic = [lettersArray.concat(desiredCharacter.split(""))];
     const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
     const specialCharacters = "!@#$%^&*()_+";
