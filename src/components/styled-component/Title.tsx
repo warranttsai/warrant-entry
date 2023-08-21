@@ -15,3 +15,7 @@ export const BlackCenterTitle = styled.h1`
   color: black;
   text-align: center;
 `;
+export const WhiteCenterTitle = styled.h1`
+  color: White;
+  text-align: center;
+`;

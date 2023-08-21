@@ -51,8 +51,6 @@ export const Flex2 = styled.div`
 `;
 
 export const BlackBackgroundContainer = styled.div`
-  font-family: "Share Tech", sans-serif;
-  font-size: 68px;
   color: white;
   justify-content: center;
   align-items: center;
