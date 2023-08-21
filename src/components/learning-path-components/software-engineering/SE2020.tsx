@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
+import GraduatePic from "../../../assets/SE2020/graduate-pic.jpeg";
 import IELTs from "../../../assets/SE2020/ielts.jpeg";
 import BachelorCertificate from "../../../assets/SE2020/bachelor-certificate.jpeg";
 import BachelorTranscript from "../../../assets/SE2020/bachelor-transcript.jpeg";
@@ -40,6 +41,7 @@ export default function SE2020() {
             updated and learning.
           </Typography>
           <SimpleGallery>
+            <img style={{ width: 200 }} src={GraduatePic} />
             <img style={{ width: 200 }} src={IELTs} />
             <img style={{ width: 200 }} src={BachelorCertificate} />
             <img style={{ width: 200 }} src={BachelorTranscript} />
