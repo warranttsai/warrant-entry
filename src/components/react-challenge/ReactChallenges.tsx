@@ -26,7 +26,7 @@ export function Challenge1() {
     }
     return counter;
   };
-  const checkEnglishOrNumber = (value: string) => {
+  const calculateLetters = (value: string) => {
     let strBuf = "";
     for (const item of value) {
       if (item.match(/[A-Za-z0-9]/g)) {
@@ -34,6 +34,10 @@ export function Challenge1() {
       }
     }
     return strBuf;
+  };
+  const calculateSentences = (value: any) => {
+    let strArr = value.split(". ");
+    return strArr.length;
   };
 
   return (
@@ -56,15 +60,15 @@ export function Challenge1() {
         <FlexColumnCenteredContainer>
           <Flex1>
             <label>Number of words: </label>
-            <span>{calculateWords(content)}</span>
+            <span>{content ? calculateWords(content) : 0}</span>
           </Flex1>
           <Flex1>
             <label>Number of letters: </label>
-            <span>{checkEnglishOrNumber(content).length}</span>
+            <span>{content ? calculateLetters(content).length : 0}</span>
           </Flex1>
           <Flex1>
             <label>Number of sentences: </label>
-            <span>{content ? content.split(". ").length : 0}</span>
+            <span>{content ? calculateSentences(content) : 0}</span>
           </Flex1>
           <Flex1>
             <label>Number of paragraphs: </label>
