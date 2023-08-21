@@ -21,6 +21,9 @@ function Header() {
         <Button color="inherit" onClick={() => navigate("learning-path")}>
           LEARNING PATH
         </Button>
+        <Button color="inherit" onClick={() => navigate("lab")}>
+          Laboratory
+        </Button>
         <Button color="inherit" onClick={() => navigate("my-hobbies")}>
           MY HOBBIES
         </Button>
@@ -29,9 +32,6 @@ function Header() {
         </Button>
         <Button color="inherit" onClick={() => navigate("contact-with-me")}>
           CONTACT WITH ME
-        </Button>
-        <Button color="inherit" onClick={() => navigate("lab")}>
-          Laboratory
         </Button>
       </Toolbar>
     </AppBar>
