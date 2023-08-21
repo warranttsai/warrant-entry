@@ -7,7 +7,7 @@ import {
   WhiteCenterTitle,
 } from "../../components/styled-component/Title";
 import { BlackBackgroundContainer } from "../../components/styled-component/Container";
-import { ObjectOrientation } from "../../components/software-engineer-note/objectOrientation";
+import { ObjectOrientation } from "../../components/software-engineer-note/ObjectOrientation";
 import {
   DrawImageForFrontEndDesign,
   EncapsulateYourStyleSheet,
