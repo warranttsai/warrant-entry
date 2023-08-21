@@ -2,13 +2,23 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 // styled-components
-import { BlackCenterTitle } from "../../components/styled-component/Title";
+import {
+  BlackCenterTitle,
+  WhiteCenterTitle,
+} from "../../components/styled-component/Title";
+import { BlackBackgroundContainer } from "../../components/styled-component/Container";
+import { ObjectOrientation } from "../../components/software-engineer-note/objectOrientation";
+import {
+  DrawImageForFrontEndDesign,
+  EncapsulateYourStyleSheet,
+} from "../../components/software-engineer-note/FrontEndDesign";
 
 export default function Lab() {
   const navigate = useNavigate();
 
   return (
     <>
+      {/* React Challenges */}
       <div>
         <a
           href="https://www.codevertiser.com/free-reactjs-coding-challenges-for-responsive-UI/"
@@ -29,6 +39,24 @@ export default function Lab() {
           challenge #4
         </Button>
       </div>
+      {/* Software Engineer Note */}
+      <BlackBackgroundContainer>
+        <WhiteCenterTitle>Software Engineer Note</WhiteCenterTitle>
+        <div style={{ paddingInline: 200 }}>
+          <span>
+            This section is my note for software engineer experience. Creating a
+            simple documentation here as my engineering bible.
+            <p style={{ color: "red" }}>
+              Note: These are all from my understanding. It might be slightly
+              different from general definition.{" "}
+            </p>
+          </span>
+        </div>
+        <br />
+        <DrawImageForFrontEndDesign />
+        <EncapsulateYourStyleSheet />
+        <ObjectOrientation />
+      </BlackBackgroundContainer>
     </>
   );
 }
