@@ -30,6 +30,10 @@ function Header() {
         <Button color="inherit" onClick={() => navigate("working-experience")}>
           WORKING EXPERIENCE
         </Button>
+
+        <Button color="inherit" onClick={() => navigate("/other-experience")}>
+          Other Experience
+        </Button>
         <Button color="inherit" onClick={() => navigate("contact-with-me")}>
           CONTACT WITH ME
         </Button>
