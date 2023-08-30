@@ -40,9 +40,7 @@ export default function Fila() {
           >
             FILA - from April 2022
           </BrownCenterTitle>
-          <span style={{ fontWeight: "1200", fontSize: "20px", flex: 1 }}>
-            Bullet Points
-          </span>
+          <span style={{ flex: 1, fontWeight: 700 }}>Customer Assistance</span>
           <ul style={{ flex: 1 }}>
             <li>General customer service including cashier and consulting</li>
             <li>Bilingual customer service</li>

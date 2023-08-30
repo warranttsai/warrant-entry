@@ -25,10 +25,10 @@ export default function MyHobbies() {
           <br />
           <br />
           <span>
-            Also, I had been teaching in RMIT "Funkdelics" Dancing club in 2022
-            and 2023. Although they were beginner level class, getting in touch
-            with the new generations really brought me many joys and
-            happinesses!
+            Also, I had honoured to be invited as Popping dance instructor in
+            RMIT "Funkdelics" Dancing club in 2022 and 2023. Although they were
+            beginner level class, getting in touch with the new generations
+            really brought me many joys and happinesses!
           </span>
         </div>
         <br />
@@ -48,7 +48,8 @@ export default function MyHobbies() {
           <br />
           <br />
           <span>
-            My favorite games: APEX, Rainbow 6, Farlight 84, Genshin, WoLong
+            My favorite games: APEX, Rainbow 6, Naraka, Farlight 84, Genshin,
+            WoLong, Elder Ring
           </span>
         </div>
         <br />

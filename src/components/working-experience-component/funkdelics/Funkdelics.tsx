@@ -40,13 +40,10 @@ export default function Funkdelics() {
           >
             Funkdelics - from Jan 2022
           </BrownCenterTitle>
-          <span style={{ flex: 1 }}>Executive Secretary</span>
+          <span style={{ flex: 1, fontWeight: 700 }}>Executive Secretary</span>
           <span style={{ flex: 1 }}>
-            Funkdelic is the dancing club in RMIT Melbourne. The club
+            Funkdelic is the dancing club in Melbourne RMIT University. The club
             facilitates dance events, training and cultural exchange.
-          </span>
-          <span style={{ fontWeight: "1200", fontSize: "20px", flex: 1 }}>
-            Bullet Points
           </span>
           <ul style={{ flex: 1 }}>
             <li>
