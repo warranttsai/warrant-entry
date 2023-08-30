@@ -90,20 +90,6 @@ function Home() {
         </Button>
         <Button
           variant="contained"
-          data-testid="other-experience"
-          sx={{
-            ":hover": {
-              bgcolor: "#D7F72A",
-              color: "black",
-            },
-            width: "300px",
-          }}
-          onClick={() => navigate("/other-experience")}
-        >
-          Other Experience
-        </Button>
-        <Button
-          variant="contained"
           data-testid="contact-with-me"
           sx={{
             ":hover": {
