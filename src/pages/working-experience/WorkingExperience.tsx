@@ -10,6 +10,7 @@ import Cleanstormwater from "../../components/working-experience-component/clean
 import Fila from "../../components/working-experience-component/fila/Fila";
 import Funkdelics from "../../components/working-experience-component/funkdelics/Funkdelics";
 import Blackball from "../../components/working-experience-component/blackball/Blackball";
+import PoppingDanceInstructor from "../../components/working-experience-component/popping-dance-instructor/PoppingDanceInstructor";
 
 export default function WorkingExperience() {
   return (
@@ -25,8 +26,9 @@ export default function WorkingExperience() {
         <BlackCenterTitle style={{ color: "white" }}>
           Other Experiences
         </BlackCenterTitle>
-        <FlexColumnCenteredContainer>
+        <FlexColumnCenteredContainer style={{ gap: "10px" }}>
           <Blackball />
+          <PoppingDanceInstructor />
         </FlexColumnCenteredContainer>
       </BlackBackgroundContainer>
     </>
