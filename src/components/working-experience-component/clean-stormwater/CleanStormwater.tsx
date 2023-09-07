@@ -44,11 +44,23 @@ export default function Cleanstormwater() {
           >
             Clean Stormwater - from May 2022
           </BrownCenterTitle>
-          <span style={{ fontWeight: "1200", fontSize: "20px", flex: 1 }}>
-            Bullet Points
+          <span style={{ flex: 1, fontWeight: 700 }}>
+            Software Engineer - Internship
+          </span>
+          <span style={{ flex: 1 }}>
+            Clean Stormwater was where I had learned the most in my working
+            experience. It was my first experience in the IT industry. In this
+            internship, I had the chance to work in the DevOps team with the
+            other engineers. Also, the civil engineering team was the main lead
+            of our company. Under this environment, it allowed me to collaborate
+            with the engineers from differnet backgound to devliver a successful
+            project.
           </span>
           <ul style={{ flex: 1 }}>
-            <li>Front-end development and management. (React JS/TS, ES6)</li>
+            <li>
+              Front-end development and management. (React JS/TS, ES6, HTML5,
+              CSS/SCSS)
+            </li>
             <li>
               Back-end development and management. (Sails.JS, Python Flask, AWS
               Lambda serverless)

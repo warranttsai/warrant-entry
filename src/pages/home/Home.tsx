@@ -44,9 +44,10 @@ function Home() {
         >
           Learning Path
         </Button>
+
         <Button
           variant="contained"
-          data-testid="working-experience"
+          data-testid="contact-with-me"
           sx={{
             ":hover": {
               bgcolor: "#D7F72A",
@@ -54,24 +55,11 @@ function Home() {
             },
             width: "300px",
           }}
-          onClick={() => navigate("/working-experience")}
+          onClick={() => navigate("/lab")}
         >
-          Working Experience
+          Laboratory
         </Button>
-        <Button
-          variant="contained"
-          data-testid="other-experience"
-          sx={{
-            ":hover": {
-              bgcolor: "#D7F72A",
-              color: "black",
-            },
-            width: "300px",
-          }}
-          onClick={() => navigate("/other-experience")}
-        >
-          Other Experience
-        </Button>
+
         <Button
           variant="contained"
           data-testid="my-hobbies"
@@ -88,7 +76,7 @@ function Home() {
         </Button>
         <Button
           variant="contained"
-          data-testid="contact-with-me"
+          data-testid="working-experience"
           sx={{
             ":hover": {
               bgcolor: "#D7F72A",
@@ -96,9 +84,9 @@ function Home() {
             },
             width: "300px",
           }}
-          onClick={() => navigate("/lab")}
+          onClick={() => navigate("/working-experience")}
         >
-          Laboratory
+          Working Experience
         </Button>
         <Button
           variant="contained"

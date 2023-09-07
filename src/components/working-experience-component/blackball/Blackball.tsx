@@ -1,12 +1,11 @@
 // modules
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-// images
 // styled-components
 import { Flex1 } from "../../styled-component/Container";
 import { BrownCenterTitle } from "../../styled-component/Title";
 
-export default function Funkdelics() {
+export default function Blackball() {
   return (
     <Flex1
       style={{
@@ -38,23 +37,28 @@ export default function Funkdelics() {
               textAlign: "left",
             }}
           >
-            Funkdelics - from Jan 2022
+            Blackball Chinatown - from January 2021 to May 2022
           </BrownCenterTitle>
-          <span style={{ flex: 1, fontWeight: 700 }}>Executive Secretary</span>
+          <span style={{ flex: 1, fontWeight: 700 }}>
+            Food and beverage attendant
+          </span>
           <span style={{ flex: 1 }}>
-            Funkdelic is the dancing club in Melbourne RMIT University. The club
-            facilitates dance events, training and cultural exchange.
+            Since my arrival in Melbourne, Australia, Blackball has been my
+            initial workplace experience. It presented a fast-paced,
+            teamwork-focused environment that demanded adept time management
+            skills. During my tenure at the milk tea shop, I acquired the
+            ability to motivate myself and effectively incorporate necessary
+            periods of relaxation amidst my responsibilities.
           </span>
           <ul style={{ flex: 1 }}>
+            <li>Customer Service</li>
+            <li>Opening/ Closing Shift</li>
+            <li>Kitchen Hand/ Dish Hand</li>
+            <li>Stock-taking</li>
             <li>
-              Organising dancing workshop (we had more than 15 people
-              participated in the locking dance workshop on April 2023!)
+              Experienced in fast-paced environment in public holiday and long
+              shift of open to close shift.
             </li>
-            <li>
-              Helping welcome party (We got more than 40 students participated
-              in this party!)e
-            </li>
-            <li>Helping organise dancing battles (The First Cycle 2023)</li>
           </ul>
         </CardContent>
       </Card>
