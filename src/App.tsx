@@ -20,6 +20,7 @@ import {
   Challenge3,
   Challenge4,
 } from "./components/react-challenge/ReactChallenges";
+import AboutThisWebApp from "./pages/lab/about-this-web-app/AboutThisWebApp";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="contact-with-me" element={<ContactWithMe />} />
         {/* Laboratory routes */}
         <Route path="lab" element={<Lab />} />
+        <Route path="lab/about-this-web-app" element={<AboutThisWebApp />} />
         <Route path="lab/react-challenge-1" element={<Challenge1 />} />
         <Route path="lab/react-challenge-2" element={<Challenge2 />} />
         <Route path="lab/react-challenge-3" element={<Challenge3 />} />

@@ -1,6 +1,6 @@
 // module
 import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Divider } from "@mui/material";
 // styled-components
 import {
   BlackCenterTitle,
@@ -18,6 +18,20 @@ export default function Lab() {
 
   return (
     <>
+      {/* About this web application */}
+      <div style={{ marginBlock: 10 }}>
+        <Button onClick={() => navigate("/lab/about-this-web-app")}>
+          <BlackCenterTitle style={{ fontSize: 30 }}>
+            📚 Something About This Web Application 📚
+          </BlackCenterTitle>
+        </Button>
+      </div>
+      <Divider
+        style={{
+          width: "90%",
+          marginInline: "auto",
+        }}
+      />
       {/* React Challenges */}
       <div>
         <a
