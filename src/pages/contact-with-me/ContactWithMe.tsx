@@ -34,7 +34,10 @@ function ContactWithMe() {
 
   return (
     <>
-      <ContactContainer id="contact-container">
+      <ContactContainer
+        id="contact-container"
+        style={{ minHeight: "70vh", marginBottom: 20 }}
+      >
         <div
           id="contact-social-media"
           style={{
@@ -127,7 +130,7 @@ function ContactWithMe() {
           )}
         </form>
       </ContactContainer>
-      <BlackBackgroundContainer>
+      <BlackBackgroundContainer style={{ minHeight: "70vh" }}>
         <CommentSection />
       </BlackBackgroundContainer>
     </>
