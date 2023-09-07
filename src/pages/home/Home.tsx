@@ -32,7 +32,7 @@ function Home() {
         </Button>
         <Button
           variant="contained"
-          data-testid="my-majority"
+          data-testid="learning-path"
           sx={{
             ":hover": {
               bgcolor: "#D7F72A",
@@ -40,7 +40,7 @@ function Home() {
             },
             width: "300px",
           }}
-          onClick={() => navigate("/my-majority")}
+          onClick={() => navigate("/learning-path")}
         >
           Learning Path
         </Button>
