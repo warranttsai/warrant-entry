@@ -1,12 +1,12 @@
 // styled-component
-import { WhiteCenterTitle } from "../styled-component/Title";
+import { BlackCenterTitle } from "../styled-component/Title";
 
 export const ObjectOrientation = () => {
   return (
     <div>
-      <WhiteCenterTitle style={{ fontSize: "2rem" }}>
+      <BlackCenterTitle style={{ fontSize: "2rem" }}>
         Creating module for reuseable methods/components
-      </WhiteCenterTitle>
+      </BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
         <span>
           There must have some methods and components which could be re-used in

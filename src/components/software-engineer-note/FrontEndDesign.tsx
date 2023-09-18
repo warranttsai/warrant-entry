@@ -1,12 +1,12 @@
 // styled-component
-import { WhiteCenterTitle } from "../styled-component/Title";
+import { BlackCenterTitle } from "../styled-component/Title";
 
 export const DrawImageForFrontEndDesign = () => {
   return (
     <>
-      <WhiteCenterTitle style={{ fontSize: "2rem" }}>
+      <BlackCenterTitle style={{ fontSize: "2rem" }}>
         Draw a image before start developing the front-end page
-      </WhiteCenterTitle>
+      </BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
         <ul>
           <li>
@@ -28,9 +28,9 @@ export const DrawImageForFrontEndDesign = () => {
 export const EncapsulateYourStyleSheet = () => {
   return (
     <>
-      <WhiteCenterTitle style={{ fontSize: "2rem" }}>
+      <BlackCenterTitle style={{ fontSize: "2rem" }}>
         Encapsulate your style sheet
-      </WhiteCenterTitle>
+      </BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
         <span>
           SCSS/SASS is a good module to be used in Node to help the developer
@@ -50,7 +50,7 @@ export const EncapsulateYourStyleSheet = () => {
         </span>
         <br />
         <br />
-        <span style={{ color: "yellow" }}>
+        <span style={{ color: "red" }}>
           Note: This website was built by Material UI
         </span>
       </div>
