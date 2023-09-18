@@ -20,6 +20,7 @@ import {
   Challenge4,
 } from "./components/react-challenge/ReactChallenges";
 import AboutThisWebApp from "./pages/lab/about-this-web-app/AboutThisWebApp";
+import MyCodingBible from "./pages/lab/my-coding-bible/MyCodingBible";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="lab/react-challenge-2" element={<Challenge2 />} />
         <Route path="lab/react-challenge-3" element={<Challenge3 />} />
         <Route path="lab/react-challenge-4" element={<Challenge4 />} />
+        <Route path="lab/my-coding-bible" element={<MyCodingBible />} />
       </Route>
       <Route path="/*" element={<NotFoundPage />} />
     </Routes>
