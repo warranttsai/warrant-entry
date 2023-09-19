@@ -9,9 +9,12 @@ export const fetchingComments = async () => {
     user_id: string;
   }> = [];
   await axios
-    .post("http://localhost:3000/prod/comments", {
-      endpoint: "getComments",
-    })
+    .post(
+      "https://dc2my8iwv4.execute-api.ap-southeast-2.amazonaws.com/prod/comments",
+      {
+        endpoint: "getComments",
+      }
+    )
     .then(
       (res: {
         data: {
@@ -29,6 +32,37 @@ export const fetchingComments = async () => {
         result = res?.data?.Items;
       }
     );
+
+  return result;
+};
+
+export const saveComment = async (userId: string, comment: string) => {
+  const today = new Date();
+  const commentDate = `${
+    today.getMonth() + 1
+  }/${today.getDate()}/${today.getFullYear()}`;
+  const commentTime = `${today.getHours()}:${today.getMinutes()}`;
+
+  const payload = {
+    endpoint: "saveComment",
+    params: {
+      user_id: userId,
+      comment: comment,
+      comment_date: commentDate,
+      comment_time: commentTime,
+    },
+  };
+
+  let result;
+  await axios
+    .post(
+      "https://dc2my8iwv4.execute-api.ap-southeast-2.amazonaws.com/prod/comment",
+      payload
+    )
+    .then((res) => {
+      result = res;
+      console.log(res);
+    });
 
   return result;
 };
