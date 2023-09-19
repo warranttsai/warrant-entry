@@ -61,3 +61,14 @@ export const BlackBackgroundContainer = styled.div`
     linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
   padding: 5vw;
 `;
+
+export const LabSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 10px;
+  min-height: 40vh;
+  max-width: 800px;
+  margin-inline: auto;
+`;
