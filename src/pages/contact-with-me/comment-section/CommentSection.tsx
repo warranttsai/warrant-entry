@@ -1,19 +1,42 @@
 // modules
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // styled-components
 import CommentComponent from "../../../components/comment-component/CommentComponent";
 import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
 import { Button, TextareaAutosize } from "@mui/material";
+import { fetchingComments } from "../../../utils/commentSectionUtils";
 
 export default function CommentSection() {
   const [inputName, setInputName] = useState<string>("");
   const [inputComment, setInputComment] = useState<string>("");
-  const commentData = [
-    { id: 1, content: "Hello" },
-    { id: 2, content: "My name is Warrant" },
-    { id: 3, content: "How are you?" },
-    { id: 4, content: "Welcome to my website!" },
-  ];
+  const [commentList, setCommentList] = useState<
+    Array<{
+      comment: string;
+      comment_date: string;
+      comment_time: string;
+      id: string;
+      user_id: string;
+    }>
+  >([
+    {
+      comment: "",
+      comment_date: "",
+      comment_time: "",
+      id: "",
+      user_id: "",
+    },
+  ]);
+
+  useEffect(() => {
+    fetchingComments()
+      .then((res) => {
+        setCommentList(res);
+      })
+      .catch((err) => {
+        console.log("Fetching Comments Error!", err);
+        alert("Fetching Comments Error!");
+      });
+  }, []);
 
   return (
     <>
@@ -39,16 +62,26 @@ export default function CommentSection() {
           />
           <Button variant="contained">Submit</Button>
         </div>
-        {commentData &&
-          commentData.map(
-            (comment: { id: number; content: string }, index: number) => {
-              return (
-                <React.Fragment key={comment.id}>
-                  <CommentComponent index={index} content={comment.content} />
-                </React.Fragment>
-              );
-            }
-          )}
+        {commentList
+          ? commentList.map(
+              (
+                comment: {
+                  comment: string;
+                  comment_date: string;
+                  comment_time: string;
+                  id: string;
+                  user_id: string;
+                },
+                index: number
+              ) => {
+                return (
+                  <React.Fragment key={comment.id}>
+                    <CommentComponent index={index} comment={comment} />
+                  </React.Fragment>
+                );
+              }
+            )
+          : null}
       </FlexColumnCenteredContainer>
     </>
   );

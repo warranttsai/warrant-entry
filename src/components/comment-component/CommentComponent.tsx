@@ -9,11 +9,17 @@ import {
 
 interface CommentComponentProps {
   index: number;
-  content: string;
+  comment: {
+    comment: string;
+    comment_date: string;
+    comment_time: string;
+    id: string;
+    user_id: string;
+  };
 }
 export default function CommentComponent({
   index,
-  content,
+  comment,
 }: CommentComponentProps) {
   return (
     <>
@@ -21,11 +27,15 @@ export default function CommentComponent({
         {index % 2 === 0 ? (
           <>
             <img className="flex-1" src={ProfilePicPlaceholder} />
-            <SpeechBubbleLeft className="flex-1">{content}</SpeechBubbleLeft>
+            <SpeechBubbleLeft className="flex-1">
+              {comment.comment}
+            </SpeechBubbleLeft>
           </>
         ) : (
           <>
-            <SpeechBubbleRight className="flex-1">{content}</SpeechBubbleRight>
+            <SpeechBubbleRight className="flex-1">
+              {comment.comment}
+            </SpeechBubbleRight>
             <img className="flex-1" src={ProfilePicPlaceholder} />
           </>
         )}
