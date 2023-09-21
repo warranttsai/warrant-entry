@@ -21,37 +21,53 @@ export default function CommentSection() {
       user_name: string;
     }>
   >([]);
+  // loading
+  const [loadingComments, setLoadingComments] = useState<boolean>(false);
+  const [submitingNewComment, setSubmitingNewComment] =
+    useState<boolean>(false);
 
   const handleSubmitComment = () => {
+    setSubmitingNewComment(true);
     saveComment(inputUserName, inputComment)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        setInputUserName("");
+        setInputComment("");
+        console.log("Saving comment success!");
       })
       .catch((err: string) => {
         console.log("Save comment error!", err);
         alert(`Save comment error! ${err}`);
+        setSubmitingNewComment(false);
       });
     // refresh the comment list
+    setLoadingComments(true);
     fetchingComments()
       .then((res) => {
         setCommentList(res);
+        setInputUserName("");
+        setInputComment("");
+        setSubmitingNewComment(false);
+        setLoadingComments(false);
       })
       .catch((err) => {
         console.log("Fetching Comments Error!", err);
         alert("Fetching Comments Error!");
+        setSubmitingNewComment(false);
+        setLoadingComments(false);
       });
-    setInputUserName("");
-    setInputComment("");
   };
 
   useEffect(() => {
+    setLoadingComments(true);
     fetchingComments()
       .then((res) => {
         setCommentList(res);
+        setLoadingComments(false);
       })
       .catch((err) => {
         console.log("Fetching Comments Error!", err);
         alert("Fetching Comments Error!");
+        setLoadingComments(false);
       });
   }, []);
 
@@ -82,31 +98,38 @@ export default function CommentSection() {
               setInputComment(e.target.value);
             }}
           />
-          <Button variant="contained" onClick={handleSubmitComment}>
+          <Button
+            variant="contained"
+            onClick={handleSubmitComment}
+            disabled={loadingComments || submitingNewComment}
+          >
             Submit
           </Button>
         </div>
         <br />
-        {commentList
-          ? commentList.map(
-              (
-                comment: {
-                  comment: string;
-                  comment_date: string;
-                  comment_time: string;
-                  id: string;
-                  user_name: string;
-                },
-                index: number
-              ) => {
-                return (
-                  <React.Fragment key={comment.id}>
-                    <CommentComponent index={index} comment={comment} />
-                  </React.Fragment>
-                );
-              }
-            )
-          : null}
+        {loadingComments ? (
+          <span>Loading...</span>
+        ) : (
+          commentList &&
+          commentList.map(
+            (
+              comment: {
+                comment: string;
+                comment_date: string;
+                comment_time: string;
+                id: string;
+                user_name: string;
+              },
+              index: number
+            ) => {
+              return (
+                <React.Fragment key={comment.id}>
+                  <CommentComponent index={index} comment={comment} />
+                </React.Fragment>
+              );
+            }
+          )
+        )}
       </FlexColumnCenteredContainer>
     </>
   );

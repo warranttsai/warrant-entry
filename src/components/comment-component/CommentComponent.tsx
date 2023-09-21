@@ -32,7 +32,14 @@ export default function CommentComponent({
                 className="flex-1"
                 style={{ fontWeight: 900, fontSize: 20 }}
               >
-                {comment.user_name !== "" ? comment.user_name : "<unknown>"}
+                {comment.user_name !== "" ? comment.user_name : "<unknown>"},{" "}
+                {comment.comment_date !== ""
+                  ? comment.comment_date
+                  : "<no date>"}
+                /
+                {comment.comment_time !== ""
+                  ? comment.comment_time
+                  : "<no time>"}
               </span>
               <span
                 style={{
@@ -52,7 +59,14 @@ export default function CommentComponent({
                 className="flex-1"
                 style={{ fontWeight: 900, fontSize: 20 }}
               >
-                {comment.user_name !== "" ? comment.user_name : "<unknown>"}
+                {comment.user_name !== "" ? comment.user_name : "<unknown>"},{" "}
+                {comment.comment_date !== ""
+                  ? comment.comment_date
+                  : "<no date>"}
+                /
+                {comment.comment_time !== ""
+                  ? comment.comment_time
+                  : "<no time>"}
               </span>
               <span
                 style={{
