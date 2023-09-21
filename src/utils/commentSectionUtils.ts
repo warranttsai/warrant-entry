@@ -6,7 +6,7 @@ export const fetchingComments = async () => {
     comment_date: string;
     comment_time: string;
     id: string;
-    user_id: string;
+    user_name: string;
   }> = [];
   await axios
     .post(
@@ -24,7 +24,7 @@ export const fetchingComments = async () => {
               comment_date: string;
               comment_time: string;
               id: string;
-              user_id: string;
+              user_name: string;
             }
           ];
         };

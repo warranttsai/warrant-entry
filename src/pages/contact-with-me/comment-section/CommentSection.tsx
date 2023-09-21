@@ -18,7 +18,7 @@ export default function CommentSection() {
       comment_date: string;
       comment_time: string;
       id: string;
-      user_id: string;
+      user_name: string;
     }>
   >([]);
 
@@ -92,7 +92,7 @@ export default function CommentSection() {
                   comment_date: string;
                   comment_time: string;
                   id: string;
-                  user_id: string;
+                  user_name: string;
                 },
                 index: number
               ) => {

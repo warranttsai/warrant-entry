@@ -14,7 +14,7 @@ interface CommentComponentProps {
     comment_date: string;
     comment_time: string;
     id: string;
-    user_id: string;
+    user_name: string;
   };
 }
 export default function CommentComponent({
@@ -33,8 +33,9 @@ export default function CommentComponent({
           </>
         ) : (
           <>
-            <SpeechBubbleRight className="flex-1">
-              {comment.comment}
+            <SpeechBubbleRight className="flex-1 d-flex flex-col">
+              <span>{comment.user_name}</span>
+              <span className="flex-5">{comment.comment}</span>
             </SpeechBubbleRight>
             <img className="flex-1" src={ProfilePicPlaceholder} />
           </>
