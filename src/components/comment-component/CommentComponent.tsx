@@ -36,7 +36,7 @@ export default function CommentComponent({
                 {comment.comment_date !== ""
                   ? comment.comment_date
                   : "<no date>"}
-                /
+                ,{" "}
                 {comment.comment_time !== ""
                   ? comment.comment_time
                   : "<no time>"}
@@ -63,7 +63,7 @@ export default function CommentComponent({
                 {comment.comment_date !== ""
                   ? comment.comment_date
                   : "<no date>"}
-                /
+                ,{" "}
                 {comment.comment_time !== ""
                   ? comment.comment_time
                   : "<no time>"}

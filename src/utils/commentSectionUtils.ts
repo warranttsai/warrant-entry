@@ -59,9 +59,8 @@ export const saveComment = async (userName: string, comment: string) => {
       "https://dc2my8iwv4.execute-api.ap-southeast-2.amazonaws.com/prod/comment",
       payload
     )
-    .then((res) => {
-      result = res;
-      console.log(res);
+    .catch(() => {
+      result = "Saving comment error!";
     });
 
   return result;

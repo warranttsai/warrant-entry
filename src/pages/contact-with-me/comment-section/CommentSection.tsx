@@ -22,9 +22,9 @@ export default function CommentSection() {
     }>
   >([]);
   // loading
-  const [loadingComments, setLoadingComments] = useState<boolean>(false);
   const [submitingNewComment, setSubmitingNewComment] =
     useState<boolean>(false);
+  const [refreshComments, setRefreshComments] = useState<boolean>(false);
 
   const handleSubmitComment = () => {
     setSubmitingNewComment(true);
@@ -32,42 +32,42 @@ export default function CommentSection() {
       .then(() => {
         setInputUserName("");
         setInputComment("");
+        setRefreshComments(false);
+
         console.log("Saving comment success!");
+        setSubmitingNewComment(false);
+        setRefreshComments(true);
       })
       .catch((err: string) => {
         console.log("Save comment error!", err);
         alert(`Save comment error! ${err}`);
         setSubmitingNewComment(false);
       });
-    // refresh the comment list
-    setLoadingComments(true);
-    fetchingComments()
-      .then((res) => {
-        setCommentList(res);
-        setInputUserName("");
-        setInputComment("");
-        setSubmitingNewComment(false);
-        setLoadingComments(false);
-      })
-      .catch((err) => {
-        console.log("Fetching Comments Error!", err);
-        alert("Fetching Comments Error!");
-        setSubmitingNewComment(false);
-        setLoadingComments(false);
-      });
   };
 
   useEffect(() => {
-    setLoadingComments(true);
+    if (refreshComments) {
+      fetchingComments()
+        .then((res) => {
+          setCommentList(res);
+          setRefreshComments(false);
+        })
+        .catch((err) => {
+          console.log("Fetching Comments Error!", err);
+          alert("Fetching Comments Error!");
+          setRefreshComments(false);
+        });
+    }
+  }, [refreshComments]);
+  useEffect(() => {
     fetchingComments()
       .then((res) => {
         setCommentList(res);
-        setLoadingComments(false);
+        setRefreshComments(false);
       })
       .catch((err) => {
         console.log("Fetching Comments Error!", err);
         alert("Fetching Comments Error!");
-        setLoadingComments(false);
       });
   }, []);
 
@@ -98,16 +98,16 @@ export default function CommentSection() {
               setInputComment(e.target.value);
             }}
           />
-          <Button
-            variant="contained"
-            onClick={handleSubmitComment}
-            disabled={loadingComments || submitingNewComment}
-          >
-            Submit
-          </Button>
+          {submitingNewComment ? (
+            <span>Submitting...</span>
+          ) : (
+            <Button variant="contained" onClick={handleSubmitComment}>
+              Submit
+            </Button>
+          )}
         </div>
         <br />
-        {loadingComments ? (
+        {refreshComments ? (
           <span>Loading...</span>
         ) : (
           commentList &&
