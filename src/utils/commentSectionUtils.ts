@@ -41,7 +41,11 @@ export const saveComment = async (userName: string, comment: string) => {
   const commentDate = `${
     today.getMonth() + 1
   }/${today.getDate()}/${today.getFullYear()}`;
-  const commentTime = `${today.getHours()}:${today.getMinutes()}`;
+  const getMinute =
+    today.getMinutes() < 10
+      ? "0" + today.getMinutes().toString()
+      : today.getMinutes();
+  const commentTime = `${today.getHours()}:${getMinute}`;
 
   const payload = {
     endpoint: "saveComment",
