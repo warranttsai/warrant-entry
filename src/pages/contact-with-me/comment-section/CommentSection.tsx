@@ -40,6 +40,8 @@ export default function CommentSection() {
         console.log("Fetching Comments Error!", err);
         alert("Fetching Comments Error!");
       });
+    setInputUserName("");
+    setInputComment("");
   };
 
   useEffect(() => {
