@@ -23,19 +23,46 @@ export default function CommentComponent({
 }: CommentComponentProps) {
   return (
     <>
-      <FlexRowCenteredContainer style={{ gap: 30 }}>
+      <FlexRowCenteredContainer style={{ gap: 30, minWidth: "40vw" }}>
         {index % 2 === 0 ? (
           <>
             <img className="flex-1" src={ProfilePicPlaceholder} />
-            <SpeechBubbleLeft className="flex-1">
-              {comment.comment}
+            <SpeechBubbleLeft className="flex-1 text-left">
+              <span
+                className="flex-1"
+                style={{ fontWeight: 900, fontSize: 20 }}
+              >
+                {comment.user_name !== "" ? comment.user_name : "<unknown>"}
+              </span>
+              <span
+                style={{
+                  display: "block",
+                  width: "20vw",
+                  wordWrap: "break-word",
+                }}
+              >
+                {comment.comment !== "" ? comment.comment : "<no comment>"}
+              </span>
             </SpeechBubbleLeft>
           </>
         ) : (
           <>
-            <SpeechBubbleRight className="flex-1 d-flex flex-col">
-              <span>{comment.user_name}</span>
-              <span className="flex-5">{comment.comment}</span>
+            <SpeechBubbleRight className="flex-1 d-flex flex-column text-left">
+              <span
+                className="flex-1"
+                style={{ fontWeight: 900, fontSize: 20 }}
+              >
+                {comment.user_name !== "" ? comment.user_name : "<unknown>"}
+              </span>
+              <span
+                style={{
+                  display: "block",
+                  width: "20vw",
+                  wordWrap: "break-word",
+                }}
+              >
+                {comment.comment !== "" ? comment.comment : "<no comment>"}
+              </span>
             </SpeechBubbleRight>
             <img className="flex-1" src={ProfilePicPlaceholder} />
           </>

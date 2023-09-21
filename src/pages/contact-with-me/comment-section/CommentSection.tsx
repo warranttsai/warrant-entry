@@ -84,6 +84,7 @@ export default function CommentSection() {
             Submit
           </Button>
         </div>
+        <br />
         {commentList
           ? commentList.map(
               (
