@@ -10,6 +10,7 @@ import {
 } from "../../../utils/commentSectionUtils";
 
 export default function CommentSection() {
+  const [inputUserName, setInputUserName] = useState<string>("");
   const [inputComment, setInputComment] = useState<string>("");
   const [commentList, setCommentList] = useState<
     Array<{
@@ -19,15 +20,27 @@ export default function CommentSection() {
       id: string;
       user_id: string;
     }>
-  >([
-    {
-      comment: "",
-      comment_date: "",
-      comment_time: "",
-      id: "",
-      user_id: "",
-    },
-  ]);
+  >([]);
+
+  const handleSubmitComment = () => {
+    saveComment(inputUserName, inputComment)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err: string) => {
+        console.log("Save comment error!", err);
+        alert(`Save comment error! ${err}`);
+      });
+    // refresh the comment list
+    fetchingComments()
+      .then((res) => {
+        setCommentList(res);
+      })
+      .catch((err) => {
+        console.log("Fetching Comments Error!", err);
+        alert("Fetching Comments Error!");
+      });
+  };
 
   useEffect(() => {
     fetchingComments()
@@ -44,7 +57,20 @@ export default function CommentSection() {
     <>
       <FlexColumnCenteredContainer>
         <div style={{ width: "50%" }}>
-          <span>Dear user!</span>
+          <input
+            className="w-100"
+            style={{ minHeight: 25 }}
+            value={inputUserName}
+            placeholder="What is your name?"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleSubmitComment();
+            }}
+            onChange={(e) => {
+              setInputUserName(e.target.value);
+            }}
+          />
+          <br />
+          <br />
           <TextareaAutosize
             className="w-100"
             style={{ minHeight: 50 }}
@@ -54,19 +80,7 @@ export default function CommentSection() {
               setInputComment(e.target.value);
             }}
           />
-          <Button
-            variant="contained"
-            onClick={() => {
-              saveComment("-1", inputComment)
-                .then((res) => {
-                  console.log(res);
-                })
-                .catch((err: string) => {
-                  console.log("Save comment error!", err);
-                  alert(`Save comment error! ${err}`);
-                });
-            }}
-          >
+          <Button variant="contained" onClick={handleSubmitComment}>
             Submit
           </Button>
         </div>

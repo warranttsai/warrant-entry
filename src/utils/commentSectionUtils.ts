@@ -36,7 +36,7 @@ export const fetchingComments = async () => {
   return result;
 };
 
-export const saveComment = async (userId: string, comment: string) => {
+export const saveComment = async (userName: string, comment: string) => {
   const today = new Date();
   const commentDate = `${
     today.getMonth() + 1
@@ -46,7 +46,7 @@ export const saveComment = async (userId: string, comment: string) => {
   const payload = {
     endpoint: "saveComment",
     params: {
-      user_id: userId,
+      user_name: userName,
       comment: comment,
       comment_date: commentDate,
       comment_time: commentTime,
