@@ -30,6 +30,11 @@ export const fetchingComments = async () => {
         };
       }) => {
         result = res?.data?.Items;
+        result.sort((a, b) => {
+          const dateA: any = new Date(`${a.comment_date} ${a.comment_time}`);
+          const dateB: any = new Date(`${b.comment_date} ${b.comment_time}`);
+          return dateB - dateA; // Sort in descending order (newest to oldest)
+        });
       }
     );
 
@@ -45,7 +50,11 @@ export const saveComment = async (userName: string, comment: string) => {
     today.getMinutes() < 10
       ? "0" + today.getMinutes().toString()
       : today.getMinutes();
-  const commentTime = `${today.getHours()}:${getMinute}`;
+  const getSecond =
+    today.getSeconds() < 10
+      ? "0" + today.getSeconds().toString()
+      : today.getSeconds();
+  const commentTime = `${today.getHours()}:${getMinute}:${getSecond}`;
 
   const payload = {
     endpoint: "saveComment",
