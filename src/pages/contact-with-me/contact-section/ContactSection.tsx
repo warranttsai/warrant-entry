@@ -20,7 +20,7 @@ export default function ContactSection() {
   const [ballonColour, setBacllonColour] = useState<string>("red");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    console.log(e.target.value);
+    console.log(e.target);
     setBallonMessage("It's not functioning yet🙇");
     setBacllonColour("red");
     setOnShowBallon(true);
