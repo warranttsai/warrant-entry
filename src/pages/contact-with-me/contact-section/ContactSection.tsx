@@ -3,7 +3,7 @@ import { useState, useEffect, FormEvent } from "react";
 import { FormControl, InputLabel, Input, Button } from "@mui/material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 // utils
-import { sendingEmailToUser } from "../../../utils/contactSectionUtils";
+// import { sendingEmailToUser } from "../../../utils/contactSectionUtils";
 // styled-components
 import { BlackCenterTitle } from "../../../components/styled-component/Title";
 // components
@@ -20,6 +20,7 @@ export default function ContactSection() {
   const [ballonColour, setBacllonColour] = useState<string>("red");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    console.log(e.target.value);
     setBallonMessage("It's not functioning yet🙇");
     setBacllonColour("red");
     setOnShowBallon(true);

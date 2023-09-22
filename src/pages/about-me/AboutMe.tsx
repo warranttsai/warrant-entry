@@ -20,15 +20,13 @@ import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow"
 import { NormalContent } from "../../components/styled-component/Content";
 
 function AboutMe() {
-  const [myPersonalities, setMyPersonalities] = useState<
-    Array<{ id: number; name: string }>
-  >([
+  const myPersonalities: Array<{ id: number; name: string }> = [
     { id: 1, name: "Highly Organized" },
     { id: 2, name: "Fast Learner" },
     { id: 3, name: "Optimistic" },
     { id: 4, name: "Open-minded" },
     { id: 5, name: "Strong Communicator" },
-  ]);
+  ];
 
   return (
     <>
