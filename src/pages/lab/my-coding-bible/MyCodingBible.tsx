@@ -1,13 +1,20 @@
+// modules
 import { Divider } from "@mui/material";
+// styled-components
+import {
+  FlexColumnCenteredContainer,
+  LabSection,
+} from "../../../components/styled-component/Container";
+// components
 import {
   DrawImageForFrontEndDesign,
   EncapsulateYourStyleSheet,
 } from "../../../components/software-engineer-note/FrontEndDesign";
 import { ObjectOrientation } from "../../../components/software-engineer-note/ObjectOrientation";
 import {
-  FlexColumnCenteredContainer,
-  LabSection,
-} from "../../../components/styled-component/Container";
+  HowToEnableCORS,
+  AddingCorsHeaderToYourApiResponseHeader,
+} from "../../../components/software-engineer-note/AwsKnowledges";
 
 export default function MyCodingBible() {
   return (
@@ -59,6 +66,12 @@ export default function MyCodingBible() {
       </LabSection>
       <LabSection>
         <ObjectOrientation />
+      </LabSection>
+      <LabSection>
+        <HowToEnableCORS />
+      </LabSection>
+      <LabSection>
+        <AddingCorsHeaderToYourApiResponseHeader />
       </LabSection>
     </FlexColumnCenteredContainer>
   );
