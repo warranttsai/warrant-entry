@@ -56,3 +56,30 @@ export const AddingCorsHeaderToYourApiResponseHeader = () => {
     </>
   );
 };
+export const EnableSesEmailer = () => {
+  return (
+    <>
+      <BlackCenterTitle style={{ fontSize: "2rem" }}>
+        How to Enable Simple Email Service With Email Address
+      </BlackCenterTitle>
+      <div className="text-left" style={{ paddingInline: 100 }}>
+        <ol>
+          <li>Access to your SES</li>
+          <li>Create identity with your email address.</li>
+          <li>Verify your email address.</li>
+          <li>Access to your IAM</li>
+          <li>
+            Click on "Role" and create the role with "AmazonSESFullAccess"
+          </li>
+          <li>
+            Go back to Lambda and assign the role to your Lambda function.
+          </li>
+          <li>
+            Now your Lambda function should be able to send email with the email
+            address of the role.
+          </li>
+        </ol>
+      </div>
+    </>
+  );
+};
