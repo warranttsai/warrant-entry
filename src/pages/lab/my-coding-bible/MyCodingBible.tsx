@@ -14,6 +14,7 @@ import { ObjectOrientation } from "../../../components/software-engineer-note/Ob
 import {
   HowToEnableCORS,
   AddingCorsHeaderToYourApiResponseHeader,
+  EnableSES,
 } from "../../../components/software-engineer-note/AwsKnowledges";
 
 export default function MyCodingBible() {
@@ -72,6 +73,9 @@ export default function MyCodingBible() {
       </LabSection>
       <LabSection>
         <AddingCorsHeaderToYourApiResponseHeader />
+      </LabSection>
+      <LabSection>
+        <EnableSES />
       </LabSection>
     </FlexColumnCenteredContainer>
   );

@@ -56,7 +56,7 @@ export const AddingCorsHeaderToYourApiResponseHeader = () => {
     </>
   );
 };
-export const EnableSesEmailer = () => {
+export const EnableSES = () => {
   return (
     <>
       <BlackCenterTitle style={{ fontSize: "2rem" }}>
