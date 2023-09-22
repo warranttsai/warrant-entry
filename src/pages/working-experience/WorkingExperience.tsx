@@ -2,8 +2,8 @@
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 import {
   BlackBackgroundContainer,
+  Flex1,
   FlexColumnCenteredContainer,
-  // Flex1,
 } from "../../components/styled-component/Container";
 // components
 import Cleanstormwater from "../../components/working-experience-component/clean-stormwater/CleanStormwater";
@@ -15,20 +15,31 @@ import PoppingDanceInstructor from "../../components/working-experience-componen
 export default function WorkingExperience() {
   return (
     <>
-      <div style={{ padding: "20px 150px" }}>
+      <div style={{ padding: "1vh 5vw" }}>
+        <BlackCenterTitle>Software Engineer Experience</BlackCenterTitle>
         <FlexColumnCenteredContainer style={{ gap: "10px" }}>
-          <Cleanstormwater />
-          <Fila />
-          <Funkdelics />
+          <Flex1 className="w-100">
+            <Cleanstormwater />
+          </Flex1>
         </FlexColumnCenteredContainer>
       </div>
       <BlackBackgroundContainer>
         <BlackCenterTitle style={{ color: "white" }}>
-          Other Experiences
+          The Other Experience
         </BlackCenterTitle>
         <FlexColumnCenteredContainer style={{ gap: "10px" }}>
-          <Blackball />
-          <PoppingDanceInstructor />
+          <Flex1 className="w-100">
+            <Fila />
+          </Flex1>
+          <Flex1 className="w-100">
+            <Funkdelics />
+          </Flex1>
+          <Flex1 className="w-100">
+            <Blackball />
+          </Flex1>
+          <Flex1 className="w-100">
+            <PoppingDanceInstructor />
+          </Flex1>
         </FlexColumnCenteredContainer>
       </BlackBackgroundContainer>
     </>
