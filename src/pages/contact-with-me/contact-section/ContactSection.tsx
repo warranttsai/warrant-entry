@@ -20,18 +20,21 @@ export default function ContactSection() {
   const [ballonColour, setBacllonColour] = useState<string>("red");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    sendingEmailToUser(userEmail, userName, userContactNumber, userFeedback)
-      .then((res: string) => {
-        setBallonMessage(res);
-        setBacllonColour("green");
-        setOnShowBallon(true);
-      })
-      .catch((err: string) => {
-        setBallonMessage(err.toString());
-        setBacllonColour("red");
-        setOnShowBallon(true);
-      });
+    setBallonMessage("It's not functioning yet🙇");
+    setBacllonColour("red");
+    setOnShowBallon(true);
+    // e.preventDefault();
+    // sendingEmailToUser(userEmail, userName, userContactNumber, userFeedback)
+    //   .then((res: string) => {
+    //     setBallonMessage(res);
+    //     setBacllonColour("green");
+    //     setOnShowBallon(true);
+    //   })
+    //   .catch((err: string) => {
+    //     setBallonMessage(err.toString());
+    //     setBacllonColour("red");
+    //     setOnShowBallon(true);
+    //   });
   };
 
   useEffect(() => {
