@@ -3,9 +3,10 @@ import "./WarningBalloon.css";
 
 interface WarningBalloonProps {
   message: string;
+  colour: string;
 }
 
-const WarningBalloon = ({ message }: WarningBalloonProps) => {
+const WarningBalloon = ({ message, colour = "red" }: WarningBalloonProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const WarningBalloon = ({ message }: WarningBalloonProps) => {
   }, [isVisible]);
 
   return isVisible ? (
-    <div className="warning-balloon">
+    <div className="warning-balloon" style={{ background: colour }}>
       <span className="warning-text">{message}</span>
     </div>
   ) : null;
