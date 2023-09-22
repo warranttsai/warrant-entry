@@ -6,24 +6,42 @@ import TextareaAutosize from "@mui/base/TextareaAutosize";
 import { BlackCenterTitle } from "../../../components/styled-component/Title";
 // components
 import WarningBalloon from "../../../components/warning-balloon/WarningBalloon";
+import { sendingEmailToUser } from "../../../utils/contactSectionUtils";
 
 export default function ContactSection() {
-  const [feedback, setFeedback] = useState<string>("");
-  const [clickOnSubmit, setClickOnSubmit] = useState<boolean>(false);
+  const [userEmail, setUserEmail] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
+  const [userContactNumber, setUserContactNumber] = useState<string>("");
+  const [userFeedback, setUserFeedback] = useState<string>("");
+  // loading state
+  const [onShowBallon, setOnShowBallon] = useState<boolean>(false);
+  const [ballonMessage, setBallonMessage] = useState<string>("404 Not Found!");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setClickOnSubmit(true);
+    sendingEmailToUser(userEmail, userName, userContactNumber, userFeedback)
+      .then(() => {
+        console.log("Successfully send the email!");
+        setBallonMessage(
+          "Thank you for taking your time to contribute to the improvement of this website!"
+        );
+        setOnShowBallon(true);
+      })
+      .catch((err) => {
+        console.log("Error happened on sending email!", err);
+        setBallonMessage(`Error happened on sending email!`);
+        setOnShowBallon(true);
+      });
   };
 
   useEffect(() => {
-    if (clickOnSubmit) {
+    if (onShowBallon) {
       // After 3 seconds, hide the message again
       setTimeout(() => {
-        setClickOnSubmit(false);
+        setOnShowBallon(false);
       }, 1000);
     }
-  }, [clickOnSubmit]);
+  }, [onShowBallon]);
 
   return (
     <form
@@ -36,27 +54,45 @@ export default function ContactSection() {
     >
       <BlackCenterTitle>Contact With Me</BlackCenterTitle>
       <FormControl fullWidth>
-        <InputLabel htmlFor="contact-email" required>
+        <InputLabel htmlFor="contact-user-email" required>
           Email address
         </InputLabel>
-        <Input id="contact-email" />
+        <Input
+          id="contact-user-email"
+          value={userEmail}
+          onChange={(e) => {
+            setUserEmail(e.target.value);
+          }}
+        />
       </FormControl>
       <FormControl fullWidth>
-        <InputLabel htmlFor="contact-name">Name</InputLabel>
-        <Input id="contact-name" />
+        <InputLabel htmlFor="contact-user-name">Name</InputLabel>
+        <Input
+          id="contact-user-name"
+          value={userName}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
       </FormControl>
       <FormControl fullWidth>
-        <InputLabel htmlFor="contact-number">Contact Number</InputLabel>
-        <Input id="contact-number" />
+        <InputLabel htmlFor="contact-user-number">Contact Number</InputLabel>
+        <Input
+          id="contact-user-number"
+          value={userContactNumber}
+          onChange={(e) => {
+            setUserContactNumber(e.target.value);
+          }}
+        />
       </FormControl>
       <FormControl fullWidth>
         <TextareaAutosize
           style={{ background: "white", color: "black" }}
           minRows={10}
           placeholder="Something you want to tell me..."
-          value={feedback}
+          value={userFeedback}
           onChange={(e) => {
-            setFeedback(e.target.value);
+            setUserFeedback(e.target.value);
           }}
         />
       </FormControl>
@@ -64,13 +100,7 @@ export default function ContactSection() {
         Submit
       </Button>
 
-      {clickOnSubmit && (
-        <WarningBalloon
-          message={
-            "This function is not enable yet. Thank you for your time to visit my website!"
-          }
-        />
-      )}
+      {onShowBallon && <WarningBalloon message={ballonMessage} />}
     </form>
   );
 }
