@@ -29,22 +29,26 @@ export default function CommentSection() {
   const [refreshComments, setRefreshComments] = useState<boolean>(false);
 
   const handleSubmitComment = () => {
-    setSubmitingNewComment(true);
-    saveComment(inputUserName, inputComment)
-      .then(() => {
-        setInputUserName("");
-        setInputComment("");
-        setRefreshComments(false);
+    if (inputComment) {
+      setSubmitingNewComment(true);
+      saveComment(inputUserName, inputComment)
+        .then(() => {
+          setInputUserName("");
+          setInputComment("");
+          setRefreshComments(false);
 
-        console.log("Saving comment success!");
-        setSubmitingNewComment(false);
-        setRefreshComments(true);
-      })
-      .catch((err: string) => {
-        console.log("Save comment error!", err);
-        alert(`Save comment error! ${err}`);
-        setSubmitingNewComment(false);
-      });
+          console.log("Saving comment success!");
+          setSubmitingNewComment(false);
+          setRefreshComments(true);
+        })
+        .catch((err: string) => {
+          console.log("Save comment error!", err);
+          alert(`Save comment error! ${err}`);
+          setSubmitingNewComment(false);
+        });
+    } else {
+      alert("Please fill in your comment!");
+    }
   };
 
   useEffect(() => {

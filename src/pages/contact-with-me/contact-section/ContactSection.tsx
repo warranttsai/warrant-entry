@@ -20,16 +20,13 @@ export default function ContactSection() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     sendingEmailToUser(userEmail, userName, userContactNumber, userFeedback)
-      .then(() => {
-        console.log("Successfully send the email!");
-        setBallonMessage(
-          "Thank you for taking your time to contribute to the improvement of this website!"
-        );
+      .then((res) => {
+        console.log(res);
+        setBallonMessage(res);
         setOnShowBallon(true);
       })
-      .catch((err) => {
-        console.log("Error happened on sending email!", err);
-        setBallonMessage(`Error happened on sending email!`);
+      .catch(() => {
+        setBallonMessage("something wrong...");
         setOnShowBallon(true);
       });
   };
@@ -81,7 +78,8 @@ export default function ContactSection() {
           id="contact-user-number"
           value={userContactNumber}
           onChange={(e) => {
-            setUserContactNumber(e.target.value);
+            if (typeof e.target.value === "number")
+              setUserContactNumber(e.target.value);
           }}
         />
       </FormControl>
@@ -100,7 +98,9 @@ export default function ContactSection() {
         Submit
       </Button>
 
-      {onShowBallon && <WarningBalloon message={ballonMessage} />}
+      {onShowBallon && (
+        <WarningBalloon message={ballonMessage} colour="green" />
+      )}
     </form>
   );
 }
