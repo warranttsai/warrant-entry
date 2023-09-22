@@ -36,8 +36,10 @@ export const fetchingComments = async () => {
           return dateB - dateA; // Sort in descending order (newest to oldest)
         });
       }
-    );
-
+    )
+    .catch(() => {
+      throw Error("Fetching comments error!");
+    });
   return result;
 };
 
@@ -66,15 +68,14 @@ export const saveComment = async (userName: string, comment: string) => {
     },
   };
 
-  let result = "Success!";
   await axios
     .post(
       "https://dc2my8iwv4.execute-api.ap-southeast-2.amazonaws.com/prod/comment",
       payload
     )
     .catch(() => {
-      result = "Saving comment error!";
+      throw Error("Saving comments error!");
     });
 
-  return result;
+  return "Successfully saved comment!";
 };

@@ -6,10 +6,11 @@ import {
   fetchingComments,
   saveComment,
 } from "../../../utils/commentSectionUtils";
-// components
-import CommentComponent from "../../../components/comment-component/CommentComponent";
 // styled-components
 import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
+// components
+import CommentComponent from "../../../components/comment-component/CommentComponent";
+import WarningBalloon from "../../../components/warning-balloon/WarningBalloon";
 
 export default function CommentSection() {
   const [inputUserName, setInputUserName] = useState<string>("");
@@ -27,27 +28,32 @@ export default function CommentSection() {
   const [submitingNewComment, setSubmitingNewComment] =
     useState<boolean>(false);
   const [refreshComments, setRefreshComments] = useState<boolean>(false);
+  const [onShowBallon, setOnShowBallon] = useState<boolean>(false);
+  const [ballonMessage, setBallonMessage] = useState<string>("404 Not Found!");
+  const [ballonColour, setBacllonColour] = useState<string>("red");
 
   const handleSubmitComment = () => {
     if (inputComment) {
       setSubmitingNewComment(true);
       saveComment(inputUserName, inputComment)
         .then(() => {
+          console.log("Saving comment success!");
           setInputUserName("");
           setInputComment("");
-          setRefreshComments(false);
-
-          console.log("Saving comment success!");
           setSubmitingNewComment(false);
           setRefreshComments(true);
         })
         .catch((err: string) => {
           console.log("Save comment error!", err);
-          alert(`Save comment error! ${err}`);
           setSubmitingNewComment(false);
+          setOnShowBallon(true);
+          setBallonMessage(err.toString());
+          setBacllonColour("red");
         });
     } else {
-      alert("Please fill in your comment!");
+      setOnShowBallon(true);
+      setBallonMessage("Please fill in your comment!");
+      setBacllonColour("red");
     }
   };
 
@@ -58,10 +64,12 @@ export default function CommentSection() {
           setCommentList(res);
           setRefreshComments(false);
         })
-        .catch((err) => {
+        .catch((err: string) => {
           console.log("Fetching Comments Error!", err);
-          alert("Fetching Comments Error!");
           setRefreshComments(false);
+          setOnShowBallon(true);
+          setBallonMessage(err.toString());
+          setBacllonColour("red");
         });
     }
   }, [refreshComments]);
@@ -71,11 +79,23 @@ export default function CommentSection() {
         setCommentList(res);
         setRefreshComments(false);
       })
-      .catch((err) => {
+      .catch((err: string) => {
         console.log("Fetching Comments Error!", err);
-        alert("Fetching Comments Error!");
+        setOnShowBallon(true);
+        setBallonMessage(err.toString());
+        setBacllonColour("red");
       });
   }, []);
+
+  // show boaalon debounce
+  useEffect(() => {
+    if (onShowBallon) {
+      // After 3 seconds, hide the message again
+      setTimeout(() => {
+        setOnShowBallon(false);
+      }, 1000);
+    }
+  }, [onShowBallon]);
 
   return (
     <>
@@ -137,6 +157,10 @@ export default function CommentSection() {
           )
         )}
       </FlexColumnCenteredContainer>
+
+      {onShowBallon && (
+        <WarningBalloon message={ballonMessage} colour={ballonColour} />
+      )}
     </>
   );
 }

@@ -26,5 +26,9 @@ export const sendingEmailToUser = async (
       result = "Sending email error!";
     });
 
-  return result;
+  if (result === "Successfully send the email!") {
+    return result;
+  } else {
+    throw Error(result);
+  }
 };

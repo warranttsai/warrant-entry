@@ -2,11 +2,12 @@
 import { useState, useEffect, FormEvent } from "react";
 import { FormControl, InputLabel, Input, Button } from "@mui/material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
+// utils
+import { sendingEmailToUser } from "../../../utils/contactSectionUtils";
 // styled-components
 import { BlackCenterTitle } from "../../../components/styled-component/Title";
 // components
 import WarningBalloon from "../../../components/warning-balloon/WarningBalloon";
-import { sendingEmailToUser } from "../../../utils/contactSectionUtils";
 
 export default function ContactSection() {
   const [userEmail, setUserEmail] = useState<string>("");
@@ -16,17 +17,19 @@ export default function ContactSection() {
   // loading state
   const [onShowBallon, setOnShowBallon] = useState<boolean>(false);
   const [ballonMessage, setBallonMessage] = useState<string>("404 Not Found!");
+  const [ballonColour, setBacllonColour] = useState<string>("red");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     sendingEmailToUser(userEmail, userName, userContactNumber, userFeedback)
-      .then((res) => {
-        console.log(res);
+      .then((res: string) => {
         setBallonMessage(res);
+        setBacllonColour("green");
         setOnShowBallon(true);
       })
-      .catch(() => {
-        setBallonMessage("something wrong...");
+      .catch((err: string) => {
+        setBallonMessage(err.toString());
+        setBacllonColour("red");
         setOnShowBallon(true);
       });
   };
@@ -99,7 +102,7 @@ export default function ContactSection() {
       </Button>
 
       {onShowBallon && (
-        <WarningBalloon message={ballonMessage} colour="green" />
+        <WarningBalloon message={ballonMessage} colour={ballonColour} />
       )}
     </form>
   );
