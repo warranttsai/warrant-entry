@@ -10,9 +10,7 @@ import img5 from "../../assets/addingCorsHeaderToYourApiResponseHeader/3.jpeg";
 export const HowToEnableCORS = () => {
   return (
     <>
-      <BlackCenterTitle style={{ fontSize: "2rem" }}>
-        How To Enable CORS
-      </BlackCenterTitle>
+      <BlackCenterTitle>How To Enable CORS</BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
         <ol>
           <li>Log in to your AWS console.</li>
@@ -59,7 +57,7 @@ export const AddingCorsHeaderToYourApiResponseHeader = () => {
 export const EnableSES = () => {
   return (
     <>
-      <BlackCenterTitle style={{ fontSize: "2rem" }}>
+      <BlackCenterTitle>
         How to Enable Simple Email Service With Email Address
       </BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  padding-inline: 300px;
+  padding-inline: 20vw;
   width: auto;
 `;
 
@@ -9,12 +9,13 @@ export const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 700px;
+  min-width: 350px;
 `;
 
 export const HeaderContainer = styled.div`
   padding: 20px;
   position: static;
+  height: auto;
   flex: 1;
 `;
 

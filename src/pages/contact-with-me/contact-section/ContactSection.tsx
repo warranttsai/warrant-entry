@@ -48,66 +48,75 @@ export default function ContactSection() {
   }, [onShowBallon]);
 
   return (
-    <form
-      id="contact-form"
-      className="d-flex flex-column justify-content-start align-items-start"
-      style={{
-        gap: "10px",
-      }}
-      onSubmit={handleSubmit}
+    <div
+      className="d-flex flex-column"
+      style={{ width: "50%", paddingInline: "10vw" }}
     >
-      <BlackCenterTitle>Contact With Me</BlackCenterTitle>
-      <FormControl fullWidth>
-        <InputLabel htmlFor="contact-user-email" required>
-          Email address
-        </InputLabel>
-        <Input
-          id="contact-user-email"
-          value={userEmail}
-          onChange={(e) => {
-            setUserEmail(e.target.value);
-          }}
-        />
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel htmlFor="contact-user-name">Name</InputLabel>
-        <Input
-          id="contact-user-name"
-          value={userName}
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-        />
-      </FormControl>
-      <FormControl fullWidth>
-        <InputLabel htmlFor="contact-user-number">Contact Number</InputLabel>
-        <Input
-          id="contact-user-number"
-          value={userContactNumber}
-          onChange={(e) => {
-            if (typeof e.target.value === "number")
-              setUserContactNumber(e.target.value);
-          }}
-        />
-      </FormControl>
-      <FormControl fullWidth>
-        <TextareaAutosize
-          style={{ background: "white", color: "black" }}
-          minRows={10}
-          placeholder="Something you want to tell me..."
-          value={userFeedback}
-          onChange={(e) => {
-            setUserFeedback(e.target.value);
-          }}
-        />
-      </FormControl>
-      <Button type="submit" variant="contained" style={{ marginLeft: "auto" }}>
-        Submit
-      </Button>
+      <BlackCenterTitle>Sending Email?</BlackCenterTitle>
+      <form
+        id="contact-form"
+        className="d-flex flex-column justify-content-start align-items-start"
+        style={{
+          gap: "10px",
+        }}
+        onSubmit={handleSubmit}
+      >
+        <FormControl fullWidth>
+          <InputLabel htmlFor="contact-user-email" required>
+            Email address
+          </InputLabel>
+          <Input
+            id="contact-user-email"
+            value={userEmail}
+            onChange={(e) => {
+              setUserEmail(e.target.value);
+            }}
+          />
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel htmlFor="contact-user-name">Name</InputLabel>
+          <Input
+            id="contact-user-name"
+            value={userName}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+        </FormControl>
+        <FormControl fullWidth>
+          <InputLabel htmlFor="contact-user-number">Contact Number</InputLabel>
+          <Input
+            id="contact-user-number"
+            value={userContactNumber}
+            onChange={(e) => {
+              if (typeof e.target.value === "number")
+                setUserContactNumber(e.target.value);
+            }}
+          />
+        </FormControl>
+        <FormControl fullWidth>
+          <TextareaAutosize
+            style={{ background: "white", color: "black" }}
+            minRows={10}
+            placeholder="Something you want to tell me..."
+            value={userFeedback}
+            onChange={(e) => {
+              setUserFeedback(e.target.value);
+            }}
+          />
+        </FormControl>
+        <Button
+          type="submit"
+          variant="contained"
+          style={{ marginLeft: "auto" }}
+        >
+          Submit
+        </Button>
 
-      {onShowBallon && (
-        <WarningBalloon message={ballonMessage} colour={ballonColour} />
-      )}
-    </form>
+        {onShowBallon && (
+          <WarningBalloon message={ballonMessage} colour={ballonColour} />
+        )}
+      </form>
+    </div>
   );
 }

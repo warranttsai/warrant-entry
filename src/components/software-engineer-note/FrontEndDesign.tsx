@@ -4,7 +4,7 @@ import { BlackCenterTitle } from "../styled-component/Title";
 export const DrawImageForFrontEndDesign = () => {
   return (
     <>
-      <BlackCenterTitle style={{ fontSize: "2rem" }}>
+      <BlackCenterTitle>
         Draw a image before start developing the front-end page
       </BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
@@ -28,9 +28,7 @@ export const DrawImageForFrontEndDesign = () => {
 export const EncapsulateYourStyleSheet = () => {
   return (
     <>
-      <BlackCenterTitle style={{ fontSize: "2rem" }}>
-        Encapsulate your style sheet
-      </BlackCenterTitle>
+      <BlackCenterTitle>Encapsulate your style sheet</BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
         <span>
           SCSS/SASS is a good module to be used in Node to help the developer

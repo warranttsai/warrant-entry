@@ -1,27 +1,18 @@
 // modules
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-// images
 // styled-components
-import { Flex1 } from "../../styled-component/Container";
 import { BrownCenterTitle } from "../../styled-component/Title";
 
 export default function Fila() {
   return (
-    <Flex1
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "left",
-      }}
-    >
+    <>
       <Card
+        id="fila-container"
         sx={{
           background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
-          width: 800,
+          textAlign: "left",
         }}
       >
         <CardContent
@@ -48,6 +39,6 @@ export default function Fila() {
           </ul>
         </CardContent>
       </Card>
-    </Flex1>
+    </>
   );
 }

@@ -13,6 +13,7 @@ import {
   Flex1,
   Flex2,
   FlexRowCenteredContainer,
+  FlexColumnCenteredContainer,
 } from "../../components/styled-component/Container";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow";
@@ -32,13 +33,12 @@ function AboutMe() {
       <BlackCenterTitle data-testid="intro-title">
         Introduction
       </BlackCenterTitle>
-      <FlexRowCenteredContainer style={{ paddingInline: "200px" }}>
+      <FlexRowCenteredContainer
+        style={{ paddingInline: "20vw", flexWrap: "wrap" }}
+      >
         <Flex1>
           <RectangleBoxShadow>
-            <img
-              src={Warrant}
-              style={{ maxWidth: "350px", maxHeight: "450px" }}
-            />
+            <img src={Warrant} style={{ maxWidth: 350, maxHeight: 450 }} />
           </RectangleBoxShadow>
         </Flex1>
         <Flex2>
@@ -76,26 +76,32 @@ function AboutMe() {
         </Flex2>
       </FlexRowCenteredContainer>
       <br />
-      <div id="my-personality-section">
-        <Flex1>
-          <Stack
-            data-testid="my-personalities"
-            direction="row"
-            spacing={1}
-            alignItems="center" // Align items vertically to the center
-            justifyContent="center" // Justify items horizontally to the center
-          >
-            {myPersonalities.map((item) => {
-              return <Chip key={item.id} label={item.name} />;
-            })}
-          </Stack>
-        </Flex1>
-      </div>
-      <div
+      <Stack
+        id="my-personality-section"
+        width="50%"
+        data-testid="my-personalities"
+        direction="row"
+        spacing={1}
+        alignItems="center" // Align items vertically to the center
+        justifyContent="center" // Justify items horizontally to the center
+        flexWrap="wrap"
+        style={{
+          marginInline: "auto",
+        }}
+      >
+        {myPersonalities.map((item) => {
+          return (
+            <Flex1 key={item.id}>
+              <Chip label={item.name} />
+            </Flex1>
+          );
+        })}
+      </Stack>
+      <FlexColumnCenteredContainer
         data-testid="social-media"
         style={{
+          width: "50%",
           height: "auto",
-          maxWidth: "max-content",
           margin: "20px auto 20px auto",
           fontFamily: "Raleway,sans-serif",
           fontSize: "15px",
@@ -107,10 +113,12 @@ function AboutMe() {
           borderRadius: "10px",
         }}
       >
-        <BlackCenterTitle data-testid="my-social-media">
-          My Social Media
-        </BlackCenterTitle>
-        <FlexRowCenteredContainer style={{ margin: "50px 400px 0 400px" }}>
+        <Flex1>
+          <BlackCenterTitle data-testid="my-social-media">
+            My Social Media
+          </BlackCenterTitle>
+        </Flex1>
+        <FlexRowCenteredContainer style={{ flexWrap: "wrap" }}>
           <Flex1>
             <button
               data-testid="linedin-button"
@@ -163,7 +171,7 @@ function AboutMe() {
             </button>
           </Flex1>
         </FlexRowCenteredContainer>
-      </div>
+      </FlexColumnCenteredContainer>
     </>
   );
 }
