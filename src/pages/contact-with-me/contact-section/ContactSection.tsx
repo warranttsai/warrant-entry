@@ -48,7 +48,10 @@ export default function ContactSection() {
   }, [onShowBallon]);
 
   return (
-    <div className="d-flex flex-column" style={{ paddingInline: "20vw" }}>
+    <div
+      className="d-flex flex-column"
+      style={{ width: "50%", paddingInline: "10vw" }}
+    >
       <BlackCenterTitle>Sending Email?</BlackCenterTitle>
       <form
         id="contact-form"

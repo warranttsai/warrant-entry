@@ -12,6 +12,7 @@ export default function Blackball() {
         sx={{
           background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
+          textAlign: "left",
         }}
       >
         <CardContent
