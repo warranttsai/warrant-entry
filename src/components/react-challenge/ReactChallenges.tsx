@@ -16,13 +16,14 @@ import WarningBalloon from "../warning-balloon/WarningBalloon";
 export function Challenge1() {
   const [content, setContent] = useState<string>("");
 
-  const calculateWords = (value: any) => {
+  const calculateWords = (value: string) => {
     let strBuf = "";
     let counter = 0;
-    const lenValue = value.length;
-    for (const index in value) {
-      strBuf += value[index];
-      if (value[index] === " " || +index === lenValue - 1) {
+    const lenValue: number = +value.length;
+    for (const [index, item] of value) {
+      console.log(index, item);
+      strBuf += item;
+      if (item === " " || +index === lenValue - 1) {
         // If the letter is space or reached the end of content
         if (strBuf.match(/^[A-Za-z0-9]/g)) {
           counter += 1;
@@ -41,8 +42,8 @@ export function Challenge1() {
     }
     return strBuf;
   };
-  const calculateSentences = (value: any) => {
-    let strArr = value.split(". ");
+  const calculateSentences = (value: string) => {
+    const strArr = value.split(". ");
     return strArr.length;
   };
 
@@ -103,7 +104,7 @@ export function Challenge2() {
     const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
     const specialCharacters = "!@#$%^&*()_+";
-    const getRandomElement = (array: any) => {
+    const getRandomElement = (array: string) => {
       return array[Math.floor(Math.random() * array.length)];
     };
     // Generate random uppercase letter
@@ -124,7 +125,9 @@ export function Challenge2() {
     setShowSuccessMessage(true);
   };
   const handleClickCopy = () => {
-    navigator.clipboard.writeText(newPassword);
+    navigator.clipboard.writeText(newPassword).catch(() => {
+      alert("Copy error!");
+    });
     setShowCopyMessage(true);
     setTimeout(() => {
       setShowCopyMessage(false);
@@ -206,7 +209,10 @@ export function Challenge2() {
       </FlexColumnCenteredContainer>
       {/* Copy Message */}
       {showCopyMessage && (
-        <WarningBalloon message="Your password had been copied to your clipboard!" />
+        <WarningBalloon
+          message="Your password had been copied to your clipboard!"
+          colour="green"
+        />
       )}
     </FlexColumnCenteredContainer>
   );

@@ -1,5 +1,5 @@
 // modules
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 // images
@@ -9,8 +9,6 @@ import instagramButton from "../../assets/instagram-button.jpeg";
 import facebookButton from "../../assets/facebook-button.jpeg";
 // scss
 import "./AboutMe.scss";
-// components
-import WarningBalloon from "../../components/warning-balloon/WarningBalloon";
 // styled comopnents
 import {
   Flex1,
@@ -31,28 +29,9 @@ function AboutMe() {
     { id: 4, name: "Open-minded" },
     { id: 5, name: "Strong Communicator" },
   ]);
-  const [showWarningBalloon, setShowWarningBalloon] = useState<boolean>(false);
-  const handleDelete = (id: number) => {
-    // Handle the delete action here
-    const newArray = myPersonalities.filter(
-      (item: { id: number; name: string }) => id !== item.id
-    );
-    setMyPersonalities(newArray);
-    setShowWarningBalloon(true);
-  };
-
-  useEffect(() => {
-    if (showWarningBalloon) {
-      // After 3 seconds, hide the message again
-      setTimeout(() => {
-        setShowWarningBalloon(false);
-      }, 1000);
-    }
-  }, [showWarningBalloon]);
 
   return (
     <>
-      {showWarningBalloon && <WarningBalloon message="OMG! Don't do this!😱" />}
       <BlackCenterTitle data-testid="intro-title">
         Introduction
       </BlackCenterTitle>
@@ -110,13 +89,7 @@ function AboutMe() {
             justifyContent="center" // Justify items horizontally to the center
           >
             {myPersonalities.map((item) => {
-              return (
-                <Chip
-                  key={item.id}
-                  label={item.name}
-                  onDelete={() => handleDelete(item.id)}
-                />
-              );
+              return <Chip key={item.id} label={item.name} />;
             })}
           </Stack>
         </Flex1>

@@ -6,7 +6,7 @@ interface WarningBalloonProps {
   colour: string;
 }
 
-const WarningBalloon = ({ message, colour = "red" }: WarningBalloonProps) => {
+const WarningBalloon = ({ message, colour }: WarningBalloonProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
