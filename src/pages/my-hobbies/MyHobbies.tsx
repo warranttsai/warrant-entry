@@ -11,7 +11,7 @@ import { BlackBackgroundContainer } from "../../components/styled-component/Cont
 export default function MyHobbies() {
   return (
     <>
-      <div>
+      <div id="my-hobbies-dancer-container">
         <BlackCenterTitle>I AM A DANCER!</BlackCenterTitle>
         <div className="text-left" style={{ paddingInline: 100 }}>
           <span>
@@ -33,11 +33,9 @@ export default function MyHobbies() {
         </div>
         <br />
         <br />
-        <div className="w-100 text-center">
-          <img src={InstagramPage} style={{ width: 450, height: 500 }} />
-        </div>
+        <img src={InstagramPage} style={{ maxWidth: 350, maxHeight: 400 }} />
       </div>
-      <BlackBackgroundContainer>
+      <BlackBackgroundContainer id="my-hobbies-gamer-container">
         <WhiteCenterTitle>Gamer!?</WhiteCenterTitle>
         <div className="text-left" style={{ paddingInline: 100 }}>
           <span>
@@ -54,9 +52,7 @@ export default function MyHobbies() {
         </div>
         <br />
         <br />
-        <div className="w-100 text-center">
-          <img src={SteamPage} style={{ width: 450, height: 500 }} />
-        </div>
+        <img src={SteamPage} style={{ maxWidth: 350, maxHeight: 400 }} />
       </BlackBackgroundContainer>
     </>
   );
