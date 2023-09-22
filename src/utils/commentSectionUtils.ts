@@ -66,7 +66,7 @@ export const saveComment = async (userName: string, comment: string) => {
     },
   };
 
-  let result;
+  let result = "Success!";
   await axios
     .post(
       "https://dc2my8iwv4.execute-api.ap-southeast-2.amazonaws.com/prod/comment",
