@@ -12,11 +12,11 @@ export const sendingEmailToUser = async (
       user_email: userEmail,
       user_name: userName,
       user_contact_number: userContactNumber,
-      comment_feedback: userFeedback,
+      user_feedback: userFeedback,
     },
   };
 
-  let result = "Success!";
+  let result = "Successfully send the email!";
   await axios
     .post(
       "https://dc2my8iwv4.execute-api.ap-southeast-2.amazonaws.com/prod/emailer",
