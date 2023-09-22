@@ -13,6 +13,7 @@ import {
   Flex1,
   Flex2,
   FlexRowCenteredContainer,
+  FlexColumnCenteredContainer,
 } from "../../components/styled-component/Container";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow";
@@ -96,10 +97,9 @@ function AboutMe() {
           );
         })}
       </Stack>
-      <FlexRowCenteredContainer
+      <FlexColumnCenteredContainer
         data-testid="social-media"
         style={{
-          flexWrap: "wrap",
           width: "50%",
           height: "auto",
           margin: "20px auto 20px auto",
@@ -113,10 +113,12 @@ function AboutMe() {
           borderRadius: "10px",
         }}
       >
-        <BlackCenterTitle data-testid="my-social-media">
-          My Social Media
-        </BlackCenterTitle>
-        <FlexRowCenteredContainer style={{ margin: "50px 400px 0 400px" }}>
+        <Flex1>
+          <BlackCenterTitle data-testid="my-social-media">
+            My Social Media
+          </BlackCenterTitle>
+        </Flex1>
+        <FlexRowCenteredContainer style={{ flexWrap: "wrap" }}>
           <Flex1>
             <button
               data-testid="linedin-button"
@@ -169,7 +171,7 @@ function AboutMe() {
             </button>
           </Flex1>
         </FlexRowCenteredContainer>
-      </FlexRowCenteredContainer>
+      </FlexColumnCenteredContainer>
     </>
   );
 }

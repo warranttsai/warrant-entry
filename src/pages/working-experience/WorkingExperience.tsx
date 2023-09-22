@@ -15,7 +15,7 @@ import PoppingDanceInstructor from "../../components/working-experience-componen
 export default function WorkingExperience() {
   return (
     <>
-      <div style={{ padding: "1vh 5vw" }}>
+      <div style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}>
         <BlackCenterTitle>Software Engineer Experience</BlackCenterTitle>
         <FlexColumnCenteredContainer style={{ gap: "10px" }}>
           <Flex1 className="w-100">
@@ -24,23 +24,25 @@ export default function WorkingExperience() {
         </FlexColumnCenteredContainer>
       </div>
       <BlackBackgroundContainer>
-        <BlackCenterTitle style={{ color: "white" }}>
-          The Other Experience
-        </BlackCenterTitle>
-        <FlexColumnCenteredContainer style={{ gap: "10px" }}>
-          <Flex1 className="w-100">
-            <Fila />
-          </Flex1>
-          <Flex1 className="w-100">
-            <Funkdelics />
-          </Flex1>
-          <Flex1 className="w-100">
-            <Blackball />
-          </Flex1>
-          <Flex1 className="w-100">
-            <PoppingDanceInstructor />
-          </Flex1>
-        </FlexColumnCenteredContainer>
+        <div style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}>
+          <BlackCenterTitle style={{ color: "white" }}>
+            The Other Experience
+          </BlackCenterTitle>
+          <FlexColumnCenteredContainer style={{ gap: "10px" }}>
+            <Flex1 className="w-100">
+              <Fila />
+            </Flex1>
+            <Flex1 className="w-100">
+              <Funkdelics />
+            </Flex1>
+            <Flex1 className="w-100">
+              <Blackball />
+            </Flex1>
+            <Flex1 className="w-100">
+              <PoppingDanceInstructor />
+            </Flex1>
+          </FlexColumnCenteredContainer>
+        </div>
       </BlackBackgroundContainer>
     </>
   );
