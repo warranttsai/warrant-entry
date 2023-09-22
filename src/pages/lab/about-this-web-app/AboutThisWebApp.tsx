@@ -8,7 +8,10 @@ import { Divider } from "@mui/material";
 
 export default function AboutThisWebApp() {
   return (
-    <FlexColumnCenteredContainer style={{ gap: 5, paddingInline: "10vw" }}>
+    <FlexColumnCenteredContainer
+      id="about-this-web-app-container"
+      style={{ gap: 5, paddingInline: "10vw" }}
+    >
       <BlackCenterTitle id="about-this-web-app-title">
         Technology Utilization
       </BlackCenterTitle>
@@ -20,25 +23,27 @@ export default function AboutThisWebApp() {
       </Flex1>
       {/* Technology Stack and Modules */}
       <Flex1
-        className="d-flex flex-row text-left"
-        style={{ width: "50%", justifyContent: "center", alignItems: "start" }}
+        id="about-this-web-app-technology-stack-and-modules"
+        className="d-flex flex-row"
+        style={{ width: "50%", flexWrap: "wrap" }}
       >
-        <Flex1 style={{ width: "50%" }}>
-          <div>
-            <h2>
-              <b>Technology Stack</b>
-            </h2>
-          </div>
-          <div>
-            <ul>
-              <li>React TypeScript</li>
-              <li>ES6</li>
-              <li>AWS Lambda</li>
-              <li>AWS DynamoDB</li>
-            </ul>
-          </div>
+        <Flex1 className="text-left">
+          <h2>
+            <b>Technology Stack</b>
+          </h2>
+          <ul>
+            <li>React TypeScript</li>
+            <li>ES6</li>
+            <li>Serverless Framework</li>
+            <li>AWS API Gateway</li>
+            <li>AWS CloudFormation</li>
+            <li>AWS CloudWatch</li>
+            <li>AWS Lambda</li>
+            <li>AWS DynamoDB</li>
+            <li>AWS SES</li>
+          </ul>
         </Flex1>
-        <Flex1 style={{ width: "50%" }}>
+        <Flex1 className="text-left">
           <h2>
             <b>Modules</b>
           </h2>
@@ -64,7 +69,7 @@ export default function AboutThisWebApp() {
         }}
       />
       {/* Deploymment Platform */}
-      <Flex1>
+      <Flex1 id="about-this-web-app-deployment-platform">
         <h2>
           <b>What platform is it using for deployment?</b>
         </h2>
@@ -79,7 +84,7 @@ export default function AboutThisWebApp() {
         }}
       />
       {/* Contribution of The Project */}
-      <Flex1>
+      <Flex1 id="about-this-web-app-contribution-of-the-project">
         <h2>
           <b>Who contributed to this project?</b>
         </h2>
