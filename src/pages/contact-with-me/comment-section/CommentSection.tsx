@@ -1,13 +1,15 @@
 // modules
 import React, { useState, useEffect } from "react";
-// styled-components
-import CommentComponent from "../../../components/comment-component/CommentComponent";
-import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
 import { Button, TextareaAutosize } from "@mui/material";
+// utils
 import {
   fetchingComments,
   saveComment,
 } from "../../../utils/commentSectionUtils";
+// components
+import CommentComponent from "../../../components/comment-component/CommentComponent";
+// styled-components
+import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
 
 export default function CommentSection() {
   const [inputUserName, setInputUserName] = useState<string>("");

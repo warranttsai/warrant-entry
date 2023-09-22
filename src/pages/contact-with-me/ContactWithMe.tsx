@@ -1,36 +1,17 @@
 // modules
-import { useState, useEffect, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link, FormControl, InputLabel, Input, Button } from "@mui/material";
-import TextareaAutosize from "@mui/base/TextareaAutosize";
+import { Link } from "@mui/material";
 // styled-component
 import {
   ContactContainer,
   BlackBackgroundContainer,
 } from "../../components/styled-component/Container";
-import { BlackCenterTitle } from "../../components/styled-component/Title";
 // components
-import WarningBalloon from "../../components/warning-balloon/WarningBalloon";
 import CommentSection from "./comment-section/CommentSection";
+import ContactSection from "./contact-section/ContactSection";
 
 function ContactWithMe() {
   const navigate = useNavigate();
-  const [feedback, setFeedback] = useState<string>("");
-  const [clickOnSubmit, setClickOnSubmit] = useState<boolean>(false);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setClickOnSubmit(true);
-  };
-
-  useEffect(() => {
-    if (clickOnSubmit) {
-      // After 3 seconds, hide the message again
-      setTimeout(() => {
-        setClickOnSubmit(false);
-      }, 1000);
-    }
-  }, [clickOnSubmit]);
 
   return (
     <>
@@ -78,57 +59,15 @@ function ContactWithMe() {
             💁 Facebbook
           </Link>
         </div>
-        <form
-          id="contact-form"
+        <div
+          id="contact-section"
+          className="flex-1"
           style={{
-            flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "start",
-            alignItems: "center",
             paddingInline: "100px",
-            gap: "10px",
           }}
-          onSubmit={handleSubmit}
         >
-          <BlackCenterTitle>Contact With Me</BlackCenterTitle>
-          <FormControl fullWidth>
-            <InputLabel htmlFor="contact-email" required>
-              Email address
-            </InputLabel>
-            <Input id="contact-email" />
-          </FormControl>
-          <FormControl fullWidth>
-            <InputLabel htmlFor="contact-name">Name</InputLabel>
-            <Input id="contact-name" />
-          </FormControl>
-          <FormControl fullWidth>
-            <InputLabel htmlFor="contact-number">Contact Number</InputLabel>
-            <Input id="contact-number" />
-          </FormControl>
-          <FormControl fullWidth>
-            <TextareaAutosize
-              style={{ background: "white", color: "black" }}
-              minRows={10}
-              placeholder="Something you want to tell me..."
-              value={feedback}
-              onChange={(e) => {
-                setFeedback(e.target.value);
-              }}
-            />
-          </FormControl>
-          <Button type="submit" variant="contained">
-            Submit
-          </Button>
-
-          {clickOnSubmit && (
-            <WarningBalloon
-              message={
-                "This function is not enable yet. Thank you for your time to visit my website!"
-              }
-            />
-          )}
-        </form>
+          <ContactSection />
+        </div>
       </ContactContainer>
       <BlackBackgroundContainer style={{ minHeight: "70vh" }}>
         <CommentSection />
