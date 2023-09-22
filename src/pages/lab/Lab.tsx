@@ -13,7 +13,7 @@ export default function Lab() {
       {/* About this web application */}
       <LabSection>
         <Button onClick={() => navigate("/lab/about-this-web-app")}>
-          <BlackCenterTitle style={{ fontSize: 30 }}>
+          <BlackCenterTitle>
             📚 Something About This Web Application 📚
           </BlackCenterTitle>
         </Button>
@@ -27,9 +27,7 @@ export default function Lab() {
       {/* My Coding Bible */}
       <LabSection>
         <Button onClick={() => navigate("/lab/my-coding-bible")}>
-          <BlackCenterTitle style={{ fontSize: 30 }}>
-            🧑‍💻 My Coding Bible
-          </BlackCenterTitle>
+          <BlackCenterTitle>🧑‍💻 My Coding Bible</BlackCenterTitle>
         </Button>
       </LabSection>
       <Divider

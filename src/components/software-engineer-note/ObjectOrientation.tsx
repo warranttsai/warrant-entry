@@ -4,7 +4,7 @@ import { BlackCenterTitle } from "../styled-component/Title";
 export const ObjectOrientation = () => {
   return (
     <div>
-      <BlackCenterTitle style={{ fontSize: "2rem" }}>
+      <BlackCenterTitle>
         Creating module for reuseable methods/components
       </BlackCenterTitle>
       <div className="text-left" style={{ paddingInline: 100 }}>
