@@ -1,6 +1,6 @@
 // modules
 import React, { useState, useEffect } from "react";
-import { Button, TextareaAutosize, Input, InputLabel } from "@mui/material";
+import { Button, TextareaAutosize, InputLabel } from "@mui/material";
 // utils
 import {
   fetchingComments,
