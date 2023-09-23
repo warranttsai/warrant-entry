@@ -3,9 +3,6 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 // images
 import Warrant from "../../assets/Warrant.jpg";
-import linedinButton from "../../assets/linedin-button.jpeg";
-import instagramButton from "../../assets/instagram-button.jpeg";
-import facebookButton from "../../assets/facebook-button.jpeg";
 // scss
 import "./AboutMe.scss";
 // styled comopnents
@@ -13,7 +10,6 @@ import {
   Flex1,
   Flex2,
   FlexRowCenteredContainer,
-  FlexColumnCenteredContainer,
 } from "../../components/styled-component/Container";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow";
@@ -97,81 +93,6 @@ function AboutMe() {
           );
         })}
       </Stack>
-      <FlexColumnCenteredContainer
-        data-testid="social-media"
-        style={{
-          width: "50%",
-          height: "auto",
-          margin: "20px auto 20px auto",
-          fontFamily: "Raleway,sans-serif",
-          fontSize: "15px",
-          fontWeight: "800",
-          lineHeight: "70px",
-          textAlign: "center",
-          textTransform: "uppercase",
-          border: "4px solid black",
-          borderRadius: "10px",
-        }}
-      >
-        <Flex1>
-          <BlackCenterTitle data-testid="my-social-media">
-            My Social Media
-          </BlackCenterTitle>
-        </Flex1>
-        <FlexRowCenteredContainer style={{ flexWrap: "wrap" }}>
-          <Flex1>
-            <button
-              data-testid="linedin-button"
-              style={{ background: "white" }}
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/warrant-tsai-20463414b/",
-                  "_blank"
-                )
-              }
-            >
-              <img
-                src={linedinButton}
-                style={{ width: "50px", height: "50px" }}
-              />
-            </button>
-          </Flex1>
-          <Flex1>
-            <button
-              data-testid="instagram-button"
-              style={{ background: "white" }}
-              onClick={() =>
-                window.open(
-                  "https://www.instagram.com/warrant_job_hunting/",
-                  "_blank"
-                )
-              }
-            >
-              <img
-                src={instagramButton}
-                style={{ width: "50px", height: "50px" }}
-              />
-            </button>
-          </Flex1>
-          <Flex1>
-            <button
-              data-testid="facebook-button"
-              style={{ background: "white" }}
-              onClick={() =>
-                window.open(
-                  "https://www.facebook.com/profile.php?id=100007257571234",
-                  "_blank"
-                )
-              }
-            >
-              <img
-                src={facebookButton}
-                style={{ width: "50px", height: "50px" }}
-              />
-            </button>
-          </Flex1>
-        </FlexRowCenteredContainer>
-      </FlexColumnCenteredContainer>
     </>
   );
 }
