@@ -13,9 +13,12 @@ export default function Lab() {
       {/* About this web application */}
       <LabSection>
         <Button onClick={() => navigate("/lab/about-this-web-app")}>
-          <BlackCenterTitle>
+          <h1
+            className="hyper-link-style"
+            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          >
             📚 Something About This Web Application 📚
-          </BlackCenterTitle>
+          </h1>
         </Button>
       </LabSection>
       <Divider
@@ -27,7 +30,12 @@ export default function Lab() {
       {/* My Coding Bible */}
       <LabSection>
         <Button onClick={() => navigate("/lab/my-coding-bible")}>
-          <BlackCenterTitle>🧑‍💻 My Coding Bible</BlackCenterTitle>
+          <h1
+            className="hyper-link-style"
+            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          >
+            🧑‍💻 My Coding Bible
+          </h1>
         </Button>
       </LabSection>
       <Divider
@@ -42,7 +50,12 @@ export default function Lab() {
           href="https://www.codevertiser.com/free-reactjs-coding-challenges-for-responsive-UI/"
           target="_blank"
         >
-          <BlackCenterTitle>React Challenge ➤</BlackCenterTitle>
+          <h1
+            className="hyper-link-style"
+            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          >
+            React Challenge ➤
+          </h1>
         </a>
         <Button onClick={() => navigate("/lab/react-challenge-1")}>
           challenge #1

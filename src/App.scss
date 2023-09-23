@@ -69,3 +69,12 @@ body {
 .align-items-end {
   align-items: ceendnter;
 }
+// title
+.hyper-link-style {
+  color: blue; /* Set the color to a typical hyperlink color */
+  text-decoration: underline; /* Underline the text */
+  cursor: pointer; /* Show pointer cursor on hover, giving a clickable feel */
+}
+.hyper-link-style:hover {
+  color: purple; /* Change the color on hover to make it more interactive */
+}

@@ -13,7 +13,7 @@ export default function MyHobbies() {
     <>
       <div id="my-hobbies-dancer-container">
         <BlackCenterTitle>I AM A DANCER!</BlackCenterTitle>
-        <div className="text-left" style={{ paddingInline: 100 }}>
+        <div className="text-left" style={{ paddingInline: "10vw" }}>
           <span>
             I had been dancing in Popping dance since September 2016. In June
             2022, I moved to Melbourne Australia and started developing the
@@ -37,7 +37,7 @@ export default function MyHobbies() {
       </div>
       <BlackBackgroundContainer id="my-hobbies-gamer-container">
         <WhiteCenterTitle>Gamer!?</WhiteCenterTitle>
-        <div className="text-left" style={{ paddingInline: 100 }}>
+        <div className="text-left" style={{ paddingInline: "10vw" }}>
           <span>
             It is always destress, relax and satisfying to play games! This is
             my another favorite thing! I enjoy the feeling to challenge myself
