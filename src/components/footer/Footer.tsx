@@ -29,7 +29,7 @@ export default function Footer() {
         >
           <Button
             className="flex-1"
-            style={{ width: 100 }}
+            style={{ width: 100, maxWidth: 100 }}
             size="small"
             variant="contained"
             color="success"
@@ -45,7 +45,7 @@ export default function Footer() {
           </Button>
           <Button
             className="flex-1"
-            style={{ width: 100 }}
+            style={{ width: 100, maxWidth: 100 }}
             size="small"
             variant="contained"
             color="success"
@@ -61,7 +61,7 @@ export default function Footer() {
           </Button>
           <Button
             className="flex-1"
-            style={{ width: 100 }}
+            style={{ width: 100, maxWidth: 100 }}
             size="small"
             variant="contained"
             color="success"
