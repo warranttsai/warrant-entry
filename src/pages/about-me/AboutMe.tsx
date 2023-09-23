@@ -25,7 +25,7 @@ function AboutMe() {
   ];
 
   return (
-    <>
+    <div style={{ marginBlock: 10 }}>
       <BlackCenterTitle data-testid="intro-title">
         Introduction
       </BlackCenterTitle>
@@ -93,7 +93,7 @@ function AboutMe() {
           );
         })}
       </Stack>
-    </>
+    </div>
   );
 }
 
