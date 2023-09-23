@@ -1,7 +1,7 @@
 // styled-components
 import { BlackCenterTitle } from "../../components/styled-component/Title";
 import {
-  BlackBackgroundContainer,
+  GreyBackgroundContainer,
   Flex1,
   FlexColumnCenteredContainer,
 } from "../../components/styled-component/Container";
@@ -23,7 +23,7 @@ export default function WorkingExperience() {
           </Flex1>
         </FlexColumnCenteredContainer>
       </div>
-      <BlackBackgroundContainer>
+      <GreyBackgroundContainer>
         <div style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}>
           <BlackCenterTitle style={{ color: "white" }}>
             The Other Experience
@@ -43,7 +43,7 @@ export default function WorkingExperience() {
             </Flex1>
           </FlexColumnCenteredContainer>
         </div>
-      </BlackBackgroundContainer>
+      </GreyBackgroundContainer>
     </>
   );
 }

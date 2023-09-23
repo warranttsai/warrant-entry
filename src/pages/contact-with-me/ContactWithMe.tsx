@@ -1,7 +1,7 @@
 // styled-component
 import {
   ContactContainer,
-  BlackBackgroundContainer,
+  GreyBackgroundContainer,
 } from "../../components/styled-component/Container";
 // components
 import CommentSection from "./comment-section/CommentSection";
@@ -16,12 +16,12 @@ function ContactWithMe() {
       >
         <ContactSection />
       </ContactContainer>
-      <BlackBackgroundContainer
+      <GreyBackgroundContainer
         id="comment-section-container"
         style={{ minHeight: "70vh" }}
       >
         <CommentSection />
-      </BlackBackgroundContainer>
+      </GreyBackgroundContainer>
     </>
   );
 }

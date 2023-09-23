@@ -6,7 +6,7 @@ import {
   BlackCenterTitle,
   WhiteCenterTitle,
 } from "../../components/styled-component/Title";
-import { BlackBackgroundContainer } from "../../components/styled-component/Container";
+import { GreyBackgroundContainer } from "../../components/styled-component/Container";
 
 export default function MyHobbies() {
   return (
@@ -35,7 +35,7 @@ export default function MyHobbies() {
         <br />
         <img src={InstagramPage} style={{ maxWidth: 350, maxHeight: 400 }} />
       </div>
-      <BlackBackgroundContainer id="my-hobbies-gamer-container">
+      <GreyBackgroundContainer id="my-hobbies-gamer-container">
         <WhiteCenterTitle>Gamer!?</WhiteCenterTitle>
         <div className="text-left" style={{ paddingInline: "10vw" }}>
           <span>
@@ -53,7 +53,7 @@ export default function MyHobbies() {
         <br />
         <br />
         <img src={SteamPage} style={{ maxWidth: 350, maxHeight: 400 }} />
-      </BlackBackgroundContainer>
+      </GreyBackgroundContainer>
     </>
   );
 }
