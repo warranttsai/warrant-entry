@@ -30,7 +30,7 @@ function AboutMe() {
         Introduction
       </BlackCenterTitle>
       <FlexRowCenteredContainer
-        style={{ paddingInline: "20vw", flexWrap: "wrap" }}
+        style={{ paddingInline: "10vw", flexWrap: "wrap" }}
       >
         <Flex1>
           <RectangleBoxShadow>
