@@ -103,10 +103,10 @@ export default function CommentSection() {
       <FlexColumnCenteredContainer>
         <div style={{ width: "50%" }}>
           <BlackCenterTitle>Say Something?</BlackCenterTitle>
-          <InputLabel className="text-left">Your Name:</InputLabel>
-          <Input
+          <InputLabel className="text-left">Your Name</InputLabel>
+          <TextareaAutosize
             className="w-100"
-            style={{ minHeight: 25 }}
+            style={{ minHeight: 25, padding: 0 }}
             value={inputUserName}
             placeholder="What is your name?"
             onKeyDown={(e) => {
@@ -116,12 +116,10 @@ export default function CommentSection() {
               setInputUserName(e.target.value);
             }}
           />
-          <br />
-          <br />
-          <InputLabel className="text-left">Say Something?</InputLabel>
+          <InputLabel className="text-left">Your Comment</InputLabel>
           <TextareaAutosize
             className="w-100"
-            style={{ minHeight: 50 }}
+            style={{ minHeight: 50, padding: 0 }}
             value={inputComment}
             onChange={(e) => {
               setInputComment(e.target.value);
