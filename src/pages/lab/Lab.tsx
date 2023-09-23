@@ -2,7 +2,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Divider } from "@mui/material";
 // styled-components
-import { BlackCenterTitle } from "../../components/styled-component/Title";
 import { LabSection } from "../../components/styled-component/Container";
 
 export default function Lab() {
