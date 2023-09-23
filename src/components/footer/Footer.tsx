@@ -28,11 +28,10 @@ export default function Footer() {
           }}
         >
           <Button
-            className="flex-1"
-            style={{ width: 100, maxWidth: 100 }}
+            className="flex-1 button-hover-blue"
+            style={{ width: 100, maxWidth: 100, background: "grey" }}
             size="small"
             variant="contained"
-            color="success"
             data-testid="linedin-button"
             onClick={() =>
               window.open(
@@ -44,8 +43,8 @@ export default function Footer() {
             LinkedIn
           </Button>
           <Button
-            className="flex-1"
-            style={{ width: 100, maxWidth: 100 }}
+            className="flex-1 button-hover-blue"
+            style={{ width: 100, maxWidth: 100, background: "grey" }}
             size="small"
             variant="contained"
             color="success"
@@ -60,8 +59,8 @@ export default function Footer() {
             Instagram
           </Button>
           <Button
-            className="flex-1"
-            style={{ width: 100, maxWidth: 100 }}
+            className="flex-1 button-hover-blue"
+            style={{ width: 100, maxWidth: 100, background: "grey" }}
             size="small"
             variant="contained"
             color="success"
