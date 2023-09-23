@@ -21,10 +21,11 @@ export default function ContactSection() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     console.log(e.target);
+    e.preventDefault();
     setBallonMessage("It's not functioning yet🙇");
     setBacllonColour("red");
     setOnShowBallon(true);
-    // e.preventDefault();
+
     // sendingEmailToUser(userEmail, userName, userContactNumber, userFeedback)
     //   .then((res: string) => {
     //     setBallonMessage(res);
