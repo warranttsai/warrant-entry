@@ -6,14 +6,14 @@ import {
   BlackCenterTitle,
   WhiteCenterTitle,
 } from "../../components/styled-component/Title";
-import { BlackBackgroundContainer } from "../../components/styled-component/Container";
+import { GreyBackgroundContainer } from "../../components/styled-component/Container";
 
 export default function MyHobbies() {
   return (
     <>
-      <div>
+      <div id="my-hobbies-dancer-container">
         <BlackCenterTitle>I AM A DANCER!</BlackCenterTitle>
-        <div className="text-left" style={{ paddingInline: 100 }}>
+        <div className="text-left" style={{ paddingInline: "10vw" }}>
           <span>
             I had been dancing in Popping dance since September 2016. In June
             2022, I moved to Melbourne Australia and started developing the
@@ -33,13 +33,11 @@ export default function MyHobbies() {
         </div>
         <br />
         <br />
-        <div className="w-100 text-center">
-          <img src={InstagramPage} style={{ width: 450, height: 500 }} />
-        </div>
+        <img src={InstagramPage} style={{ maxWidth: 350, maxHeight: 400 }} />
       </div>
-      <BlackBackgroundContainer>
+      <GreyBackgroundContainer id="my-hobbies-gamer-container">
         <WhiteCenterTitle>Gamer!?</WhiteCenterTitle>
-        <div className="text-left" style={{ paddingInline: 100 }}>
+        <div className="text-left" style={{ paddingInline: "10vw" }}>
           <span>
             It is always destress, relax and satisfying to play games! This is
             my another favorite thing! I enjoy the feeling to challenge myself
@@ -54,10 +52,8 @@ export default function MyHobbies() {
         </div>
         <br />
         <br />
-        <div className="w-100 text-center">
-          <img src={SteamPage} style={{ width: 450, height: 500 }} />
-        </div>
-      </BlackBackgroundContainer>
+        <img src={SteamPage} style={{ maxWidth: 350, maxHeight: 400 }} />
+      </GreyBackgroundContainer>
     </>
   );
 }

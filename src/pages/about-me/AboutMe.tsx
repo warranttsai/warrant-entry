@@ -3,9 +3,6 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 // images
 import Warrant from "../../assets/Warrant.jpg";
-import linedinButton from "../../assets/linedin-button.jpeg";
-import instagramButton from "../../assets/instagram-button.jpeg";
-import facebookButton from "../../assets/facebook-button.jpeg";
 // scss
 import "./AboutMe.scss";
 // styled comopnents
@@ -28,17 +25,16 @@ function AboutMe() {
   ];
 
   return (
-    <>
+    <div style={{ marginBlock: 10 }}>
       <BlackCenterTitle data-testid="intro-title">
         Introduction
       </BlackCenterTitle>
-      <FlexRowCenteredContainer style={{ paddingInline: "200px" }}>
+      <FlexRowCenteredContainer
+        style={{ paddingInline: "10vw", flexWrap: "wrap" }}
+      >
         <Flex1>
           <RectangleBoxShadow>
-            <img
-              src={Warrant}
-              style={{ maxWidth: "350px", maxHeight: "450px" }}
-            />
+            <img src={Warrant} style={{ maxWidth: 350, maxHeight: 450 }} />
           </RectangleBoxShadow>
         </Flex1>
         <Flex2>
@@ -76,95 +72,28 @@ function AboutMe() {
         </Flex2>
       </FlexRowCenteredContainer>
       <br />
-      <div id="my-personality-section">
-        <Flex1>
-          <Stack
-            data-testid="my-personalities"
-            direction="row"
-            spacing={1}
-            alignItems="center" // Align items vertically to the center
-            justifyContent="center" // Justify items horizontally to the center
-          >
-            {myPersonalities.map((item) => {
-              return <Chip key={item.id} label={item.name} />;
-            })}
-          </Stack>
-        </Flex1>
-      </div>
-      <div
-        data-testid="social-media"
+      <Stack
+        id="my-personality-section"
+        width="50%"
+        data-testid="my-personalities"
+        direction="row"
+        spacing={1}
+        alignItems="center" // Align items vertically to the center
+        justifyContent="center" // Justify items horizontally to the center
+        flexWrap="wrap"
         style={{
-          height: "auto",
-          maxWidth: "max-content",
-          margin: "20px auto 20px auto",
-          fontFamily: "Raleway,sans-serif",
-          fontSize: "15px",
-          fontWeight: "800",
-          lineHeight: "70px",
-          textAlign: "center",
-          textTransform: "uppercase",
-          border: "4px solid black",
-          borderRadius: "10px",
+          marginInline: "auto",
         }}
       >
-        <BlackCenterTitle data-testid="my-social-media">
-          My Social Media
-        </BlackCenterTitle>
-        <FlexRowCenteredContainer style={{ margin: "50px 400px 0 400px" }}>
-          <Flex1>
-            <button
-              data-testid="linedin-button"
-              style={{ background: "white" }}
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/warrant-tsai-20463414b/",
-                  "_blank"
-                )
-              }
-            >
-              <img
-                src={linedinButton}
-                style={{ width: "50px", height: "50px" }}
-              />
-            </button>
-          </Flex1>
-          <Flex1>
-            <button
-              data-testid="instagram-button"
-              style={{ background: "white" }}
-              onClick={() =>
-                window.open(
-                  "https://www.instagram.com/warrant_job_hunting/",
-                  "_blank"
-                )
-              }
-            >
-              <img
-                src={instagramButton}
-                style={{ width: "50px", height: "50px" }}
-              />
-            </button>
-          </Flex1>
-          <Flex1>
-            <button
-              data-testid="facebook-button"
-              style={{ background: "white" }}
-              onClick={() =>
-                window.open(
-                  "https://www.facebook.com/profile.php?id=100007257571234",
-                  "_blank"
-                )
-              }
-            >
-              <img
-                src={facebookButton}
-                style={{ width: "50px", height: "50px" }}
-              />
-            </button>
-          </Flex1>
-        </FlexRowCenteredContainer>
-      </div>
-    </>
+        {myPersonalities.map((item) => {
+          return (
+            <Flex1 key={item.id}>
+              <Chip label={item.name} />
+            </Flex1>
+          );
+        })}
+      </Stack>
+    </div>
   );
 }
 

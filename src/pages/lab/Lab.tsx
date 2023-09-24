@@ -2,7 +2,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Divider } from "@mui/material";
 // styled-components
-import { BlackCenterTitle } from "../../components/styled-component/Title";
 import { LabSection } from "../../components/styled-component/Container";
 
 export default function Lab() {
@@ -13,9 +12,12 @@ export default function Lab() {
       {/* About this web application */}
       <LabSection>
         <Button onClick={() => navigate("/lab/about-this-web-app")}>
-          <BlackCenterTitle style={{ fontSize: 30 }}>
+          <h1
+            className="hyper-link-style"
+            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          >
             📚 Something About This Web Application 📚
-          </BlackCenterTitle>
+          </h1>
         </Button>
       </LabSection>
       <Divider
@@ -27,9 +29,12 @@ export default function Lab() {
       {/* My Coding Bible */}
       <LabSection>
         <Button onClick={() => navigate("/lab/my-coding-bible")}>
-          <BlackCenterTitle style={{ fontSize: 30 }}>
+          <h1
+            className="hyper-link-style"
+            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          >
             🧑‍💻 My Coding Bible
-          </BlackCenterTitle>
+          </h1>
         </Button>
       </LabSection>
       <Divider
@@ -44,7 +49,12 @@ export default function Lab() {
           href="https://www.codevertiser.com/free-reactjs-coding-challenges-for-responsive-UI/"
           target="_blank"
         >
-          <BlackCenterTitle>React Challenge ➤</BlackCenterTitle>
+          <h1
+            className="hyper-link-style"
+            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          >
+            React Challenge ➤
+          </h1>
         </a>
         <Button onClick={() => navigate("/lab/react-challenge-1")}>
           challenge #1

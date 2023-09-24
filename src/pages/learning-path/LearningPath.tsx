@@ -1,3 +1,5 @@
+// modules
+import { Box } from "@mui/material";
 // styled-components
 import { ArrowComponent } from "../../components/learning-path-components/ArrowComponent";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
@@ -14,7 +16,7 @@ import SE2023 from "../../components/learning-path-components/software-engineeri
 export default function LearningPath() {
   return (
     <>
-      <div data-testid="software-engineering" style={{ minHeight: "40vh" }}>
+      <Box data-testid="software-engineering" style={{ minHeight: "40vh" }}>
         <BlackCenterTitle>
           👨‍💻 Software Engineering/Computer Science
         </BlackCenterTitle>
@@ -25,7 +27,7 @@ export default function LearningPath() {
             overflow: "scroll",
             overflowX: "scroll",
             paddingInline: 200,
-            maxWidth: "80vw",
+            maxWidth: "100%",
           }}
         >
           <SE2016 />
@@ -44,7 +46,7 @@ export default function LearningPath() {
           <ArrowComponent />
           <SE2023 />
         </div>
-      </div>
+      </Box>
       <br />
       {/* <div
         data-testid="street-dancing"

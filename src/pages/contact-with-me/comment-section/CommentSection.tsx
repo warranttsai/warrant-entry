@@ -1,6 +1,6 @@
 // modules
 import React, { useState, useEffect } from "react";
-import { Button, TextareaAutosize } from "@mui/material";
+import { Button, TextareaAutosize, InputLabel } from "@mui/material";
 // utils
 import {
   fetchingComments,
@@ -8,6 +8,7 @@ import {
 } from "../../../utils/commentSectionUtils";
 // styled-components
 import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
+import { BlackCenterTitle } from "../../../components/styled-component/Title";
 // components
 import CommentComponent from "../../../components/comment-component/CommentComponent";
 import WarningBalloon from "../../../components/warning-balloon/WarningBalloon";
@@ -101,9 +102,11 @@ export default function CommentSection() {
     <>
       <FlexColumnCenteredContainer>
         <div style={{ width: "50%" }}>
-          <input
+          <BlackCenterTitle>Say Something?</BlackCenterTitle>
+          <InputLabel className="text-left">Your Name</InputLabel>
+          <TextareaAutosize
             className="w-100"
-            style={{ minHeight: 25 }}
+            style={{ minHeight: 25, padding: 0 }}
             value={inputUserName}
             placeholder="What is your name?"
             onKeyDown={(e) => {
@@ -113,12 +116,10 @@ export default function CommentSection() {
               setInputUserName(e.target.value);
             }}
           />
-          <br />
-          <br />
+          <InputLabel className="text-left">Your Comment</InputLabel>
           <TextareaAutosize
             className="w-100"
-            style={{ minHeight: 50 }}
-            placeholder="Say something..."
+            style={{ minHeight: 50, padding: 0 }}
             value={inputComment}
             onChange={(e) => {
               setInputComment(e.target.value);
