@@ -1,3 +1,5 @@
+// module
+import { motion } from "framer-motion";
 // images
 import InstagramPage from "../../assets/MyHobbies/instagram-page.jpeg";
 import SteamPage from "../../assets/MyHobbies/steam-page.jpeg";
@@ -10,7 +12,11 @@ import { GreyBackgroundContainer } from "../../components/styled-component/Conta
 
 export default function MyHobbies() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div id="my-hobbies-dancer-container">
         <BlackCenterTitle>I AM A DANCER!</BlackCenterTitle>
         <div className="text-left" style={{ paddingInline: "10vw" }}>
@@ -54,6 +60,6 @@ export default function MyHobbies() {
         <br />
         <img src={SteamPage} style={{ maxWidth: 350, maxHeight: 400 }} />
       </GreyBackgroundContainer>
-    </>
+    </motion.div>
   );
 }
