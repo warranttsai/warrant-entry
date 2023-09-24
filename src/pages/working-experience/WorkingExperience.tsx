@@ -16,40 +16,50 @@ import PoppingDanceInstructor from "../../components/working-experience-componen
 
 export default function WorkingExperience() {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
       <div style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}>
         <BlackCenterTitle>Software Engineer Experience</BlackCenterTitle>
         <FlexColumnCenteredContainer style={{ gap: "10px" }}>
-          <Flex1 className="w-100">
-            <Cleanstormwater />
-          </Flex1>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Flex1 className="w-100">
+              <Cleanstormwater />
+            </Flex1>
+          </motion.div>
         </FlexColumnCenteredContainer>
       </div>
       <GreyBackgroundContainer>
-        <div style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}>
-          <BlackCenterTitle style={{ color: "white" }}>
-            The Other Experience
-          </BlackCenterTitle>
-          <FlexColumnCenteredContainer style={{ gap: "10px" }}>
-            <Flex1 className="w-100">
-              <Fila />
-            </Flex1>
-            <Flex1 className="w-100">
-              <Funkdelics />
-            </Flex1>
-            <Flex1 className="w-100">
-              <Blackball />
-            </Flex1>
-            <Flex1 className="w-100">
-              <PoppingDanceInstructor />
-            </Flex1>
-          </FlexColumnCenteredContainer>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div
+            style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}
+          >
+            <BlackCenterTitle style={{ color: "white" }}>
+              The Other Experience
+            </BlackCenterTitle>
+            <FlexColumnCenteredContainer style={{ gap: "10px" }}>
+              <Flex1 className="w-100">
+                <Fila />
+              </Flex1>
+              <Flex1 className="w-100">
+                <Funkdelics />
+              </Flex1>
+              <Flex1 className="w-100">
+                <Blackball />
+              </Flex1>
+              <Flex1 className="w-100">
+                <PoppingDanceInstructor />
+              </Flex1>
+            </FlexColumnCenteredContainer>
+          </div>
+        </motion.div>
       </GreyBackgroundContainer>
-    </motion.div>
+    </>
   );
 }

@@ -9,21 +9,23 @@ export default function Lab() {
   const navigate = useNavigate();
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
       {/* About this web application */}
       <LabSection>
-        <Button onClick={() => navigate("/lab/about-this-web-app")}>
-          <h1
-            className="hyper-link-style"
-            style={{ fontSize: "1.5rem", color: "blue", textAlign: "center" }}
-          >
-            📚 Something About This Web Application 📚
-          </h1>
-        </Button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Button onClick={() => navigate("/lab/about-this-web-app")}>
+            <h1
+              className="hyper-link-style"
+              style={{ fontSize: "1.5rem", color: "blue", textAlign: "center" }}
+            >
+              📚 Something About This Web Application 📚
+            </h1>
+          </Button>
+        </motion.div>
       </LabSection>
       <Divider
         style={{
@@ -33,14 +35,20 @@ export default function Lab() {
       />
       {/* My Coding Bible */}
       <LabSection>
-        <Button onClick={() => navigate("/lab/my-coding-bible")}>
-          <h1
-            className="hyper-link-style"
-            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
-          >
-            🧑‍💻 My Coding Bible
-          </h1>
-        </Button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Button onClick={() => navigate("/lab/my-coding-bible")}>
+            <h1
+              className="hyper-link-style"
+              style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+            >
+              🧑‍💻 My Coding Bible
+            </h1>
+          </Button>
+        </motion.div>
       </LabSection>
       <Divider
         style={{
@@ -50,30 +58,36 @@ export default function Lab() {
       />
       {/* React Challenges */}
       <LabSection>
-        <a
-          href="https://www.codevertiser.com/free-reactjs-coding-challenges-for-responsive-UI/"
-          target="_blank"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          <h1
-            className="hyper-link-style"
-            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+          <a
+            href="https://www.codevertiser.com/free-reactjs-coding-challenges-for-responsive-UI/"
+            target="_blank"
           >
-            React Challenge ➤
-          </h1>
-        </a>
-        <Button onClick={() => navigate("/lab/react-challenge-1")}>
-          challenge #1
-        </Button>
-        <Button onClick={() => navigate("/lab/react-challenge-2")}>
-          challenge #2
-        </Button>
-        <Button onClick={() => navigate("/lab/react-challenge-3")}>
-          challenge #3
-        </Button>
-        <Button onClick={() => navigate("/lab/react-challenge-4")}>
-          challenge #4
-        </Button>
+            <h1
+              className="hyper-link-style"
+              style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+            >
+              React Challenge ➤
+            </h1>
+          </a>
+          <Button onClick={() => navigate("/lab/react-challenge-1")}>
+            challenge #1
+          </Button>
+          <Button onClick={() => navigate("/lab/react-challenge-2")}>
+            challenge #2
+          </Button>
+          <Button onClick={() => navigate("/lab/react-challenge-3")}>
+            challenge #3
+          </Button>
+          <Button onClick={() => navigate("/lab/react-challenge-4")}>
+            challenge #4
+          </Button>
+        </motion.div>
       </LabSection>
-    </motion.div>
+    </>
   );
 }

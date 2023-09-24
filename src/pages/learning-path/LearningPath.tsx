@@ -16,41 +16,45 @@ import SE2023 from "../../components/learning-path-components/software-engineeri
 
 export default function LearningPath() {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <>
       <Box data-testid="software-engineering" style={{ minHeight: "40vh" }}>
-        <BlackCenterTitle>
-          👨‍💻 Software Engineering/Computer Science
-        </BlackCenterTitle>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            overflow: "scroll",
-            overflowX: "scroll",
-            paddingInline: 200,
-            maxWidth: "100%",
-          }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          <SE2016 />
-          <ArrowComponent />
-          <SE2017 />
-          <ArrowComponent />
-          <SE2018 />
-          <ArrowComponent />
-          <SE2019 />
-          <ArrowComponent />
-          <SE2020 />
-          <ArrowComponent />
-          <SE2021 />
-          <ArrowComponent />
-          <SE2022 />
-          <ArrowComponent />
-          <SE2023 />
-        </div>
+          <>
+            <BlackCenterTitle>
+              👨‍💻 Software Engineering/Computer Science
+            </BlackCenterTitle>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                overflow: "scroll",
+                overflowX: "scroll",
+                paddingInline: 200,
+                maxWidth: "100%",
+              }}
+            >
+              <SE2016 />
+              <ArrowComponent />
+              <SE2017 />
+              <ArrowComponent />
+              <SE2018 />
+              <ArrowComponent />
+              <SE2019 />
+              <ArrowComponent />
+              <SE2020 />
+              <ArrowComponent />
+              <SE2021 />
+              <ArrowComponent />
+              <SE2022 />
+              <ArrowComponent />
+              <SE2023 />
+            </div>
+          </>
+        </motion.div>
       </Box>
       <br />
       {/* <div
@@ -61,6 +65,6 @@ export default function LearningPath() {
           🕺 Street Dancing
         </BlackCenterTitle>
       </div> */}
-    </motion.div>
+    </>
   );
 }
