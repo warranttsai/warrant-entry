@@ -82,3 +82,35 @@ body {
 .button-hover-blue:hover {
   color: blue;
 }
+
+/* Transition Animation */
+// appear
+.page-transition-appear {
+  opacity: 0;
+}
+.page-transition-appear-active {
+  opacity: 1;
+  transition: opacity 3000ms;
+}
+// enter
+.page-transition-enter {
+  opacity: 0;
+}
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity 3000ms;
+}
+.page-transition-enter-done {
+  opacity: 1;
+}
+// exit
+.page-transition-exit {
+  opacity: 1;
+}
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 3000ms;
+}
+.page-transition-exit-done {
+  opacity: 0;
+}
