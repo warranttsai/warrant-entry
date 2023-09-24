@@ -1,3 +1,5 @@
+// module
+import { motion } from "framer-motion";
 // images
 import InstagramPage from "../../assets/MyHobbies/instagram-page.jpeg";
 import SteamPage from "../../assets/MyHobbies/steam-page.jpeg";
