@@ -14,7 +14,7 @@ export default function Lab() {
         <Button onClick={() => navigate("/lab/about-this-web-app")}>
           <h1
             className="hyper-link-style"
-            style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
+            style={{ fontSize: "1.5rem", color: "blue", textAlign: "center" }}
           >
             📚 Something About This Web Application 📚
           </h1>
