@@ -59,6 +59,9 @@ export default function AboutThisWebApp() {
                 SASS/SCSS
               </a>
             </li>
+            <li>
+              <a href="https://www.framer.com/motion/">Framer Motion</a>
+            </li>
           </ul>
         </Flex1>
       </Flex1>
