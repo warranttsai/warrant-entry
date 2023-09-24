@@ -28,6 +28,7 @@ export default function LearningPath() {
               👨‍💻 Software Engineering/Computer Science
             </BlackCenterTitle>
             <div
+              className="hide-scroll-bar"
               style={{
                 display: "flex",
                 flexDirection: "row",
