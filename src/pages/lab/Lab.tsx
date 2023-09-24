@@ -1,4 +1,5 @@
 // module
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button, Divider } from "@mui/material";
 // styled-components
@@ -8,7 +9,11 @@ export default function Lab() {
   const navigate = useNavigate();
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       {/* About this web application */}
       <LabSection>
         <Button onClick={() => navigate("/lab/about-this-web-app")}>
@@ -69,6 +74,6 @@ export default function Lab() {
           challenge #4
         </Button>
       </LabSection>
-    </>
+    </motion.div>
   );
 }

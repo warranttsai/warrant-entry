@@ -1,4 +1,5 @@
 // modules
+import { motion } from "framer-motion";
 import { Box } from "@mui/material";
 // styled-components
 import { ArrowComponent } from "../../components/learning-path-components/ArrowComponent";
@@ -15,7 +16,11 @@ import SE2023 from "../../components/learning-path-components/software-engineeri
 
 export default function LearningPath() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Box data-testid="software-engineering" style={{ minHeight: "40vh" }}>
         <BlackCenterTitle>
           👨‍💻 Software Engineering/Computer Science
@@ -56,6 +61,6 @@ export default function LearningPath() {
           🕺 Street Dancing
         </BlackCenterTitle>
       </div> */}
-    </>
+    </motion.div>
   );
 }
