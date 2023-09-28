@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import {
+  Flex1,
   HeaderContainer,
   LayoutContainer,
-  OutletContainer,
 } from "../../components/styled-component/Container";
 
 function Layout() {
@@ -15,9 +15,9 @@ function Layout() {
       <HeaderContainer id="header-container">
         <Header />
       </HeaderContainer>
-      <OutletContainer id="outlet-container">
+      <Flex1 id="outlet-container">
         <Outlet />
-      </OutletContainer>
+      </Flex1>
       <Footer />
     </LayoutContainer>
   );

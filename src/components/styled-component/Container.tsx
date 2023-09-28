@@ -19,11 +19,6 @@ export const HeaderContainer = styled.div`
   flex: 1;
 `;
 
-export const OutletContainer = styled.div`
-  flex: 1;
-  flex-grow: 1;
-`;
-
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: row;

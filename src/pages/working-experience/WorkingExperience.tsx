@@ -17,19 +17,19 @@ import PoppingDanceInstructor from "../../components/working-experience-componen
 export default function WorkingExperience() {
   return (
     <>
-      <div style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}>
+      <div>
         <BlackCenterTitle>Software Engineer Experience</BlackCenterTitle>
-        <FlexColumnCenteredContainer style={{ gap: "10px" }}>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <FlexColumnCenteredContainer>
             <Flex1 className="w-100">
               <Cleanstormwater />
             </Flex1>
-          </motion.div>
-        </FlexColumnCenteredContainer>
+          </FlexColumnCenteredContainer>
+        </motion.div>
       </div>
       <GreyBackgroundContainer>
         <motion.div
