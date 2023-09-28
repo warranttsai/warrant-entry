@@ -41,7 +41,7 @@ export default function MyHobbies() {
           </div>
           <br />
           <br />
-          <img src={InstagramPage} style={{ maxWidth: 350, maxHeight: 400 }} />
+          <img src={InstagramPage} style={{ maxWidth: "100%" }} />
         </motion.div>
       </div>
       <GreyBackgroundContainer id="my-hobbies-gamer-container">
@@ -66,7 +66,7 @@ export default function MyHobbies() {
           </div>
           <br />
           <br />
-          <img src={SteamPage} style={{ maxWidth: 350, maxHeight: 400 }} />
+          <img src={SteamPage} style={{ maxWidth: "100%" }} />
         </motion.div>
       </GreyBackgroundContainer>
     </>
