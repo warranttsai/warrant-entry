@@ -18,17 +18,15 @@ export default function WorkingExperience() {
   return (
     <>
       <div>
-        <BlackCenterTitle>Software Engineer Experience</BlackCenterTitle>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <FlexColumnCenteredContainer>
-            <Flex1 className="w-100">
-              <Cleanstormwater />
-            </Flex1>
-          </FlexColumnCenteredContainer>
+          <div style={{ padding: "2vh 10vw" }}>
+            <BlackCenterTitle>Software Engineer Experience</BlackCenterTitle>
+            <Cleanstormwater />
+          </div>
         </motion.div>
       </div>
       <GreyBackgroundContainer>
@@ -37,9 +35,7 @@ export default function WorkingExperience() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div
-            style={{ padding: "1vh 5vw", width: "50%", marginInline: "auto" }}
-          >
+          <div style={{ padding: "2vh 10vw" }}>
             <BlackCenterTitle style={{ color: "white" }}>
               The Other Experience
             </BlackCenterTitle>

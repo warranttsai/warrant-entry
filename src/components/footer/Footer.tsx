@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer
       id="footer-container"
-      className="d-flex flex-1  flex-column justify-contnet-center align-items-center w-100"
+      className="d-flex flex-1 flex-column justify-contnet-center align-items-center w-100"
       style={{
         backgroundColor: "#1976d2",
         color: "white",
@@ -23,8 +23,9 @@ export default function Footer() {
         }}
       >
         <Button
+          id="linkedin-facebook-button"
           className="flex-1 button-hover-blue"
-          style={{ width: 100, maxWidth: 100, background: "grey" }}
+          style={{ background: "grey", fontSize: "0.75rem", width: "auto" }}
           size="small"
           variant="contained"
           data-testid="linedin-button"
@@ -38,8 +39,9 @@ export default function Footer() {
           LinkedIn
         </Button>
         <Button
+          id="instagram-facebook-button"
           className="flex-1 button-hover-blue"
-          style={{ width: 100, maxWidth: 100, background: "grey" }}
+          style={{ background: "grey", fontSize: "0.75rem", width: "auto" }}
           size="small"
           variant="contained"
           color="success"
@@ -54,8 +56,9 @@ export default function Footer() {
           Instagram
         </Button>
         <Button
+          id="footer-facebook-button"
           className="flex-1 button-hover-blue"
-          style={{ width: 100, maxWidth: 100, background: "grey" }}
+          style={{ background: "grey", fontSize: "0.75rem", width: "auto" }}
           size="small"
           variant="contained"
           color="success"
