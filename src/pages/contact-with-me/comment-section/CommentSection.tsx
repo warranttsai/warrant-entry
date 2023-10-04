@@ -106,10 +106,10 @@ export default function CommentSection() {
             style={{ minHeight: 25, padding: 0 }}
             value={inputUserName}
             placeholder="What is your name?"
-            onKeyDown={(e) => {
+            onKeyDown={(e: any) => {
               if (e.key === "Enter") handleSubmitComment();
             }}
-            onChange={(e) => {
+            onChange={(e: any) => {
               setInputUserName(e.target.value);
             }}
           />
@@ -117,7 +117,7 @@ export default function CommentSection() {
             className="w-100"
             style={{ minHeight: 50, padding: 0 }}
             value={inputComment}
-            onChange={(e) => {
+            onChange={(e: any) => {
               setInputComment(e.target.value);
             }}
             placeholder="Anything you want to say..."
