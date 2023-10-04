@@ -1,6 +1,6 @@
 // modules
 import React, { useState, useEffect } from "react";
-import { Button, TextareaAutosize, InputLabel } from "@mui/material";
+import { Button, TextareaAutosize } from "@mui/material";
 // utils
 import {
   fetchingComments,
@@ -8,7 +8,6 @@ import {
 } from "../../../utils/commentSectionUtils";
 // styled-components
 import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
-import { BlackCenterTitle } from "../../../components/styled-component/Title";
 // components
 import CommentComponent from "../../../components/comment-component/CommentComponent";
 import WarningBalloon from "../../../components/warning-balloon/WarningBalloon";
@@ -102,8 +101,6 @@ export default function CommentSection() {
     <>
       <FlexColumnCenteredContainer>
         <div style={{ width: "50%" }}>
-          <BlackCenterTitle>Say Something?</BlackCenterTitle>
-          <InputLabel className="text-left">Your Name</InputLabel>
           <TextareaAutosize
             className="w-100"
             style={{ minHeight: 25, padding: 0 }}
@@ -116,7 +113,6 @@ export default function CommentSection() {
               setInputUserName(e.target.value);
             }}
           />
-          <InputLabel className="text-left">Your Comment</InputLabel>
           <TextareaAutosize
             className="w-100"
             style={{ minHeight: 50, padding: 0 }}
@@ -124,6 +120,7 @@ export default function CommentSection() {
             onChange={(e) => {
               setInputComment(e.target.value);
             }}
+            placeholder="Anything you want to say..."
           />
           {submitingNewComment ? (
             <span>Submitting...</span>
