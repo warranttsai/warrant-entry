@@ -1,5 +1,3 @@
-// module
-import { motion } from "framer-motion";
 // styled-component
 import { ContactContainer } from "../../components/styled-component/Container";
 // components
