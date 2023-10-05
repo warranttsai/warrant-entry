@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import Layout from "./pages/layout/Layout";
 import AboutMe from "./pages/about-me/AboutMe";
 import LearningPath from "./pages/learning-path/LearningPath";
+import MySideProjects from "./pages/my-side-projects/MySideProjects";
 import WorkingExperience from "./pages/working-experience/WorkingExperience";
 import MyHobbies from "./pages/my-hobbies/MyHobbies";
 import ContactWithMe from "./pages/contact-with-me/ContactWithMe";
@@ -30,6 +31,7 @@ function App() {
       <Route path="/*" element={<Layout />}>
         <Route path="about-me" element={<AboutMe />} />
         <Route path="learning-path" element={<LearningPath />} />
+        <Route path="my-side-projects" element={<MySideProjects />} />
         <Route path="working-experience" element={<WorkingExperience />} />
         <Route path="my-hobbies" element={<MyHobbies />} />
         <Route path="contact-with-me" element={<ContactWithMe />} />
