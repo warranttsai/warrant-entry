@@ -69,8 +69,11 @@ export default function MyHobbies() {
           <br />
           <br />
           <Carousel>
-            <img src={SteamPage} style={{ maxWidth: "100%" }} />
-            <img src={NarakaRank} style={{ maxWidth: "100%" }} />
+            <img src={SteamPage} style={{ maxWidth: "100%", maxHeight: 450 }} />
+            <img
+              src={NarakaRank}
+              style={{ maxWidth: "100%", maxHeight: 450 }}
+            />
           </Carousel>
         </motion.div>
       </GreyBackgroundContainer>
