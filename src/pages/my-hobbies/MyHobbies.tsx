@@ -1,8 +1,10 @@
 // module
 import { motion } from "framer-motion";
+import Carousel from "react-material-ui-carousel";
 // images
 import InstagramPage from "../../assets/MyHobbies/instagram-page.jpeg";
 import SteamPage from "../../assets/MyHobbies/steam-page.jpeg";
+import NarakaRank from "../../assets/MyHobbies/naraka-rank.jpg";
 // styled components
 import {
   BlackCenterTitle,
@@ -66,7 +68,10 @@ export default function MyHobbies() {
           </div>
           <br />
           <br />
-          <img src={SteamPage} style={{ maxWidth: "100%" }} />
+          <Carousel>
+            <img src={SteamPage} style={{ maxWidth: "100%" }} />
+            <img src={NarakaRank} style={{ maxWidth: "100%" }} />
+          </Carousel>
         </motion.div>
       </GreyBackgroundContainer>
     </>
