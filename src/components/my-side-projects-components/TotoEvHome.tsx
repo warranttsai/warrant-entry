@@ -21,11 +21,11 @@ export default function TotoEvHome() {
               <h2>TotoEV Home</h2>
             </Flex1>
             <Flex1>
-              Programming Language: <span>React TS</span>
+              Programming Language: <span>React TypeScript</span>
             </Flex1>
+
             <Flex1>
-              Status:
-              <span style={{ color: "#90EE90" }}>Deployed</span>
+              Deploy Link: <a href="https://stormupdated.com.au/">Click Me</a>
             </Flex1>
             <Flex1>Created Date: 31/05/2023</Flex1>
           </FlexColumnCenteredContainer>

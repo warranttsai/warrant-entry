@@ -28,10 +28,6 @@ export default function CafeManagemengSystem() {
                 Click Me
               </a>
             </Flex1>
-            <Flex1>
-              Status:
-              <span style={{ color: "#F6BE00" }}>Under developing</span>
-            </Flex1>
             <Flex1>Created Date: 06/10/2023</Flex1>
           </FlexColumnCenteredContainer>
         </Flex1>
