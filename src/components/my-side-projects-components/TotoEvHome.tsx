@@ -25,7 +25,7 @@ export default function TotoEvHome() {
             </Flex1>
             <Flex1>
               Status:
-              <span style={{ color: "green" }}>Deployed</span>
+              <span style={{ color: "#90EE90" }}>Deployed</span>
             </Flex1>
             <Flex1>Created Date: 31/05/2023</Flex1>
           </FlexColumnCenteredContainer>
