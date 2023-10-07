@@ -44,7 +44,21 @@ function Home() {
         >
           Learning Path
         </Button>
-
+        <Button
+          variant="contained"
+          color="success"
+          data-testid="learning-path"
+          sx={{
+            ":hover": {
+              bgcolor: "#D7F72A",
+              color: "black",
+            },
+            width: "300px",
+          }}
+          onClick={() => navigate("/my-side-projects")}
+        >
+          My Side Projects
+        </Button>
         <Button
           variant="contained"
           data-testid="contact-with-me"

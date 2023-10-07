@@ -48,11 +48,10 @@ export const Flex2 = styled.div`
 
 export const GreyBackgroundContainer = styled.div`
   color: white;
+  background: grey;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: grey;
-  margin: 0;
-  padding: 5vw;
 `;
 
 export const LabSection = styled.div`
