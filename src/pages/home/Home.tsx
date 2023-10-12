@@ -61,6 +61,21 @@ function Home() {
         </Button>
         <Button
           variant="contained"
+          color="success"
+          data-testid="learning-path"
+          sx={{
+            ":hover": {
+              bgcolor: "#D7F72A",
+              color: "black",
+            },
+            width: "300px",
+          }}
+          onClick={() => navigate("/my-coding-bible")}
+        >
+          Coding Bible
+        </Button>
+        <Button
+          variant="contained"
           data-testid="contact-with-me"
           sx={{
             ":hover": {

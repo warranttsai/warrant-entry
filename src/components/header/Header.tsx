@@ -25,6 +25,9 @@ function Header() {
           <Button color="inherit" onClick={() => navigate("my-side-projects")}>
             My SIDE PROJECTS
           </Button>
+          <Button color="inherit" onClick={() => navigate("/my-coding-bible")}>
+            Coding Bible
+          </Button>
           <Button color="inherit" onClick={() => navigate("lab")}>
             Laboratory
           </Button>

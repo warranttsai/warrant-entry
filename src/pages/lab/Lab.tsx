@@ -33,29 +33,6 @@ export default function Lab() {
           marginInline: "auto",
         }}
       />
-      {/* My Coding Bible */}
-      <LabSection>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Button onClick={() => navigate("/lab/my-coding-bible")}>
-            <h1
-              className="hyper-link-style"
-              style={{ fontSize: "2rem", color: "blue", textAlign: "center" }}
-            >
-              🧑‍💻 My Coding Bible
-            </h1>
-          </Button>
-        </motion.div>
-      </LabSection>
-      <Divider
-        style={{
-          width: "90%",
-          marginInline: "auto",
-        }}
-      />
       {/* React Challenges */}
       <LabSection>
         <motion.div
