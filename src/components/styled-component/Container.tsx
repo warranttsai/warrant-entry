@@ -29,9 +29,10 @@ export const ContactContainer = styled.div`
 
 export const FlexRowCenteredContainer = styled.div`
   display: flex;
-  flexdirection: row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 export const FlexColumnCenteredContainer = styled.div`
   display: flex;

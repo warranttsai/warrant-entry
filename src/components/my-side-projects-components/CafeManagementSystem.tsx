@@ -13,8 +13,8 @@ import {
 export default function CafeManagemengSystem() {
   return (
     <>
-      <FlexRowCenteredContainer>
-        <Flex1>
+      <FlexRowCenteredContainer id="cafe-management-system-container">
+        <Flex1 id="description" style={{ minWidth: 250 }}>
           <FlexColumnCenteredContainer>
             <Flex1>
               <h2>Cafe Management System</h2>
@@ -31,7 +31,7 @@ export default function CafeManagemengSystem() {
             <Flex1>Created Date: 06/10/2023</Flex1>
           </FlexColumnCenteredContainer>
         </Flex1>
-        <Flex1 style={{ minWidth: 450, maxHeight: 500 }}>
+        <Flex1 id="carousel" style={{ minWidth: 250 }}>
           <Carousel>
             <img src={dashboard} />
             <img src={userList} />
