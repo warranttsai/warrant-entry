@@ -33,14 +33,14 @@ export default function AboutThisWebApp() {
           </h2>
           <ul>
             <li>React TypeScript</li>
-            <li>ES6</li>
+            <li>Next JS</li>
+            <li>AWS S3</li>
             <li>Serverless Framework</li>
             <li>AWS API Gateway</li>
             <li>AWS CloudFormation</li>
             <li>AWS CloudWatch</li>
             <li>AWS Lambda</li>
             <li>AWS DynamoDB</li>
-            <li>AWS SES</li>
           </ul>
         </Flex1>
         <Flex1 className="text-left">
@@ -89,36 +89,12 @@ export default function AboutThisWebApp() {
       {/* Contribution of The Project */}
       <Flex1 id="about-this-web-app-contribution-of-the-project">
         <h2>
-          <b>Who contributed to this project?</b>
+          <b>Who had contributed to this project?</b>
         </h2>
         <ul className="text-left">
           <li>Warrant TSAI</li>
         </ul>
       </Flex1>
-      <Divider
-        style={{
-          width: "90%",
-          marginInline: "auto",
-        }}
-      />
-      {/* Commits */}
-      {/* <Flex1>Commits? link?</Flex1>
-      <Divider
-        style={{
-          width: "90%",
-          marginInline: "auto",
-        }}
-      /> */}
-      {/* File Structure Figure */}
-      {/* <Flex1>
-        File structure? It will be updated after I finished this website
-      </Flex1>
-      <Divider
-        style={{
-          width: "90%",
-          marginInline: "auto",
-        }}
-      /> */}
     </FlexColumnCenteredContainer>
   );
 }
