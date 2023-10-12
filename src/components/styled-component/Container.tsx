@@ -29,9 +29,10 @@ export const ContactContainer = styled.div`
 
 export const FlexRowCenteredContainer = styled.div`
   display: flex;
-  flexdirection: row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 export const FlexColumnCenteredContainer = styled.div`
   display: flex;
@@ -61,6 +62,5 @@ export const LabSection = styled.div`
   align-items: center;
   margin-block: 10px;
   min-height: 40vh;
-  max-width: 800px;
   margin-inline: auto;
 `;

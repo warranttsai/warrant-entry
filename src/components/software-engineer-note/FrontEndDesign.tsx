@@ -7,7 +7,7 @@ export const DrawImageForFrontEndDesign = () => {
       <BlackCenterTitle>
         Draw a image before start developing the front-end page
       </BlackCenterTitle>
-      <div className="text-left" style={{ paddingInline: 100 }}>
+      <div className="text-left">
         <ul>
           <li>
             Always drawing a image of your page design before started! It would
@@ -29,7 +29,7 @@ export const EncapsulateYourStyleSheet = () => {
   return (
     <>
       <BlackCenterTitle>Encapsulate your style sheet</BlackCenterTitle>
-      <div className="text-left" style={{ paddingInline: 100 }}>
+      <div className="text-left">
         <span>
           SCSS/SASS is a good module to be used in Node to help the developer
           implementing the nested CSS sheet with their requirements. In many of

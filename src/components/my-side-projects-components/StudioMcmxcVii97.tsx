@@ -13,8 +13,8 @@ import {
 export default function StudioMcmxcvii97() {
   return (
     <>
-      <FlexRowCenteredContainer>
-        <Flex1>
+      <FlexRowCenteredContainer id="studio-mcmxcvii-97-container">
+        <Flex1 id="description" style={{ minWidth: 250 }}>
           <FlexColumnCenteredContainer>
             <Flex1>
               <h2>Studio Mcmxvii 97</h2>
@@ -38,7 +38,7 @@ export default function StudioMcmxcvii97() {
             <Flex1>Created Date: 13/02/2023</Flex1>
           </FlexColumnCenteredContainer>
         </Flex1>
-        <Flex1 style={{ minWidth: 450, maxHeight: 500 }}>
+        <Flex1 id="carousel" style={{ minWidth: 250 }}>
           <Carousel>
             <img src={dashboard} />
             <img src={priceConsultant} />

@@ -7,7 +7,7 @@ export const ObjectOrientation = () => {
       <BlackCenterTitle>
         Creating module for reuseable methods/components
       </BlackCenterTitle>
-      <div className="text-left" style={{ paddingInline: 100 }}>
+      <div className="text-left">
         <span>
           There must have some methods and components which could be re-used in
           your code. They are the points that you could optimise your code.
