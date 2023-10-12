@@ -11,7 +11,7 @@ export const HowToEnableCORS = () => {
   return (
     <>
       <BlackCenterTitle>How To Enable CORS</BlackCenterTitle>
-      <div className="text-left" style={{ paddingInline: 100 }}>
+      <div className="text-left">
         <ol>
           <li>Log in to your AWS console.</li>
           <li>
@@ -19,9 +19,9 @@ export const HowToEnableCORS = () => {
             function.
           </li>
           <li>Click on the API which you wished to enable the CORS.</li>
-          <img src={img1} style={{ maxHeight: 300 }} />
+          <img src={img1} className="h-100 w-100" />
           <li>Click on the "Enable CORS" button.</li>
-          <img src={img2} style={{ maxHeight: 300 }} />
+          <img src={img2} className="h-100 w-100" />
           <li>Click "Save" and now you are enabled the CORS for your API!</li>
         </ol>
       </div>
@@ -34,7 +34,7 @@ export const AddingCorsHeaderToYourApiResponseHeader = () => {
       <BlackCenterTitle style={{ fontSize: "2rem" }}>
         Adding CORS Header To Your API Response Header
       </BlackCenterTitle>
-      <div className="text-left" style={{ paddingInline: 100 }}>
+      <div className="text-left">
         <ol>
           <li>
             Please adding this code to your API script when you were sending the
@@ -42,13 +42,13 @@ export const AddingCorsHeaderToYourApiResponseHeader = () => {
           </li>
 
           <li>Click on the API which you wished to enable the CORS.</li>
-          <img src={img3} style={{ maxHeight: 300 }} />
-          <img src={img4} style={{ maxHeight: 300 }} />
+          <img src={img3} className="h-100 w-100" />
+          <img src={img4} className="h-100 w-100" />
           <li>
             You can check your console(inspect) on browser to verify the header
             was applied on your request.
           </li>
-          <img src={img5} style={{ maxHeight: 300 }} />
+          <img src={img5} className="h-100 w-100" />
         </ol>
       </div>
     </>
@@ -60,7 +60,7 @@ export const EnableSES = () => {
       <BlackCenterTitle>
         How to Enable Simple Email Service With Email Address
       </BlackCenterTitle>
-      <div className="text-left" style={{ paddingInline: 100 }}>
+      <div className="text-left">
         <ol>
           <li>Access to your SES</li>
           <li>Create identity with your email address.</li>

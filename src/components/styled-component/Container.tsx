@@ -62,6 +62,5 @@ export const LabSection = styled.div`
   align-items: center;
   margin-block: 10px;
   min-height: 40vh;
-  max-width: 800px;
   margin-inline: auto;
 `;
