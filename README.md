@@ -38,13 +38,12 @@ Framework: React
 - yarn deployFunction <fileName>: "sls deploy function -f"
   You can specify the file which you wished to deploy instead of the whole project. It helps to deploy the new functions in a efficient manner.
 
-## Under developing functions
-
-none
-
 ## To-do List
 
-None
+- Migrate images to S3 bucket to optimise the efficiency.
+- In the coding bible, create article component to contain my notes in a good-looking way
+- Update my understanding of SSR, CSR and SSG to my coding bible.
+- Using NextJS for static pages to increase the SEO.
 
 ## Contributors:
 
