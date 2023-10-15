@@ -11,7 +11,7 @@ export const BrownCenterTitle = styled.h1`
 `;
 
 export const BlackCenterTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 3rem;
   color: black;
   text-align: center;
 `;
