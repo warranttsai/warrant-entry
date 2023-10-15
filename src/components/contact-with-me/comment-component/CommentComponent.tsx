@@ -23,15 +23,13 @@ export default function CommentComponent({
 }: CommentComponentProps) {
   return (
     <>
-      <FlexRowCenteredContainer style={{ gap: 30, minWidth: "40vw" }}>
+      <FlexRowCenteredContainer
+        style={{ gap: 30, minWidth: "40vw", flexWrap: "nowrap" }}
+      >
         {index % 2 === 0 ? (
           <>
-            <img
-              className="flex-1"
-              style={{ maxWidth: 300 }}
-              src={ProfilePicPlaceholder}
-            />
-            <SpeechBubbleLeft className="flex-1 text-left">
+            <img className="flex-1 w-100" src={ProfilePicPlaceholder} />
+            <SpeechBubbleLeft className="flex-2 text-left w-100">
               <span
                 className="flex-1 w-100"
                 style={{ fontWeight: 900, fontSize: 20 }}
@@ -58,7 +56,7 @@ export default function CommentComponent({
           </>
         ) : (
           <>
-            <SpeechBubbleRight className="flex-1 d-flex flex-column text-left">
+            <SpeechBubbleRight className="flex-2 d-flex flex-column text-left">
               <span
                 className="flex-1"
                 style={{ fontWeight: 900, fontSize: 20 }}
@@ -82,11 +80,7 @@ export default function CommentComponent({
                 {comment.comment !== "" ? comment.comment : "<no comment>"}
               </span>
             </SpeechBubbleRight>
-            <img
-              className="flex-1"
-              style={{ maxWidth: 300 }}
-              src={ProfilePicPlaceholder}
-            />
+            <img className="flex-1 w-100" src={ProfilePicPlaceholder} />
           </>
         )}
       </FlexRowCenteredContainer>
