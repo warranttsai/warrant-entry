@@ -8,6 +8,7 @@ import ContactWithMe from "../../components/contact-with-me/ContactWithMe";
 // styled comopnents
 import {
   Flex1,
+  Flex2,
   FlexRowCenteredContainer,
 } from "../../components/styled-component/Container";
 import { BlackCenterTitle } from "../../components/styled-component/Title";
@@ -40,27 +41,28 @@ function AboutMe() {
           </BlackCenterTitle>
 
           <FlexRowCenteredContainer style={{ gap: 10 }}>
-            <Flex1 className="w-100 h-100">
+            <Flex1 className="w-100">
               <RectangleBoxShadow
                 id="warrant-image-container"
-                className="w-100 h-100"
+                className="w-100"
               >
                 {!imageLoaded ? (
-                  <span className="w-100 h-100">Loading...</span>
+                  <span className="w-100">Loading...</span>
                 ) : (
-                  <img className="w-100 h-100" src={Warrant} />
+                  <img className="w-100" src={Warrant} />
                 )}
               </RectangleBoxShadow>
             </Flex1>
-            <Flex1
+            <Flex2
               data-testid="introduction-content"
               className="w-100 h-100 d-flex justify-content-start align-items-start"
               style={{ minWidth: 250 }}
             >
               <NormalContent className="w-100 h-100">
-                Results-driven web developer with one and a half years of
-                proficiency in <span style={{ color: "red" }}>React JS/TS</span>
-                development. Recently conferred a{" "}
+                Warrant is a results-driven web developer with one and a half
+                years of proficiency in{" "}
+                <span style={{ color: "red" }}>React JS/TS</span> development.
+                Recently conferred a{" "}
                 <span style={{ color: "red" }}>
                   master's degree in Information Technology (2022)
                 </span>
@@ -76,7 +78,7 @@ function AboutMe() {
                 open-minded individual receptive to diverse perspectives and
                 suggestions.
               </NormalContent>
-            </Flex1>
+            </Flex2>
           </FlexRowCenteredContainer>
         </section>
         {/* Contact With Me */}
