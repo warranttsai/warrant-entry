@@ -9,7 +9,7 @@ import {
 // styled-components
 import { FlexColumnCenteredContainer } from "../../../components/styled-component/Container";
 // components
-import CommentComponent from "../../../components/comment-component/CommentComponent";
+import CommentComponent from "../comment-component/CommentComponent";
 import WarningBalloon from "../../../components/warning-balloon/WarningBalloon";
 
 export default function CommentSection() {

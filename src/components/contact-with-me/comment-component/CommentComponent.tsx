@@ -1,11 +1,11 @@
 // images
-import ProfilePicPlaceholder from "../../assets/profile-pic-placeholder.jpg";
+import ProfilePicPlaceholder from "../../../assets/profile-pic-placeholder.jpg";
 // styled-components
-import { FlexRowCenteredContainer } from "../styled-component/Container";
+import { FlexRowCenteredContainer } from "../../styled-component/Container";
 import {
   SpeechBubbleLeft,
   SpeechBubbleRight,
-} from "../styled-component/SpeechBubble";
+} from "../../styled-component/SpeechBubble";
 
 interface CommentComponentProps {
   index: number;
