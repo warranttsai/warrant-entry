@@ -56,7 +56,7 @@ function AboutMe() {
             <Flex2
               data-testid="introduction-content"
               className="w-100 h-100 d-flex justify-content-start align-items-start"
-              style={{ minWidth: 250 }}
+              style={{ minWidth: 400 }}
             >
               <NormalContent className="w-100 h-100">
                 Warrant is a results-driven web developer with one and a half
