@@ -76,7 +76,7 @@ function Home() {
         </Button>
         <Button
           variant="contained"
-          data-testid="contact-with-me"
+          data-testid="laboratory"
           sx={{
             ":hover": {
               bgcolor: "#D7F72A",
@@ -116,20 +116,6 @@ function Home() {
           onClick={() => navigate("/working-experience")}
         >
           Working Experience
-        </Button>
-        <Button
-          variant="contained"
-          data-testid="contact-with-me"
-          sx={{
-            ":hover": {
-              bgcolor: "#D7F72A",
-              color: "black",
-            },
-            width: "300px",
-          }}
-          onClick={() => navigate("/contact-with-me")}
-        >
-          Contact With Me
         </Button>
       </VerticalButtons>
     </HomeContainer>

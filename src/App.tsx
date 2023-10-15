@@ -10,7 +10,6 @@ import LearningPath from "./pages/learning-path/LearningPath";
 import MySideProjects from "./pages/my-side-projects/MySideProjects";
 import WorkingExperience from "./pages/working-experience/WorkingExperience";
 import MyHobbies from "./pages/my-hobbies/MyHobbies";
-import ContactWithMe from "./pages/contact-with-me/ContactWithMe";
 import NotFoundPage from "./pages/not-found-page/NotFoundPage";
 import MyCodingBible from "./pages/lab/my-coding-bible/MyCodingBible";
 // lab components
@@ -35,7 +34,6 @@ function App() {
         <Route path="my-coding-bible" element={<MyCodingBible />} />
         <Route path="working-experience" element={<WorkingExperience />} />
         <Route path="my-hobbies" element={<MyHobbies />} />
-        <Route path="contact-with-me" element={<ContactWithMe />} />
         {/* Laboratory routes */}
         <Route path="lab" element={<Lab />} />
         <Route path="lab/about-this-web-app" element={<AboutThisWebApp />} />
