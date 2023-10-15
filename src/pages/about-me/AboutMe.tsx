@@ -1,11 +1,10 @@
 // modules
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 // images
 import Warrant from "../../assets/Warrant.jpg";
-// scss
-import "./AboutMe.scss";
 // styled comopnents
 import {
   Flex1,
@@ -24,9 +23,19 @@ function AboutMe() {
     { id: 4, name: "Open-minded" },
     { id: 5, name: "Strong Communicator" },
   ];
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImageLoaded(true);
+    }, 1000);
+
+    // Clean up the timer if the component unmounts before the timeout
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div style={{ marginBlock: 10 }}>
+    <div style={{ marginBlock: 10, paddingInline: "10vw" }}>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -36,38 +45,43 @@ function AboutMe() {
           Introduction
         </BlackCenterTitle>
 
-        <FlexRowCenteredContainer
-          style={{ paddingInline: "10vw", flexWrap: "wrap", gap: 10 }}
-        >
-          <Flex1>
-            <RectangleBoxShadow className="h-100">
-              <img src={Warrant} style={{ width: "100%", minWidth: 250 }} />
+        <FlexRowCenteredContainer style={{ gap: 10 }}>
+          <Flex1 className="w-100 h-100">
+            <RectangleBoxShadow
+              id="warrant-image-container"
+              className="w-100 h-100"
+            >
+              {!imageLoaded ? (
+                <span className="w-100 h-100">Loading...</span>
+              ) : (
+                <img className="w-100 h-100" src={Warrant} />
+              )}
             </RectangleBoxShadow>
           </Flex1>
-          <Flex2
+          <Flex1
             data-testid="introduction-content"
-            className="introduction-content-area w-100 h-100 d-flex justify-content-start align-items-start"
-            style={{ width: "100%", minWidth: 250 }}
+            className="w-100 h-100 d-flex justify-content-start align-items-start"
+            style={{ minWidth: 250 }}
           >
             <NormalContent className="w-100 h-100">
-              My name is Warrant TSAI, and in 2023, I successfully completed my
-              Master of Information Technology from RMIT. Originally from Taiwan
-              (the R.O.C.), I relocated to Melbourne, Australia in June 2020 to
-              pursue my academic and personal aspirations. <br />
-              <br />
-              During my academic journey, I developed a keen interest and
-              proficiency in various programming languages, particularly in the
-              domain of website development. This area of study has been a major
-              focus of mine throughout my Information Technology program. <br />
-              <br />
-              Beyond my academic pursuits, I also have a passion for street
-              dancing. I have been dedicatedly learning Popping dance for seven
-              years and have recently embarked on my journey as a beginner in
-              Hip-hop and House dance styles. Additionally, I had the privilege
-              of serving as the secretary of the student dancing club
-              "Funkdelics" at RMIT in 2023.
+              Results-driven web developer with one and a half years of
+              proficiency in <span style={{ color: "red" }}>React JS/TS</span>
+              development. Recently conferred a{" "}
+              <span style={{ color: "red" }}>
+                master's degree in Information Technology (2022)
+              </span>
+              , demonstrating a commitment to continuous learning. Proven
+              expertise in backend development utilizing{" "}
+              <span style={{ color: "blue" }}>
+                Lambda serverless framework, Node.JS, Sails.JS, and Python Flask
+              </span>
+              . Known for an insatiable appetite for acquiring new knowledge,
+              paired with a reputation for responsibility, organizational
+              prowess, and a willingness to tackle new challenges head-on. An
+              open-minded individual receptive to diverse perspectives and
+              suggestions.
             </NormalContent>
-          </Flex2>
+          </Flex1>
         </FlexRowCenteredContainer>
         <br />
         <Stack
