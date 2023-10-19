@@ -11,7 +11,7 @@ import {
   FlexRowCenteredContainer,
 } from "./styled-component/Container";
 import { BlackCenterTitle } from "./styled-component/Title";
-import WarningBalloon from "./warning-balloon/WarningBalloon";
+import WarningBalloon from "./WarningBalloon";
 
 export function Challenge1() {
   const [content, setContent] = useState<string>("");

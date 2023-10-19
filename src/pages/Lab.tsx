@@ -16,6 +16,7 @@ import {
 export default function Lab() {
   const [showAboutThisWebsite, setShowAboutThisWebsite] = useState(false);
   const [showReactChallenges, setShowReactChallenges] = useState(-1);
+
   return (
     <>
       {/* About this web application */}
