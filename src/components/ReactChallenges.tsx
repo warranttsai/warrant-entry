@@ -3,15 +3,15 @@ import { useState } from "react";
 import { Alert } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 // scss
-import "./ReactChallenge.scss";
+import "../styles/ReactChallenge.scss";
 // styled components
 import {
   Flex1,
   FlexColumnCenteredContainer,
   FlexRowCenteredContainer,
-} from "../styled-component/Container";
-import { BlackCenterTitle } from "../styled-component/Title";
-import WarningBalloon from "../warning-balloon/WarningBalloon";
+} from "./styled-component/Container";
+import { BlackCenterTitle } from "./styled-component/Title";
+import WarningBalloon from "./warning-balloon/WarningBalloon";
 
 export function Challenge1() {
   const [content, setContent] = useState<string>("");

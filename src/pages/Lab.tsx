@@ -1,13 +1,21 @@
 // module
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { Button, Divider } from "@mui/material";
 // styled-components
 import { LabSection } from "../components/styled-component/Container";
+// components
+import AboutThisWebApp from "../components/AboutThisWebApp";
+import {
+  Challenge1,
+  Challenge2,
+  Challenge3,
+  Challenge4,
+} from "../components/ReactChallenges";
 
 export default function Lab() {
-  const navigate = useNavigate();
-
+  const [showAboutThisWebsite, setShowAboutThisWebsite] = useState(false);
+  const [showReactChallenges, setShowReactChallenges] = useState(-1);
   return (
     <>
       {/* About this web application */}
@@ -17,7 +25,7 @@ export default function Lab() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Button onClick={() => navigate("/lab/about-this-web-app")}>
+          <Button onClick={() => setShowAboutThisWebsite(true)}>
             <h1
               className="hyper-link-style"
               style={{ fontSize: "1.5rem", color: "blue", textAlign: "center" }}
@@ -25,6 +33,7 @@ export default function Lab() {
               📚 Something About This Web Application 📚
             </h1>
           </Button>
+          {showAboutThisWebsite && <AboutThisWebApp />}
         </motion.div>
       </LabSection>
       <Divider
@@ -51,19 +60,23 @@ export default function Lab() {
               React Challenge ➤
             </h1>
           </a>
-          <Button onClick={() => navigate("/lab/react-challenge-1")}>
+          <Button onClick={() => setShowReactChallenges(1)}>
             challenge #1
           </Button>
-          <Button onClick={() => navigate("/lab/react-challenge-2")}>
+          <Button onClick={() => setShowReactChallenges(2)}>
             challenge #2
           </Button>
-          <Button onClick={() => navigate("/lab/react-challenge-3")}>
+          <Button onClick={() => setShowReactChallenges(3)}>
             challenge #3
           </Button>
-          <Button onClick={() => navigate("/lab/react-challenge-4")}>
+          <Button onClick={() => setShowReactChallenges(4)}>
             challenge #4
           </Button>
         </motion.div>
+        {showReactChallenges === 1 && <Challenge1 />}
+        {showReactChallenges === 2 && <Challenge2 />}
+        {showReactChallenges === 3 && <Challenge3 />}
+        {showReactChallenges === 4 && <Challenge4 />}
       </LabSection>
     </>
   );
