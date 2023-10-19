@@ -1,12 +1,12 @@
 // module
 import { motion } from "framer-motion";
 // styled-components
-import { BlackCenterTitle } from "../../components/styled-component/Title";
+import { BlackCenterTitle } from "../components/styled-component/Title";
 // components
 import { Divider } from "@mui/material";
-import CafeManagemengSystem from "../../components/my-side-projects-components/CafeManagementSystem";
-import TotoEvHome from "../../components/my-side-projects-components/TotoEvHome";
-import StudioMcmxcvii97 from "../../components/my-side-projects-components/StudioMcmxcVii97";
+import CafeManagemengSystem from "../components/my-side-projects-components/CafeManagementSystem";
+import TotoEvHome from "../components/my-side-projects-components/TotoEvHome";
+import StudioMcmxcvii97 from "../components/my-side-projects-components/StudioMcmxcVii97";
 
 export default function MySideProjects() {
   return (

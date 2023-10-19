@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 // components
-import AboutMe from "../pages/about-me/AboutMe.tsx";
+import AboutMe from "../pages/AboutMe.tsx";
 
 describe("<AboutMe />", () => {
   test("has section and title as 'Introduction'", () => {

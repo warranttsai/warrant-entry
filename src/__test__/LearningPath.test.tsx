@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 // components
-import LearningPath from "../pages/learning-path/LearningPath";
+import LearningPath from "../pages/LearningPath";
 
 describe("<Home />", () => {
   test("has section 'Software Engineering/Computer Science'", () => {

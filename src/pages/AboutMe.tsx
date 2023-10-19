@@ -2,18 +2,18 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // images
-import Warrant from "../../assets/Warrant.jpg";
+import Warrant from "../public/Warrant.jpg";
 // components
-import ContactWithMe from "../../components/contact-with-me/ContactWithMe";
+import ContactWithMe from "../components/contact-with-me/ContactWithMe";
 // styled comopnents
 import {
   Flex1,
   Flex2,
   FlexRowCenteredContainer,
-} from "../../components/styled-component/Container";
-import { BlackCenterTitle } from "../../components/styled-component/Title";
-import { RectangleBoxShadow } from "../../components/styled-component/BoxShadow";
-import { NormalContent } from "../../components/styled-component/Content";
+} from "../components/styled-component/Container";
+import { BlackCenterTitle } from "../components/styled-component/Title";
+import { RectangleBoxShadow } from "../components/styled-component/BoxShadow";
+import { NormalContent } from "../components/styled-component/Content";
 
 function AboutMe() {
   const [imageLoaded, setImageLoaded] = useState(false);

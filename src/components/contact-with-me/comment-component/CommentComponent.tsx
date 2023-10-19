@@ -1,5 +1,5 @@
 // images
-import ProfilePicPlaceholder from "../../../assets/profile-pic-placeholder.jpg";
+import ProfilePicPlaceholder from "../../../public/profile-pic-placeholder.jpg";
 // styled-components
 import { FlexRowCenteredContainer } from "../../styled-component/Container";
 import {

@@ -1,8 +1,8 @@
 // modules
 import Carousel from "react-material-ui-carousel";
 // images
-import dashboard from "../../assets/studioMcmxcvii97/dashboard.jpg";
-import priceConsultant from "../../assets/studioMcmxcvii97/priceConsultant.jpg";
+import dashboard from "../../public/studioMcmxcvii97/dashboard.jpg";
+import priceConsultant from "../../public/studioMcmxcvii97/priceConsultant.jpg";
 // styled components
 import {
   FlexRowCenteredContainer,

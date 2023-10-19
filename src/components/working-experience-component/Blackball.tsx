@@ -2,7 +2,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 // styled-components
-import { BrownCenterTitle } from "../../styled-component/Title";
+import { BrownCenterTitle } from "../styled-component/Title";
 
 export default function Blackball() {
   return (

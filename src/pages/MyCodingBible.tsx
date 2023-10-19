@@ -4,18 +4,18 @@ import { Divider } from "@mui/material";
 import {
   FlexColumnCenteredContainer,
   LabSection,
-} from "../../../components/styled-component/Container";
+} from "../components/styled-component/Container";
 // components
 import {
   DrawImageForFrontEndDesign,
   EncapsulateYourStyleSheet,
-} from "../../../components/software-engineer-note/FrontEndDesign";
-import { ObjectOrientation } from "../../../components/software-engineer-note/ObjectOrientation";
+} from "../components/software-engineer-note/FrontEndDesign";
+import { ObjectOrientation } from "../components/software-engineer-note/ObjectOrientation";
 import {
   HowToEnableCORS,
   AddingCorsHeaderToYourApiResponseHeader,
   EnableSES,
-} from "../../../components/software-engineer-note/AwsKnowledges";
+} from "../components/software-engineer-note/AwsKnowledges";
 
 export default function MyCodingBible() {
   return (

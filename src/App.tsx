@@ -1,28 +1,41 @@
 // modules
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 // css
 import "./App.scss";
 // pages
-import Home from "./pages/home/Home";
-import Layout from "./pages/layout/Layout";
-import AboutMe from "./pages/about-me/AboutMe";
-import LearningPath from "./pages/learning-path/LearningPath";
-import MySideProjects from "./pages/my-side-projects/MySideProjects";
-import WorkingExperience from "./pages/working-experience/WorkingExperience";
-import MyHobbies from "./pages/my-hobbies/MyHobbies";
-import NotFoundPage from "./pages/not-found-page/NotFoundPage";
-import MyCodingBible from "./pages/lab/my-coding-bible/MyCodingBible";
-// lab components
-import Lab from "./pages/lab/Lab";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
+import LearningPath from "./pages/LearningPath";
+import MySideProjects from "./pages/MySideProjects";
+import WorkingExperience from "./pages/WorkingExperience";
+import MyHobbies from "./pages/MyHobbies";
+import NotFoundPage from "./pages/NotFoundPage";
+import MyCodingBible from "./pages/MyCodingBible";
+import Lab from "./pages/Lab";
+// components
 import {
-  Challenge1,
-  Challenge2,
-  Challenge3,
-  Challenge4,
-} from "./components/react-challenge/ReactChallenges";
-import AboutThisWebApp from "./pages/lab/about-this-web-app/AboutThisWebApp";
+  Flex1,
+  HeaderContainer,
+  LayoutContainer,
+} from "./components/styled-component/Container";
 
-function App() {
+export function Layout() {
+  return (
+    <LayoutContainer id="layout-container">
+      <HeaderContainer id="header-container">
+        <Header />
+      </HeaderContainer>
+      <Flex1 id="outlet-container">
+        <Outlet />
+      </Flex1>
+      <Footer />
+    </LayoutContainer>
+  );
+}
+
+export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -34,17 +47,9 @@ function App() {
         <Route path="my-coding-bible" element={<MyCodingBible />} />
         <Route path="working-experience" element={<WorkingExperience />} />
         <Route path="my-hobbies" element={<MyHobbies />} />
-        {/* Laboratory routes */}
         <Route path="lab" element={<Lab />} />
-        <Route path="lab/about-this-web-app" element={<AboutThisWebApp />} />
-        <Route path="lab/react-challenge-1" element={<Challenge1 />} />
-        <Route path="lab/react-challenge-2" element={<Challenge2 />} />
-        <Route path="lab/react-challenge-3" element={<Challenge3 />} />
-        <Route path="lab/react-challenge-4" element={<Challenge4 />} />
       </Route>
       <Route path="/*" element={<NotFoundPage />} />
     </Routes>
   );
 }
-
-export default App;

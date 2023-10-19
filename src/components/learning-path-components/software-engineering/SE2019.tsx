@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import AlgorithmMock from "../../../assets/SE2019/algorithm-mock.jpeg";
+import AlgorithmMock from "../../../public/SE2019/algorithm-mock.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 

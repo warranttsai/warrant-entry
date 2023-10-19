@@ -1,18 +1,18 @@
 // module
 import { motion } from "framer-motion";
 // styled-components
-import { BlackCenterTitle } from "../../components/styled-component/Title";
+import { BlackCenterTitle } from "../components/styled-component/Title";
 import {
   GreyBackgroundContainer,
   Flex1,
   FlexColumnCenteredContainer,
-} from "../../components/styled-component/Container";
+} from "../components/styled-component/Container";
 // components
-import Cleanstormwater from "../../components/working-experience-component/clean-stormwater/CleanStormwater";
-import Fila from "../../components/working-experience-component/fila/Fila";
-import Funkdelics from "../../components/working-experience-component/funkdelics/Funkdelics";
-import Blackball from "../../components/working-experience-component/blackball/Blackball";
-import PoppingDanceInstructor from "../../components/working-experience-component/popping-dance-instructor/PoppingDanceInstructor";
+import Cleanstormwater from "../components/working-experience-component/CleanStormwater";
+import Fila from "../components/working-experience-component/Fila";
+import Funkdelics from "../components/working-experience-component/Funkdelics";
+import Blackball from "../components/working-experience-component/Blackball";
+import PoppingDanceInstructor from "../components/working-experience-component/PoppingDanceInstructor";
 
 export default function WorkingExperience() {
   return (

@@ -1,9 +1,9 @@
 // styled-component
-import { BlackCenterTitle } from "../../../components/styled-component/Title";
+import { BlackCenterTitle } from "./styled-component/Title";
 import {
   FlexColumnCenteredContainer,
   Flex1,
-} from "../../../components/styled-component/Container";
+} from "./styled-component/Container";
 import { Divider } from "@mui/material";
 
 export default function AboutThisWebApp() {

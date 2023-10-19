@@ -2,9 +2,9 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 // styled component
-import { HomeContainer } from "../../components/styled-component/Container";
-import { VerticalButtons } from "../../components/styled-component/Button";
-import { BrownCenterTitle } from "../../components/styled-component/Title";
+import { HomeContainer } from "../components/styled-component/Container";
+import { VerticalButtons } from "../components/styled-component/Button";
+import { BrownCenterTitle } from "../components/styled-component/Title";
 
 function Home() {
   const navigate = useNavigate();

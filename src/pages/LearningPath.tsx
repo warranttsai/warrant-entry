@@ -2,17 +2,17 @@
 import { motion } from "framer-motion";
 import { Box } from "@mui/material";
 // styled-components
-import { ArrowComponent } from "../../components/learning-path-components/ArrowComponent";
-import { BlackCenterTitle } from "../../components/styled-component/Title";
+import { ArrowComponent } from "../components/ArrowComponent";
+import { BlackCenterTitle } from "../components/styled-component/Title";
 // components
-import SE2016 from "../../components/learning-path-components/software-engineering/SE2016";
-import SE2017 from "../../components/learning-path-components/software-engineering/SE2017";
-import SE2018 from "../../components/learning-path-components/software-engineering/SE2018";
-import SE2019 from "../../components/learning-path-components/software-engineering/SE2019";
-import SE2020 from "../../components/learning-path-components/software-engineering/SE2020";
-import SE2021 from "../../components/learning-path-components/software-engineering/SE2021";
-import SE2022 from "../../components/learning-path-components/software-engineering/SE2022";
-import SE2023 from "../../components/learning-path-components/software-engineering/SE2023";
+import SE2016 from "../components/learning-path-components/software-engineering/SE2016";
+import SE2017 from "../components/learning-path-components/software-engineering/SE2017";
+import SE2018 from "../components/learning-path-components/software-engineering/SE2018";
+import SE2019 from "../components/learning-path-components/software-engineering/SE2019";
+import SE2020 from "../components/learning-path-components/software-engineering/SE2020";
+import SE2021 from "../components/learning-path-components/software-engineering/SE2021";
+import SE2022 from "../components/learning-path-components/software-engineering/SE2022";
+import SE2023 from "../components/learning-path-components/software-engineering/SE2023";
 
 export default function LearningPath() {
   return (
