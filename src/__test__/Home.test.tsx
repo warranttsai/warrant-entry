@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 // components
-import Home from "../pages/home/Home.tsx";
+import Home from "../pages/Home.tsx";
 
 describe("<Home />", () => {
   // context
