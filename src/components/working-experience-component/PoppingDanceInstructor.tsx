@@ -2,13 +2,13 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 // styled-components
-import { BrownCenterTitle } from "../../styled-component/Title";
+import { BrownCenterTitle } from "../styled-component/Title";
 
-export default function Fila() {
+export default function PoppingDanceInstructor() {
   return (
     <>
       <Card
-        id="fila-container"
+        id="popping-dance-instructor-container"
         sx={{
           background: "white",
           border: "5px solid rgba(3, 102, 214, 0.3)",
@@ -29,13 +29,19 @@ export default function Fila() {
               textAlign: "left",
             }}
           >
-            FILA - from April 2022
+            Popping Dance Instructor - from July 2023
           </BrownCenterTitle>
-          <span style={{ flex: 1, fontWeight: 700 }}>Customer Assistance</span>
+          <span style={{ flex: 1, fontWeight: 700 }}>
+            RMIT University Dacning Club "Funkdelics" · Freelance
+          </span>
+          <span style={{ flex: 1 }}>
+            This is my second time to be the instructor for popping dance in
+            this club. I delivered my knowledges and understanding of dancing to
+            help the beginner dancers get used with popping dance.
+          </span>
           <ul style={{ flex: 1 }}>
-            <li>General customer service including cashier and consulting</li>
-            <li>Bilingual customer service</li>
-            <li>Replenish the products</li>
+            <li>Teaching Popping Dance in Beginner Level</li>
+            <li>Deliver the relevant knowledges</li>
           </ul>
         </CardContent>
       </Card>

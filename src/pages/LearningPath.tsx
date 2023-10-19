@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Box } from "@mui/material";
 // styled-components
-import { ArrowComponent } from "../components/learning-path-components/ArrowComponent";
+import { ArrowComponent } from "../components/ArrowComponent";
 import { BlackCenterTitle } from "../components/styled-component/Title";
 // components
 import SE2016 from "../components/learning-path-components/software-engineering/SE2016";

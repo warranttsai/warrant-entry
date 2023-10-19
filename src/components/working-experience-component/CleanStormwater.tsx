@@ -7,8 +7,8 @@ import CleanStormwaterGroup2 from "../../../assets/present-work/cleanstormwater-
 import CleanStormwaterGroup3 from "../../../assets/present-work/cleanstormwater-group-3.jpeg";
 import CleanStormwaterGroup4 from "../../../assets/present-work/cleanstormwater-group-4.jpeg";
 // styled-components
-import { Flex1 } from "../../styled-component/Container";
-import { BrownCenterTitle } from "../../styled-component/Title";
+import { Flex1 } from "../styled-component/Container";
+import { BrownCenterTitle } from "../styled-component/Title";
 
 export default function Cleanstormwater() {
   return (
