@@ -3,8 +3,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import CleanStormwaterLogo from "../../../assets/SE2022/clean-stormwater-logo.jpeg";
-import MasterCertificate from "../../../assets/SE2022/master-certificate.jpeg";
+import CleanStormwaterLogo from "../../../public/SE2022/clean-stormwater-logo.jpeg";
+import MasterCertificate from "../../../public/SE2022/master-certificate.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 import { SimpleGallery } from "../../styled-component/Gallery";

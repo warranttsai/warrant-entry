@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // images
-import Warrant from "../assets/Warrant.jpg";
+import Warrant from "../public/Warrant.jpg";
 // components
 import ContactWithMe from "../components/contact-with-me/ContactWithMe";
 // styled comopnents

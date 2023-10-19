@@ -1,8 +1,8 @@
 // modules
 import Carousel from "react-material-ui-carousel";
 // images
-import dashboard from "../../assets/cafeManagementSystem/1.jpg";
-import userList from "../../assets/cafeManagementSystem/2.jpg";
+import dashboard from "../../public/cafeManagementSystem/1.jpg";
+import userList from "../../public/cafeManagementSystem/2.jpg";
 // styled components
 import {
   FlexRowCenteredContainer,

@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import NationalFormosaUniversity from "../../../assets/national-formosa-university.jpeg";
+import NationalFormosaUniversity from "../../../public/national-formosa-university.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 

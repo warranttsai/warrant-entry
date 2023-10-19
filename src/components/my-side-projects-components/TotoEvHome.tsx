@@ -1,9 +1,9 @@
 // modules
 import Carousel from "react-material-ui-carousel";
 // images
-import dashboard from "../../assets/totoEvHome/dashboard.jpg";
-import tutorial from "../../assets/totoEvHome/tutorial.jpg";
-import help from "../../assets/totoEvHome/help.jpg";
+import dashboard from "../../public/totoEvHome/dashboard.jpg";
+import tutorial from "../../public/totoEvHome/tutorial.jpg";
+import help from "../../public/totoEvHome/help.jpg";
 // styled components
 import {
   FlexRowCenteredContainer,

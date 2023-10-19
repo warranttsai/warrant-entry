@@ -3,10 +3,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import GraduatePic from "../../../assets/SE2020/graduate-pic.jpeg";
-import IELTs from "../../../assets/SE2020/ielts.jpeg";
-import BachelorCertificate from "../../../assets/SE2020/bachelor-certificate.jpeg";
-import BachelorTranscript from "../../../assets/SE2020/bachelor-transcript.jpeg";
+import GraduatePic from "../../../public/SE2020/graduate-pic.jpeg";
+import IELTs from "../../../public/SE2020/ielts.jpeg";
+import BachelorCertificate from "../../../public/SE2020/bachelor-certificate.jpeg";
+import BachelorTranscript from "../../../public/SE2020/bachelor-transcript.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 import { SimpleGallery } from "../../styled-component/Gallery";

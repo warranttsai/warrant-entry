@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../styles/WarningBalloon.css";
+import "../styles/WarningBalloon.scss";
 
 interface WarningBalloonProps {
   message: string;

@@ -3,11 +3,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 // images
-import SE2017_1 from "../../../assets/SE2017/2017-1.jpeg";
-import SE2017_2 from "../../../assets/SE2017/2017-2.jpeg";
-import SE2017_3 from "../../../assets/SE2017/2017-3.jpeg";
-import SE2017_4 from "../../../assets/SE2017/2017-4.jpeg";
-import SE2017_5 from "../../../assets/SE2017/2017-5.jpeg";
+import SE2017_1 from "../../../public/SE2017/2017-1.jpeg";
+import SE2017_2 from "../../../public/SE2017/2017-2.jpeg";
+import SE2017_3 from "../../../public/SE2017/2017-3.jpeg";
+import SE2017_4 from "../../../public/SE2017/2017-4.jpeg";
+import SE2017_5 from "../../../public/SE2017/2017-5.jpeg";
 // styled-components
 import { BrownCenterTitle } from "../../styled-component/Title";
 import { SimpleGallery } from "../../styled-component/Gallery";

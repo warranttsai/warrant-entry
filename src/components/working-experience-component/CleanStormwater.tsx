@@ -2,10 +2,10 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 // images
-import CleanStormwaterGroup1 from "../../../assets/present-work/cleanstormwater-group-1.jpeg";
-import CleanStormwaterGroup2 from "../../../assets/present-work/cleanstormwater-group-2.jpeg";
-import CleanStormwaterGroup3 from "../../../assets/present-work/cleanstormwater-group-3.jpeg";
-import CleanStormwaterGroup4 from "../../../assets/present-work/cleanstormwater-group-4.jpeg";
+import CleanStormwaterGroup1 from "../../public/present-work/cleanstormwater-group-1.jpeg";
+import CleanStormwaterGroup2 from "../../public/present-work/cleanstormwater-group-2.jpeg";
+import CleanStormwaterGroup3 from "../../public/present-work/cleanstormwater-group-3.jpeg";
+import CleanStormwaterGroup4 from "../../public/present-work/cleanstormwater-group-4.jpeg";
 // styled-components
 import { Flex1 } from "../styled-component/Container";
 import { BrownCenterTitle } from "../styled-component/Title";

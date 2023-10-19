@@ -1,11 +1,11 @@
 // styled-component
 import { BlackCenterTitle } from "../styled-component/Title";
 // images
-import img1 from "../../assets/howToEnableCors/1.jpeg";
-import img2 from "../../assets/howToEnableCors/2.jpeg";
-import img3 from "../../assets/addingCorsHeaderToYourApiResponseHeader/1.jpeg";
-import img4 from "../../assets/addingCorsHeaderToYourApiResponseHeader/2.jpeg";
-import img5 from "../../assets/addingCorsHeaderToYourApiResponseHeader/3.jpeg";
+import img1 from "../../public/howToEnableCors/1.jpeg";
+import img2 from "../../public/howToEnableCors/2.jpeg";
+import img3 from "../../public/addingCorsHeaderToYourApiResponseHeader/1.jpeg";
+import img4 from "../../public/addingCorsHeaderToYourApiResponseHeader/2.jpeg";
+import img5 from "../../public/addingCorsHeaderToYourApiResponseHeader/3.jpeg";
 
 export const HowToEnableCORS = () => {
   return (
